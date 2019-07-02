@@ -8,3 +8,4 @@
 */*/*.sdf
 */*.vs
 */*/Release/*.pch
+/ChatUDP

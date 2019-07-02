@@ -1,0 +1,51 @@
+// onlytest.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (onlytest.tlb) that will become a resource in
+// onlytest.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(FAE33989-6CA1-47B7-BBBD-60890A9B34E8), version(1.0),
+  control ]
+library onlytestLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for ConlytestCtrl
+	[ 
+		uuid(22DCBE03-7163-43C2-9916-9847B73556AE)	
+	]
+	dispinterface _Donlytest
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for ConlytestCtrl
+
+	[ 
+		uuid(14BB9456-FF57-4462-9BF3-5C67347BA6ED)	
+	]
+	dispinterface _DonlytestEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+	};
+
+	//  Class information for ConlytestCtrl
+	[
+		uuid(15F63DED-B7C5-42BA-AD72-F5D8364B2B47)
+	]
+	coclass onlytest
+	{
+		[default] dispinterface _Donlytest;
+		[default, source] dispinterface _DonlytestEvents;
+	};
+
+};

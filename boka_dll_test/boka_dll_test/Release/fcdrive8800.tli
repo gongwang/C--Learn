@@ -1,0 +1,3345 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.40219.01 (4952cb2a).
+//
+// d:\vs2012_project\boka_dll_test\boka_dll_test\release\fcdrive8800.tli
+//
+// Wrapper implementations for Win32 type library ../Release/FCDrive8800.Dll
+// compiler-generated file created 06/13/19 at 14:45:54 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface _DriveTimeGroup wrapper method implementations
+//
+
+inline VARIANT_BOOL _DriveTimeGroup::GetCheckModeGroup ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_CheckModeGroup(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveTimeGroup::PutCheckModeGroup ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_CheckModeGroup(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT _DriveTimeGroup::SetCheckMode ( enum VbDayOfWeek iWeekIndex, short TimeIndex, unsigned char lMode ) {
+    HRESULT _hr = raw_SetCheckMode(iWeekIndex, TimeIndex, lMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline unsigned char _DriveTimeGroup::GetCheckMode ( enum VbDayOfWeek iWeekIndex, short TimeIndex ) {
+    unsigned char _result = 0;
+    HRESULT _hr = raw_GetCheckMode(iWeekIndex, TimeIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveTimeGroup::SetBeginTime ( enum VbDayOfWeek iWeekIndex, short TimeIndex, DATE dTime ) {
+    HRESULT _hr = raw_SetBeginTime(iWeekIndex, TimeIndex, dTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveTimeGroup::SetEndTime ( enum VbDayOfWeek iWeekIndex, short TimeIndex, DATE dTime ) {
+    HRESULT _hr = raw_SetEndTime(iWeekIndex, TimeIndex, dTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveTimeGroup::SetTimeGroupNum ( short lNum ) {
+    HRESULT _hr = raw_SetTimeGroupNum(lNum);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline DATE _DriveTimeGroup::GetBeginTime ( enum VbDayOfWeek iWeekIndex, short TimeIndex ) {
+    DATE _result = 0;
+    HRESULT _hr = raw_GetBeginTime(iWeekIndex, TimeIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline DATE _DriveTimeGroup::GetEndTime ( enum VbDayOfWeek iWeekIndex, short TimeIndex ) {
+    DATE _result = 0;
+    HRESULT _hr = raw_GetEndTime(iWeekIndex, TimeIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short _DriveTimeGroup::GetTimeGroupNum ( ) {
+    short _result = 0;
+    HRESULT _hr = raw_GetTimeGroupNum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t _DriveTimeGroup::toString_FC8800 ( enum VbDayOfWeek iWeekIndex ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_toString_FC8800(iWeekIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DriveTimeGroup::toString_FC8800_All ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_toString_FC8800_All(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DriveTimeGroup::toString_FC8000 ( _bstr_t iIndex ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_toString_FC8000(iIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL _DriveTimeGroup::SetTimeHex_FC8800 ( _bstr_t sHex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTimeHex_FC8800(sHex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveTimeGroup::SetTimeHex_FC8800_CheckMode ( _bstr_t sHex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTimeHex_FC8800_CheckMode(sHex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t _DriveTimeGroup::toString_FC8800_CheckMode ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_toString_FC8800_CheckMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface _DriveTimeGroupLists wrapper method implementations
+//
+
+inline _DriveTimeGroupPtr _DriveTimeGroupLists::Add ( BSTR * sKey ) {
+    struct _DriveTimeGroup * _result = 0;
+    HRESULT _hr = raw_Add(sKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveTimeGroupPtr(_result, false);
+}
+
+inline _DriveTimeGroupPtr _DriveTimeGroupLists::GetItem ( VARIANT * vntIndexKey ) {
+    struct _DriveTimeGroup * _result = 0;
+    HRESULT _hr = get_Item(vntIndexKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveTimeGroupPtr(_result, false);
+}
+
+inline long _DriveTimeGroupLists::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveTimeGroupLists::Remove ( VARIANT * vntIndexKey ) {
+    HRESULT _hr = raw_Remove(vntIndexKey);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IUnknownPtr _DriveTimeGroupLists::GetNewEnum ( ) {
+    struct IUnknown * _result = 0;
+    HRESULT _hr = get_NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// dispinterface __DriveMain wrapper method implementations
+//
+
+inline HRESULT __DriveMain::WatchEvents ( struct _DriveInfo * * objConnInfo, short iWatchType, _bstr_t sValue ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x0002\x0008", objConnInfo, iWatchType, (BSTR)sValue);
+}
+
+inline HRESULT __DriveMain::FrameAchieve ( struct _DriveInfo * * objConnInfo, short iFunc, _bstr_t sValue ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x0002\x0008", objConnInfo, iFunc, (BSTR)sValue);
+}
+
+inline HRESULT __DriveMain::PasswordErr ( struct _DriveInfo * * objConnInfo, short iFunc ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x0002", objConnInfo, iFunc);
+}
+
+inline HRESULT __DriveMain::SendProcess ( struct _DriveInfo * * objConnInfo, short iFunc, long iStep, long iStepCount ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x0002\x0003\x0003", objConnInfo, iFunc, iStep, iStepCount);
+}
+
+inline HRESULT __DriveMain::ContainOverflow ( struct _DriveInfo * * objConnInfo, short iFunc ) {
+    return _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x0002", objConnInfo, iFunc);
+}
+
+inline HRESULT __DriveMain::CommandTimeout ( struct _DriveInfo * * objConnInfo, short iFunc, short iStep ) {
+    return _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x0002\x0002", objConnInfo, iFunc, iStep);
+}
+
+inline HRESULT __DriveMain::ReadRecordAchieve ( struct _DriveInfo * * objConnInfo, _bstr_t lRecordCount, struct _DriveRecordLists * * objRecords ) {
+    return _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x0008\x4009", objConnInfo, (BSTR)lRecordCount, objRecords);
+}
+
+inline HRESULT __DriveMain::ReadCardAchieve ( struct _DriveInfo * * objConnInfo, struct _DriveCardLists * * objCol ) {
+    return _com_dispatch_method(this, 0x8, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x4009", objConnInfo, objCol);
+}
+
+inline HRESULT __DriveMain::ReadHolidayAchieve ( struct _DriveInfo * * objConnInfo, struct _DriveHolidayLists * * objCol ) {
+    return _com_dispatch_method(this, 0x9, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x4009", objConnInfo, objCol);
+}
+
+inline HRESULT __DriveMain::ReadTimeGroupAchieve ( struct _DriveInfo * * objConnInfo, struct _DriveTimeGroupLists * * objCol ) {
+    return _com_dispatch_method(this, 0xa, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x4009", objConnInfo, objCol);
+}
+
+inline HRESULT __DriveMain::ReadPasswordAchieve ( struct _DriveInfo * * objConnInfo, struct _DrivePasswordLists * * objCol ) {
+    return _com_dispatch_method(this, 0xb, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x4009", objConnInfo, objCol);
+}
+
+inline HRESULT __DriveMain::OpenPortErr ( struct _DriveInfo * * objConnInfo, short iFunc ) {
+    return _com_dispatch_method(this, 0xc, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x0002", objConnInfo, iFunc);
+}
+
+inline HRESULT __DriveMain::SendEvent ( struct _DriveInfo * * objConnInfo, long lDataLen, _bstr_t sHex ) {
+    return _com_dispatch_method(this, 0xd, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x0003\x0008", objConnInfo, lDataLen, (BSTR)sHex);
+}
+
+inline HRESULT __DriveMain::DataArrivalEvent ( struct _DriveInfo * * objConnInfo, long lDataLen, _bstr_t sHex ) {
+    return _com_dispatch_method(this, 0xe, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x4009\x0003\x0008", objConnInfo, lDataLen, (BSTR)sHex);
+}
+
+//
+// interface _DriveHoliday wrapper method implementations
+//
+
+inline HRESULT _DriveHoliday::SetYearly ( VARIANT_BOOL bData ) {
+    HRESULT _hr = raw_SetYearly(bData);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL _DriveHoliday::GetYearly ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetYearly(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveHoliday::SetDate ( DATE nDate ) {
+    HRESULT _hr = raw_SetDate(nDate);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline DATE _DriveHoliday::GetDate ( ) {
+    DATE _result = 0;
+    HRESULT _hr = raw_GetDate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveHoliday::SetHolLen ( enum e_HolLenType lh ) {
+    HRESULT _hr = raw_SetHolLen(lh);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum e_HolLenType _DriveHoliday::GetHolLen ( ) {
+    enum e_HolLenType _result;
+    HRESULT _hr = raw_GetHolLen(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveHoliday::SetHolNum ( short lh ) {
+    HRESULT _hr = raw_SetHolNum(lh);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline short _DriveHoliday::GetHolNum ( ) {
+    short _result = 0;
+    HRESULT _hr = raw_GetHolNum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t _DriveHoliday::ToString ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ToString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DriveHoliday::toString_Hol ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_toString_Hol(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DriveHoliday::toString_FC8800 ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_toString_FC8800(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DriveHoliday::SetHolHex_FC8800 ( _bstr_t sHex ) {
+    HRESULT _hr = raw_SetHolHex_FC8800(sHex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface _DriveHolidayLists wrapper method implementations
+//
+
+inline _DriveHolidayPtr _DriveHolidayLists::Add ( BSTR * sKey ) {
+    struct _DriveHoliday * _result = 0;
+    HRESULT _hr = raw_Add(sKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveHolidayPtr(_result, false);
+}
+
+inline _DriveHolidayPtr _DriveHolidayLists::GetItem ( VARIANT * vntIndexKey ) {
+    struct _DriveHoliday * _result = 0;
+    HRESULT _hr = get_Item(vntIndexKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveHolidayPtr(_result, false);
+}
+
+inline long _DriveHolidayLists::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveHolidayLists::Remove ( VARIANT * vntIndexKey ) {
+    HRESULT _hr = raw_Remove(vntIndexKey);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IUnknownPtr _DriveHolidayLists::GetNewEnum ( ) {
+    struct IUnknown * _result = 0;
+    HRESULT _hr = get_NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface _DrivePassword wrapper method implementations
+//
+
+inline VARIANT_BOOL _DrivePassword::GetClickButton ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ClickButton(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DrivePassword::PutClickButton ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_ClickButton(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT _DrivePassword::SetPassword ( _bstr_t vNew ) {
+    HRESULT _hr = raw_SetPassword(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DrivePassword::GetPassword ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetPassword(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline enum e_CardPwrType _DrivePassword::GetPwr ( short vDoorNum ) {
+    enum e_CardPwrType _result;
+    HRESULT _hr = raw_GetPwr(vDoorNum, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DrivePassword::SetPwr ( short vDoorNum, enum e_CardPwrType iPwr ) {
+    HRESULT _hr = raw_SetPwr(vDoorNum, iPwr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DrivePassword::GetPasswordPwrStr ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetPasswordPwrStr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DrivePassword::ToString ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ToString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DrivePassword::toString_FC8800 ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_toString_FC8800(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DrivePassword::SetPasswordHex_FC8800 ( _bstr_t sHex ) {
+    HRESULT _hr = raw_SetPasswordHex_FC8800(sHex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DrivePassword::toString_FC8832 ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_toString_FC8832(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DrivePassword::SetPasswordHex_FC8832 ( _bstr_t sHex ) {
+    HRESULT _hr = raw_SetPasswordHex_FC8832(sHex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface _DrivePasswordLists wrapper method implementations
+//
+
+inline _DrivePasswordPtr _DrivePasswordLists::Add ( BSTR * sKey ) {
+    struct _DrivePassword * _result = 0;
+    HRESULT _hr = raw_Add(sKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DrivePasswordPtr(_result, false);
+}
+
+inline _DrivePasswordPtr _DrivePasswordLists::GetItem ( VARIANT * vntIndexKey ) {
+    struct _DrivePassword * _result = 0;
+    HRESULT _hr = get_Item(vntIndexKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DrivePasswordPtr(_result, false);
+}
+
+inline long _DrivePasswordLists::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DrivePasswordLists::Remove ( VARIANT * vntIndexKey ) {
+    HRESULT _hr = raw_Remove(vntIndexKey);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IUnknownPtr _DrivePasswordLists::GetNewEnum ( ) {
+    struct IUnknown * _result = 0;
+    HRESULT _hr = get_NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface _DriveInfo wrapper method implementations
+//
+
+inline long _DriveInfo::GetBeginTimeSec ( ) {
+    long _result = 0;
+    HRESULT _hr = get_BeginTimeSec(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutBeginTimeSec ( long _arg1 ) {
+    HRESULT _hr = put_BeginTimeSec(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveInfo::GetEndTimeSec ( ) {
+    long _result = 0;
+    HRESULT _hr = get_EndTimeSec(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutEndTimeSec ( long _arg1 ) {
+    HRESULT _hr = put_EndTimeSec(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE _DriveInfo::GetBeginTime ( ) {
+    DATE _result = 0;
+    HRESULT _hr = get_BeginTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutBeginTime ( DATE _arg1 ) {
+    HRESULT _hr = put_BeginTime(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveInfo::GetEquptAddr ( ) {
+    long _result = 0;
+    HRESULT _hr = get_EquptAddr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutEquptAddr ( long _arg1 ) {
+    HRESULT _hr = put_EquptAddr(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum e_EquptType _DriveInfo::GetEquptType ( ) {
+    enum e_EquptType _result;
+    HRESULT _hr = get_EquptType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutEquptType ( enum e_EquptType _arg1 ) {
+    HRESULT _hr = put_EquptType(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum e_ConnectType _DriveInfo::GetConnType ( ) {
+    enum e_ConnectType _result;
+    HRESULT _hr = get_ConnType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutConnType ( enum e_ConnectType _arg1 ) {
+    HRESULT _hr = put_ConnType(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveInfo::GetIP ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_IP(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveInfo::PutIP ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_IP(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveInfo::GetNetPort ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NetPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutNetPort ( long _arg1 ) {
+    HRESULT _hr = put_NetPort(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline short _DriveInfo::GetCommPort ( ) {
+    short _result = 0;
+    HRESULT _hr = get_CommPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutCommPort ( short _arg1 ) {
+    HRESULT _hr = put_CommPort(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveInfo::GetCommBaudrate ( ) {
+    long _result = 0;
+    HRESULT _hr = get_CommBaudrate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutCommBaudrate ( long _arg1 ) {
+    HRESULT _hr = put_CommBaudrate(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveInfo::GetSN ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_SN(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveInfo::PutSN ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_SN(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveInfo::GetPassword ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Password(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveInfo::PutPassword ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_Password(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveInfo::GetID ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutID ( long _arg1 ) {
+    HRESULT _hr = put_ID(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveInfo::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveInfo::PutName ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_Name(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveInfo::GetTimeOutMSEL ( ) {
+    long _result = 0;
+    HRESULT _hr = get_TimeOutMSEL(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutTimeOutMSEL ( long _arg1 ) {
+    HRESULT _hr = put_TimeOutMSEL(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveInfo::GetRestartCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_RestartCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutRestartCount ( long _arg1 ) {
+    HRESULT _hr = put_RestartCount(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveInfo::GetDesc ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Desc(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveInfo::PutDesc ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_Desc(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveInfo::GetErrDescription ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrDescription(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveInfo::PutErrDescription ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_ErrDescription(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveInfo::GetErrNumber ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ErrNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutErrNumber ( long _arg1 ) {
+    HRESULT _hr = put_ErrNumber(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveInfo::GetConnectionTimeout ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ConnectionTimeout(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutConnectionTimeout ( long _arg1 ) {
+    HRESULT _hr = put_ConnectionTimeout(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveInfo::GetConnectionTimeoutCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ConnectionTimeoutCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutConnectionTimeoutCount ( long _arg1 ) {
+    HRESULT _hr = put_ConnectionTimeoutCount(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveInfo::GetSNHex ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_SNHex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveInfo::PutSNHex ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_SNHex(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL _DriveInfo::GetSNIsHex ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_SNIsHex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveInfo::PutSNIsHex ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_SNIsHex(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface _DrivePortList wrapper method implementations
+//
+
+inline HRESULT _DrivePortList::SetEquptType ( enum e_EquptType lEquptType ) {
+    HRESULT _hr = raw_SetEquptType(lEquptType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum e_EquptType _DrivePortList::GetEquptType ( ) {
+    enum e_EquptType _result;
+    HRESULT _hr = raw_GetEquptType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long _DrivePortList::GetPortCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetPortCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DrivePortList::SetPortValue ( long iPort, long lValue ) {
+    HRESULT _hr = raw_SetPortValue(iPort, lValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long _DrivePortList::GetPortValue ( long iPort ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetPortValue(iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t _DrivePortList::ToString ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ToString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DrivePortList::ToString_PortValue1B ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ToString_PortValue1B(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DrivePortList::ToString_PortValue2B ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ToString_PortValue2B(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DrivePortList::ToString_PortValue4B ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ToString_PortValue4B(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface _DriveValueList wrapper method implementations
+//
+
+inline long _DriveValueList::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t _DriveValueList::GetItemKey ( long lItem ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetItemKey(lItem, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DriveValueList::AddValue ( _bstr_t sKey, long lValue, _bstr_t sValue, struct _DrivePortList * * oPortList, struct _DriveTimeGroup * * oTimeGroup ) {
+    HRESULT _hr = raw_AddValue(sKey, lValue, sValue, oPortList, oTimeGroup);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DriveValueList::GetValue_String ( _bstr_t sKey ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetValue_String(sKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long _DriveValueList::GetValue_Num ( _bstr_t sKey ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetValue_Num(sKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _DrivePortListPtr _DriveValueList::GetValue_PortList ( _bstr_t sKey ) {
+    struct _DrivePortList * _result = 0;
+    HRESULT _hr = raw_GetValue_PortList(sKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DrivePortListPtr(_result, false);
+}
+
+inline _DriveTimeGroupPtr _DriveValueList::GetValue_TimeGroup ( _bstr_t sKey ) {
+    struct _DriveTimeGroup * _result = 0;
+    HRESULT _hr = raw_GetValue_TimeGroup(sKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveTimeGroupPtr(_result, false);
+}
+
+//
+// interface _DriveTCPInfo wrapper method implementations
+//
+
+inline _bstr_t _DriveTCPInfo::GetMAC ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_MAC(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveTCPInfo::PutMAC ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_MAC(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveTCPInfo::GetIP ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_IP(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveTCPInfo::PutIP ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_IP(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveTCPInfo::GetIPMask ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_IPMask(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveTCPInfo::PutIPMask ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_IPMask(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveTCPInfo::GetIPGateway ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_IPGateway(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveTCPInfo::PutIPGateway ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_IPGateway(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveTCPInfo::GetDNS ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_DNS(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveTCPInfo::PutDNS ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_DNS(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveTCPInfo::GetDNSBuckup ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_DNSBuckup(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveTCPInfo::PutDNSBuckup ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_DNSBuckup(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum e_EquptTCPSettingMode _DriveTCPInfo::GetIPMode ( ) {
+    enum e_EquptTCPSettingMode _result;
+    HRESULT _hr = get_IPMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveTCPInfo::PutIPMode ( enum e_EquptTCPSettingMode _arg1 ) {
+    HRESULT _hr = put_IPMode(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveTCPInfo::GetTCPPort ( ) {
+    long _result = 0;
+    HRESULT _hr = get_TCPPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveTCPInfo::PutTCPPort ( long _arg1 ) {
+    HRESULT _hr = put_TCPPort(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveTCPInfo::GetUDPPort ( ) {
+    long _result = 0;
+    HRESULT _hr = get_UDPPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveTCPInfo::PutUDPPort ( long _arg1 ) {
+    HRESULT _hr = put_UDPPort(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveTCPInfo::GetTCPServerPort ( ) {
+    long _result = 0;
+    HRESULT _hr = get_TCPServerPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveTCPInfo::PutTCPServerPort ( long _arg1 ) {
+    HRESULT _hr = put_TCPServerPort(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveTCPInfo::GetTCPServerIP ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_TCPServerIP(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveTCPInfo::PutTCPServerIP ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_TCPServerIP(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveTCPInfo::GetTCPServerAddr ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_TCPServerAddr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveTCPInfo::PutTCPServerAddr ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_TCPServerAddr(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t _DriveTCPInfo::ToHexString ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_ToHexString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t _DriveTCPInfo::SetTCPParHexString ( _bstr_t sPar ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_SetTCPParHexString(sPar, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT _DriveTCPInfo::SetEquptType ( enum e_EquptType * lEquptType ) {
+    HRESULT _hr = raw_SetEquptType(lEquptType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL _DriveTCPInfo::GetAutoIP ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_AutoIP(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveTCPInfo::PutAutoIP ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_AutoIP(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface _DriveRecord wrapper method implementations
+//
+
+inline HRESULT _DriveRecord::SetNum ( long lNum ) {
+    HRESULT _hr = raw_SetNum(lNum);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long _DriveRecord::GetNum ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetNum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveRecord::SetCode ( enum e_RecordFileCode lCode ) {
+    HRESULT _hr = raw_SetCode(lCode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum e_RecordFileCode _DriveRecord::GetCode ( ) {
+    enum e_RecordFileCode _result;
+    HRESULT _hr = raw_GetCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum e_RecordType _DriveRecord::GetType ( ) {
+    enum e_RecordType _result;
+    HRESULT _hr = raw_GetType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline DATE _DriveRecord::GetDateTime ( ) {
+    DATE _result = 0;
+    HRESULT _hr = raw_GetDateTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double _DriveRecord::GetCard ( ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetCard(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t _DriveRecord::GetPassword ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetPassword(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long _DriveRecord::GetDoorPort ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetDoorPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t _DriveRecord::GetRecordStr ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetRecordStr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DriveRecord::SetRecordStr ( BSTR * sNew ) {
+    HRESULT _hr = raw_SetRecordStr(sNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveRecord::SetRecordFC8800Str ( enum e_RecordFileCode lCode, BSTR * sNew ) {
+    HRESULT _hr = raw_SetRecordFC8800Str(lCode, sNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveRecord::SetRecordFC9800ICStr ( enum e_RecordFileCode lCode, BSTR * sNew ) {
+    HRESULT _hr = raw_SetRecordFC9800ICStr(lCode, sNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface _DriveRecordLists wrapper method implementations
+//
+
+inline HRESULT _DriveRecordLists::SetCode ( enum e_RecordFileCode lCode ) {
+    HRESULT _hr = raw_SetCode(lCode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum e_RecordFileCode _DriveRecordLists::GetCode ( ) {
+    enum e_RecordFileCode _result;
+    HRESULT _hr = raw_GetCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _DriveRecordPtr _DriveRecordLists::Add ( BSTR * sKey ) {
+    struct _DriveRecord * _result = 0;
+    HRESULT _hr = raw_Add(sKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveRecordPtr(_result, false);
+}
+
+inline _variant_t _DriveRecordLists::SetRecordCount ( long lCount ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_SetRecordCount(lCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _DriveRecordPtr _DriveRecordLists::GetItem ( long vntIndexKey ) {
+    struct _DriveRecord * _result = 0;
+    HRESULT _hr = get_Item(vntIndexKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveRecordPtr(_result, false);
+}
+
+inline void _DriveRecordLists::PutRefItem ( long vntIndexKey, struct _DriveRecord * * _arg2 ) {
+    HRESULT _hr = putref_Item(vntIndexKey, _arg2);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveRecordLists::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveRecordLists::Remove ( long vntIndexKey, VARIANT_BOOL * bResList ) {
+    HRESULT _hr = raw_Remove(vntIndexKey, bResList);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveRecordLists::RefreshList ( ) {
+    HRESULT _hr = raw_RefreshList();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveRecordLists::Unload ( ) {
+    HRESULT _hr = raw_Unload();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface _DriveCard wrapper method implementations
+//
+
+inline VARIANT_BOOL _DriveCard::GetClickButton ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ClickButton(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveCard::PutClickButton ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_ClickButton(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline unsigned char _DriveCard::GetMuchReader ( ) {
+    unsigned char _result = 0;
+    HRESULT _hr = get_MuchReader(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveCard::PutMuchReader ( unsigned char _arg1 ) {
+    HRESULT _hr = put_MuchReader(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT _DriveCard::SetCardData ( double vNew ) {
+    HRESULT _hr = raw_SetCardData(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline double _DriveCard::GetCardData ( ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetCardData(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetCardNum ( _bstr_t vNew ) {
+    HRESULT _hr = raw_SetCardNum(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DriveCard::GetCardNum ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetCardNum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DriveCard::SetPassword ( _bstr_t vNew ) {
+    HRESULT _hr = raw_SetPassword(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DriveCard::GetPassword ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetPassword(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DriveCard::SetUsePassword ( VARIANT_BOOL vNew ) {
+    HRESULT _hr = raw_SetUsePassword(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL _DriveCard::GetUsePassword ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetUsePassword(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetName ( _bstr_t vNew ) {
+    HRESULT _hr = raw_SetName(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DriveCard::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DriveCard::SetUseHoliday ( VARIANT_BOOL vNew ) {
+    HRESULT _hr = raw_SetUseHoliday(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL _DriveCard::GetUseHoliday ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetUseHoliday(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetDoorInOutState ( short vDoorNum, enum e_DoorInOutState vNew ) {
+    HRESULT _hr = raw_SetDoorInOutState(vDoorNum, vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum e_DoorInOutState _DriveCard::GetDoorInOutState ( short vDoorNum ) {
+    enum e_DoorInOutState _result;
+    HRESULT _hr = raw_GetDoorInOutState(vDoorNum, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum e_CardPwrType _DriveCard::GetDoorPwr ( short vDoorNum ) {
+    enum e_CardPwrType _result;
+    HRESULT _hr = raw_GetDoorPwr(vDoorNum, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetDoorPwr ( short vDoorNum, enum e_CardPwrType iPwr ) {
+    HRESULT _hr = raw_SetDoorPwr(vDoorNum, iPwr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DriveCard::GetDoorPwrStr ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetDoorPwrStr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DriveCard::SetDoorPwrStr ( _bstr_t sPwrStr ) {
+    HRESULT _hr = raw_SetDoorPwrStr(sPwrStr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveCard::SetTimeLimit ( DATE vNew ) {
+    HRESULT _hr = raw_SetTimeLimit(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline DATE _DriveCard::GetTimeLimit ( ) {
+    DATE _result = 0;
+    HRESULT _hr = raw_GetTimeLimit(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short _DriveCard::GetTimeGroup ( short iPort ) {
+    short _result = 0;
+    HRESULT _hr = raw_GetTimeGroup(iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetTimeGroup ( short iPort, short vNew ) {
+    HRESULT _hr = raw_SetTimeGroup(iPort, vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long _DriveCard::GetReadCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetReadCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetReadCount ( long vNew ) {
+    HRESULT _hr = raw_SetReadCount(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL _DriveCard::GetFirstCard ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetFirstCard(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetFirstCard ( VARIANT_BOOL vNew ) {
+    HRESULT _hr = raw_SetFirstCard(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL _DriveCard::GetLongOpen ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetLongOpen(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetLongOpen ( VARIANT_BOOL vNew ) {
+    HRESULT _hr = raw_SetLongOpen(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL _DriveCard::GetPatrol ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetPatrol(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetPatrol ( VARIANT_BOOL vNew ) {
+    HRESULT _hr = raw_SetPatrol(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL _DriveCard::GetTheftSeting ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetTheftSeting(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetTheftSeting ( VARIANT_BOOL vNew ) {
+    HRESULT _hr = raw_SetTheftSeting(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum e_CardState _DriveCard::GetState ( ) {
+    enum e_CardState _result;
+    HRESULT _hr = raw_GetState(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetState ( enum e_CardState lState ) {
+    HRESULT _hr = raw_SetState(lState);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DriveCard::toString_Len17 ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_toString_Len17(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DriveCard::ToString ( enum e_EquptType lEquptType ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ToString(lEquptType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL _DriveCard::GetHolidayPwr ( short vHolidayNum ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetHolidayPwr(vHolidayNum, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetHolidayPwr ( short vHolidayNum, VARIANT_BOOL bUse ) {
+    HRESULT _hr = raw_SetHolidayPwr(vHolidayNum, bUse);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DriveCard::GetHolidayPwrStr ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetHolidayPwrStr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DriveCard::SetHolidayPwrStr ( BSTR * sPwrStr ) {
+    HRESULT _hr = raw_SetHolidayPwrStr(sPwrStr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DriveCard::toString_FC8800 ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_toString_FC8800(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DriveCard::SetCardHex_FC8800 ( BSTR * sHex ) {
+    HRESULT _hr = raw_SetCardHex_FC8800(sHex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DriveCard::toString_FC8832 ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_toString_FC8832(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DriveCard::SetCardHex_FC8832 ( BSTR * sHex ) {
+    HRESULT _hr = raw_SetCardHex_FC8832(sHex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL _DriveCard::GetManageCard ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetManageCard(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCard::SetManageCard ( VARIANT_BOOL vNew ) {
+    HRESULT _hr = raw_SetManageCard(vNew);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface _DriveCardLists wrapper method implementations
+//
+
+inline HRESULT _DriveCardLists::SetEquptCardType ( long lType ) {
+    HRESULT _hr = raw_SetEquptCardType(lType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long _DriveCardLists::GetEquptCardType ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetEquptCardType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _DriveCardPtr _DriveCardLists::Add ( BSTR * sKey ) {
+    struct _DriveCard * _result = 0;
+    HRESULT _hr = raw_Add(sKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveCardPtr(_result, false);
+}
+
+inline _variant_t _DriveCardLists::SetCardCount ( long lCount ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_SetCardCount(lCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _DriveCardPtr _DriveCardLists::GetItem ( long vntIndexKey ) {
+    struct _DriveCard * _result = 0;
+    HRESULT _hr = get_Item(vntIndexKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveCardPtr(_result, false);
+}
+
+inline void _DriveCardLists::PutRefItem ( long vntIndexKey, struct _DriveCard * * _arg2 ) {
+    HRESULT _hr = putref_Item(vntIndexKey, _arg2);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveCardLists::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveCardLists::Remove ( long vntIndexKey, VARIANT_BOOL * bResList ) {
+    HRESULT _hr = raw_Remove(vntIndexKey, bResList);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveCardLists::RefreshList ( ) {
+    HRESULT _hr = raw_RefreshList();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveCardLists::Unload ( ) {
+    HRESULT _hr = raw_Unload();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface _DriveCommandEvent wrapper method implementations
+//
+
+inline _DriveInfoPtr _DriveCommandEvent::GetEventConnInfo ( ) {
+    struct _DriveInfo * _result = 0;
+    HRESULT _hr = get_EventConnInfo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveInfoPtr(_result, false);
+}
+
+inline void _DriveCommandEvent::PutRefEventConnInfo ( struct _DriveInfo * EventConnInfo ) {
+    HRESULT _hr = putref_EventConnInfo(EventConnInfo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IDispatchPtr _DriveCommandEvent::GetEventCols ( ) {
+    IDispatch * _result = 0;
+    HRESULT _hr = get_EventCols(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline void _DriveCommandEvent::PutRefEventCols ( IDispatch * EventCols ) {
+    HRESULT _hr = putref_EventCols(EventCols);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveCommandEvent::GetEventType ( ) {
+    long _result = 0;
+    HRESULT _hr = get_EventType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveCommandEvent::PutEventType ( long EventType ) {
+    HRESULT _hr = put_EventType(EventType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveCommandEvent::GetEventiFunc ( ) {
+    long _result = 0;
+    HRESULT _hr = get_EventiFunc(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveCommandEvent::PutEventiFunc ( long EventiFunc ) {
+    HRESULT _hr = put_EventiFunc(EventiFunc);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveCommandEvent::GetEventiWatchType ( ) {
+    long _result = 0;
+    HRESULT _hr = get_EventiWatchType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveCommandEvent::PutEventiWatchType ( long EventiWatchType ) {
+    HRESULT _hr = put_EventiWatchType(EventiWatchType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveCommandEvent::GetEventsValue ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_EventsValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveCommandEvent::PutEventsValue ( _bstr_t EventsValue ) {
+    HRESULT _hr = put_EventsValue(EventsValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveCommandEvent::GetEventiStep ( ) {
+    long _result = 0;
+    HRESULT _hr = get_EventiStep(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveCommandEvent::PutEventiStep ( long EventiStep ) {
+    HRESULT _hr = put_EventiStep(EventiStep);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveCommandEvent::GetEventiStepCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_EventiStepCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveCommandEvent::PutEventiStepCount ( long EventiStepCount ) {
+    HRESULT _hr = put_EventiStepCount(EventiStepCount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveCommandEvent::GetEventlRecordCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_EventlRecordCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveCommandEvent::PutEventlRecordCount ( long EventlRecordCount ) {
+    HRESULT _hr = put_EventlRecordCount(EventlRecordCount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveCommandEvent::GetEventlDataLen ( ) {
+    long _result = 0;
+    HRESULT _hr = get_EventlDataLen(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveCommandEvent::PutEventlDataLen ( long EventlDataLen ) {
+    HRESULT _hr = put_EventlDataLen(EventlDataLen);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t _DriveCommandEvent::GetEventsHex ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_EventsHex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void _DriveCommandEvent::PutEventsHex ( _bstr_t EventsHex ) {
+    HRESULT _hr = put_EventsHex(EventsHex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _DriveRecordListsPtr _DriveCommandEvent::GetRecords ( ) {
+    struct _DriveRecordLists * _result = 0;
+    HRESULT _hr = raw_GetRecords(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveRecordListsPtr(_result, false);
+}
+
+inline _DriveCardListsPtr _DriveCommandEvent::GetCards ( ) {
+    struct _DriveCardLists * _result = 0;
+    HRESULT _hr = raw_GetCards(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveCardListsPtr(_result, false);
+}
+
+inline _DriveHolidayListsPtr _DriveCommandEvent::GetHolidays ( ) {
+    struct _DriveHolidayLists * _result = 0;
+    HRESULT _hr = raw_GetHolidays(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveHolidayListsPtr(_result, false);
+}
+
+inline _DriveTimeGroupListsPtr _DriveCommandEvent::GetTimeGroups ( ) {
+    struct _DriveTimeGroupLists * _result = 0;
+    HRESULT _hr = raw_GetTimeGroups(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveTimeGroupListsPtr(_result, false);
+}
+
+//
+// interface _DriveMain wrapper method implementations
+//
+
+inline long _DriveMain::GetCheckMaxChunnel ( ) {
+    long _result = 0;
+    HRESULT _hr = get_CheckMaxChunnel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void _DriveMain::PutCheckMaxChunnel ( long _arg1 ) {
+    HRESULT _hr = put_CheckMaxChunnel(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long _DriveMain::GetAlignmentCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetAlignmentCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveMain::SetShowEvent ( VARIANT_BOOL bShowEvent ) {
+    HRESULT _hr = raw_SetShowEvent(bShowEvent);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _DriveCommandEventPtr _DriveMain::GetEvent ( ) {
+    struct _DriveCommandEvent * _result = 0;
+    HRESULT _hr = raw_GetEvent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveCommandEventPtr(_result, false);
+}
+
+inline _DriveCommandEventPtr _DriveMain::GetEventSending ( ) {
+    struct _DriveCommandEvent * _result = 0;
+    HRESULT _hr = raw_GetEventSending(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveCommandEventPtr(_result, false);
+}
+
+inline _DriveInfoPtr _DriveMain::GetTmpConnInfo ( ) {
+    struct _DriveInfo * _result = 0;
+    HRESULT _hr = raw_GetTmpConnInfo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveInfoPtr(_result, false);
+}
+
+inline _DriveRecordListsPtr _DriveMain::GetTmpRecords ( ) {
+    struct _DriveRecordLists * _result = 0;
+    HRESULT _hr = raw_GetTmpRecords(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveRecordListsPtr(_result, false);
+}
+
+inline _DriveCardListsPtr _DriveMain::GetTmpCards ( ) {
+    struct _DriveCardLists * _result = 0;
+    HRESULT _hr = raw_GetTmpCards(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveCardListsPtr(_result, false);
+}
+
+inline _DriveHolidayListsPtr _DriveMain::GetTmpHolidays ( ) {
+    struct _DriveHolidayLists * _result = 0;
+    HRESULT _hr = raw_GetTmpHolidays(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveHolidayListsPtr(_result, false);
+}
+
+inline _DriveTimeGroupListsPtr _DriveMain::GetTmpTimeGroups ( ) {
+    struct _DriveTimeGroupLists * _result = 0;
+    HRESULT _hr = raw_GetTmpTimeGroups(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveTimeGroupListsPtr(_result, false);
+}
+
+inline _DrivePasswordListsPtr _DriveMain::GetTmpPasswords ( ) {
+    struct _DrivePasswordLists * _result = 0;
+    HRESULT _hr = raw_GetTmpPasswords(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DrivePasswordListsPtr(_result, false);
+}
+
+inline HRESULT _DriveMain::RaiseWatchEvents ( struct _DriveInfo * * objConnInfo, short iWatchType, _bstr_t sValue ) {
+    HRESULT _hr = raw_RaiseWatchEvents(objConnInfo, iWatchType, sValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseFrameAchieve ( struct _DriveInfo * * objConnInfo, short iFunc, _bstr_t sValue ) {
+    HRESULT _hr = raw_RaiseFrameAchieve(objConnInfo, iFunc, sValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseFrameAchieve_Obj ( struct _DriveInfo * * objConnInfo, short iFunc, _bstr_t sValue, IDispatch * * oCols ) {
+    HRESULT _hr = raw_RaiseFrameAchieve_Obj(objConnInfo, iFunc, sValue, oCols);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseSendProcess ( struct _DriveInfo * * objConnInfo, long iFunc, long iStep, long iStepCount, _bstr_t sValue ) {
+    HRESULT _hr = raw_RaiseSendProcess(objConnInfo, iFunc, iStep, iStepCount, sValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseContainOverflow ( struct _DriveInfo * * objConnInfo, short iFunc, _bstr_t sValue ) {
+    HRESULT _hr = raw_RaiseContainOverflow(objConnInfo, iFunc, sValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseReadRecordAchieve ( struct _DriveInfo * * objConnInfo, long lRecordCount, struct _DriveRecordLists * * objRecords ) {
+    HRESULT _hr = raw_RaiseReadRecordAchieve(objConnInfo, lRecordCount, objRecords);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseReadCardAchieve ( struct _DriveInfo * * objConnInfo, struct _DriveCardLists * * objCards ) {
+    HRESULT _hr = raw_RaiseReadCardAchieve(objConnInfo, objCards);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseReadHolidayAchieve ( struct _DriveInfo * * objConnInfo, struct _DriveHolidayLists * * objCol ) {
+    HRESULT _hr = raw_RaiseReadHolidayAchieve(objConnInfo, objCol);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseReadTimeGroupAchieve ( struct _DriveInfo * * objConnInfo, struct _DriveTimeGroupLists * * objCol ) {
+    HRESULT _hr = raw_RaiseReadTimeGroupAchieve(objConnInfo, objCol);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaisePasswordErr ( struct _DriveInfo * * objConnInfo, short iFunc, _bstr_t sValue ) {
+    HRESULT _hr = raw_RaisePasswordErr(objConnInfo, iFunc, sValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseReadPasswordAchieve ( struct _DriveInfo * * objConnInfo, struct _DrivePasswordLists * * objCol ) {
+    HRESULT _hr = raw_RaiseReadPasswordAchieve(objConnInfo, objCol);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseOpenPortErr ( struct _DriveInfo * * objConnInfo, short iFunc, struct _DriveCardLists * * objCards, _bstr_t sValue ) {
+    HRESULT _hr = raw_RaiseOpenPortErr(objConnInfo, iFunc, objCards, sValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseCommandTimeout ( struct _DriveInfo * * objConnInfo, short iFunc, short iStep, struct _DriveCardLists * * objCards, _bstr_t sValue ) {
+    HRESULT _hr = raw_RaiseCommandTimeout(objConnInfo, iFunc, iStep, objCards, sValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseSendEvent ( struct _DriveInfo * * objConnInfo, long lDataLen, _bstr_t sHex ) {
+    HRESULT _hr = raw_RaiseSendEvent(objConnInfo, lDataLen, sHex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::RaiseDataArrivalEvent ( struct _DriveInfo * * objConnInfo, long lDataLen, _bstr_t sHex ) {
+    HRESULT _hr = raw_RaiseDataArrivalEvent(objConnInfo, lDataLen, sHex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::Unload ( ) {
+    HRESULT _hr = raw_Unload();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t _DriveMain::GetVer ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetVer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline enum StateConstants _DriveMain::GetWinSockState ( long lIndex ) {
+    enum StateConstants _result;
+    HRESULT _hr = raw_GetWinSockState(lIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveMain::StopConnAll ( ) {
+    HRESULT _hr = raw_StopConnAll();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::StopConn ( struct _DriveInfo * * objConnInfo ) {
+    HRESULT _hr = raw_StopConn(objConnInfo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteSN ( struct _DriveInfo * * objConnInfo, _bstr_t sSN ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteSN(objConnInfo, sSN, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadSN ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadSN(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteConnPassword ( struct _DriveInfo * * objConnInfo, _bstr_t sPassword ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteConnPassword(objConnInfo, sPassword, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadConnPassword ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadConnPassword(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::DeleteConnPassword ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_DeleteConnPassword(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetTCPPar ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL mUDPBroadcast ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetTCPPar(objConnInfo, mUDPBroadcast, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteTCPPar ( struct _DriveInfo * * objConnInfo, struct _DriveTCPInfo * * oTCPPar, VARIANT_BOOL mUDPBroadcast ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteTCPPar(objConnInfo, oTCPPar, mUDPBroadcast, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadEquptDeadline ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadEquptDeadline(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteEquptDeadline ( struct _DriveInfo * * objConnInfo, long lDeadline ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteEquptDeadline(objConnInfo, lDeadline, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadEquptVer ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadEquptVer(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadEquptStateInfo ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadEquptStateInfo(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadSysPar ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadSysPar(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteRecordMode ( struct _DriveInfo * * objConnInfo, short lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteRecordMode(objConnInfo, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadRecordMode ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadRecordMode(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteKeyboard ( struct _DriveInfo * * objConnInfo, struct _DrivePortList * * oPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteKeyboard(objConnInfo, oPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadKeyboard ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadKeyboard(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::IniKeyboardPassword ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IniKeyboardPassword(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadKeyboardPassword ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadKeyboardPassword(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteLockInteraction ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bDoor1, VARIANT_BOOL bDoor2, VARIANT_BOOL bDoor3, VARIANT_BOOL bDoor4 ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteLockInteraction(objConnInfo, bDoor1, bDoor2, bDoor3, bDoor4, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadLockInteraction ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadLockInteraction(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteFireAlarm ( struct _DriveInfo * * objConnInfo, short lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteFireAlarm(objConnInfo, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadFireAlarm ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadFireAlarm(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteOpenAlarm ( struct _DriveInfo * * objConnInfo, short lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteOpenAlarm(objConnInfo, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadOpenAlarm ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadOpenAlarm(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetReaderIntervalTime ( struct _DriveInfo * * objConnInfo, long lInterval ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetReaderIntervalTime(objConnInfo, lInterval, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetReaderIntervalTime ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetReaderIntervalTime(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetReaderIntervalTime_Elevator ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bUse, long lInterval, short lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetReaderIntervalTime_Elevator(objConnInfo, bUse, lInterval, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetSpeakOpen ( struct _DriveInfo * * objConnInfo, _bstr_t sOpen ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetSpeakOpen(objConnInfo, sOpen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadSpeakOpen ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadSpeakOpen(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetReaderCheckMode ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bOpen ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetReaderCheckMode(objConnInfo, bOpen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadReaderCheckMode ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadReaderCheckMode(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetEquptBuzzerMode ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bOpen ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetEquptBuzzerMode(objConnInfo, bOpen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadEquptBuzzerMode ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadEquptBuzzerMode(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteAssistantAlertPar ( struct _DriveInfo * * objConnInfo, unsigned char lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteAssistantAlertPar(objConnInfo, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadAssistantAlertPar ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadAssistantAlertPar(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteCardMaxPar ( struct _DriveInfo * * objConnInfo, long lCardMax, struct _DrivePortList * * oDoorCardMax, struct _DrivePortList * * oDoorInCardCount ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteCardMaxPar(objConnInfo, lCardMax, oDoorCardMax, oDoorInCardCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadCardMaxPar ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadCardMaxPar(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteTheftAlarmPar ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bOpen, unsigned char lInTime, unsigned char lOutTime, long lBeginPassword, long lClosePassword, long lAlarmTime ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteTheftAlarmPar(objConnInfo, bOpen, lInTime, lOutTime, lBeginPassword, lClosePassword, lAlarmTime, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadTheftAlarmPar ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadTheftAlarmPar(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteCheckInOutPar ( struct _DriveInfo * * objConnInfo, unsigned char lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteCheckInOutPar(objConnInfo, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadCheckInOutPar ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadCheckInOutPar(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteCardPeriodSpeak ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL lOpen ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteCardPeriodSpeak(objConnInfo, lOpen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadCardPeriodSpeak ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadCardPeriodSpeak(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteReadCardSpeak ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bOpen, unsigned char lMsgIndex, DATE dBeginDate, DATE dEndDate ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteReadCardSpeak(objConnInfo, bOpen, lMsgIndex, dBeginDate, dEndDate, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadReadCardSpeak ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadReadCardSpeak(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::BeginWatch ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_BeginWatch(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::CloseWatch ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CloseWatch(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadWatchState ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadWatchState(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SendFireAlarm ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SendFireAlarm(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::CloseFireAlarm ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CloseFireAlarm(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadFireAlarmState ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadFireAlarmState(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SendAssistantAlarm ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SendAssistantAlarm(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::CloseAssistantAlarm ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CloseAssistantAlarm(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadAssistantAlarm ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadAssistantAlarm(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::CloseAlarm ( struct _DriveInfo * * objConnInfo, short iPort, long lAlarmPar ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CloseAlarm(objConnInfo, iPort, lAlarmPar, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::CloseAlarm_Elevator ( struct _DriveInfo * * objConnInfo, long lAlarmPar ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CloseAlarm_Elevator(objConnInfo, lAlarmPar, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetPortState ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetPortState(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetTheftAlarmState ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetTheftAlarmState(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::IniEqupt ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IniEqupt(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SearchEquptOnNetNum ( struct _DriveInfo * * objConnInfo, long lNetNum ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SearchEquptOnNetNum(objConnInfo, lNetNum, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetEquptNetNum ( struct _DriveInfo * * objConnInfo, long lNetNum, VARIANT_BOOL mUDPBroadcast ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetEquptNetNum(objConnInfo, lNetNum, mUDPBroadcast, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadTime ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadTime(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteTime ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteTime(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadTimePar ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadTimePar(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteTimePar ( struct _DriveInfo * * objConnInfo, short lParMode, short lSecond ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteTimePar(objConnInfo, lParMode, lSecond, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetReaderPar ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetReaderPar(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteReaderPar ( struct _DriveInfo * * objConnInfo, struct _DrivePortList * * oPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteReaderPar(objConnInfo, oPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetLockPar ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetLockPar(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteLockPar ( struct _DriveInfo * * objConnInfo, struct _DrivePortList * * oPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteLockPar(objConnInfo, oPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::OpenDoor ( struct _DriveInfo * * objConnInfo, struct _DrivePortList * * oPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_OpenDoor(objConnInfo, oPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::OpenDoor_Check ( struct _DriveInfo * * objConnInfo, unsigned char lNum, struct _DrivePortList * * oPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_OpenDoor_Check(objConnInfo, lNum, oPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::CloseDoor ( struct _DriveInfo * * objConnInfo, struct _DrivePortList * * oPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CloseDoor(objConnInfo, oPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::OpenDoor_always ( struct _DriveInfo * * objConnInfo, struct _DrivePortList * * oPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_OpenDoor_always(objConnInfo, oPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::LockPort ( struct _DriveInfo * * objConnInfo, struct _DrivePortList * * oPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_LockPort(objConnInfo, oPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::UnLockPort ( struct _DriveInfo * * objConnInfo, struct _DrivePortList * * oPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_UnLockPort(objConnInfo, oPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetPortCheckMode ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetPortCheckMode(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WritePortCheckMode ( struct _DriveInfo * * objConnInfo, short iPort, struct _DriveTimeGroup * * oTime ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WritePortCheckMode(objConnInfo, iPort, oTime, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetPortCheckMode_Elevator ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetPortCheckMode_Elevator(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WritePortCheckMode_Elevator ( struct _DriveInfo * * objConnInfo, struct _DriveTimeGroup * * oTime ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WritePortCheckMode_Elevator(objConnInfo, oTime, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetPortWorkMode ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetPortWorkMode(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WritePortWorkMode ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bUse, short lOpenMode, short lLongOpenMode, struct _DriveTimeGroup * * oTimeG ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WritePortWorkMode(objConnInfo, iPort, bUse, lOpenMode, lLongOpenMode, oTimeG, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadLockReadTime ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadLockReadTime(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteLockReadTime ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bOpen, struct _DriveTimeGroup * * oTime ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteLockReadTime(objConnInfo, iPort, bOpen, oTime, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadLockOpenTime ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadLockOpenTime(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteLockOpenTime ( struct _DriveInfo * * objConnInfo, short iPort, long lLockOpenTime ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteLockOpenTime(objConnInfo, iPort, lLockOpenTime, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadLockOpenTime_Elevator ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadLockOpenTime_Elevator(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteLockOpenTime_Elevator ( struct _DriveInfo * * objConnInfo, struct _DrivePortList * * oPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteLockOpenTime_Elevator(objConnInfo, oPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetReaderInterval ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetReaderInterval(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteReaderInterval ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bUse, short lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteReaderInterval(objConnInfo, iPort, bUse, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetReadErrCardAlarm ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bUse ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetReadErrCardAlarm(objConnInfo, iPort, bUse, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetReadErrCardAlarm ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetReadErrCardAlarm(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetReadErrCardAlarm_Elevator ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bUse ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetReadErrCardAlarm_Elevator(objConnInfo, bUse, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetReadErrCardAlarm_Elevator ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetReadErrCardAlarm_Elevator(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetAlarmPassword ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bUse, _bstr_t sPasswrod, short lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetAlarmPassword(objConnInfo, iPort, bUse, sPasswrod, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetAlarmPassword ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetAlarmPassword(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetAlarmPassword_Elevator ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bUse, _bstr_t sPasswrod, short lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetAlarmPassword_Elevator(objConnInfo, bUse, sPasswrod, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetAlarmPassword_Elevator ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetAlarmPassword_Elevator(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetCheckCardInOutState ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetCheckCardInOutState(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetCheckCardInOutState ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bUse ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetCheckCardInOutState(objConnInfo, iPort, bUse, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetLongOpenAlarm ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetLongOpenAlarm(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetLongOpenAlarm ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bOpen, long lLongOpenTime, VARIANT_BOOL bAlarm ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLongOpenAlarm(objConnInfo, iPort, bOpen, lLongOpenTime, bAlarm, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetButtonPar ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetButtonPar(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetButtonPar ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bUse, VARIANT_BOOL bUseLongOpen, struct _DriveTimeGroup * * oTimeG ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetButtonPar(objConnInfo, iPort, bUse, bUseLongOpen, oTimeG, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetDoorStateAlarm ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetDoorStateAlarm(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetDoorStateAlarm ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bUse, struct _DriveTimeGroup * * oTimeG ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetDoorStateAlarm(objConnInfo, iPort, bUse, oTimeG, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetProhibitCheck ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetProhibitCheck(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetProhibitCheck ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bOpen, VARIANT_BOOL bSaveCard, long lTimeGroupIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetProhibitCheck(objConnInfo, iPort, bOpen, bSaveCard, lTimeGroupIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetMuchCardPar ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetMuchCardPar(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetMuchCardPar ( struct _DriveInfo * * objConnInfo, short iPort, unsigned char lInCardMax, unsigned char lOutCardMax ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetMuchCardPar(objConnInfo, iPort, lInCardMax, lOutCardMax, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetMuchCardGroup ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetMuchCardGroup(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetMuchCardGroup ( struct _DriveInfo * * objConnInfo, short iPort, unsigned char lGroupIndex, long lGroupMode, struct _DriveCardLists * * oCards ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetMuchCardGroup(objConnInfo, iPort, lGroupIndex, lGroupMode, oCards, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetHolidayInfo ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetHolidayInfo(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::HolidayInfoHexToNum ( _bstr_t sHex, double * lMaxCount, double * lReocrdCount ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_HolidayInfoHexToNum(sHex, lMaxCount, lReocrdCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ClearHoliday ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ClearHoliday(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetHoliday ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetHoliday(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteHoliday ( struct _DriveInfo * * objConnInfo, struct _DriveHolidayLists * * objHols ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteHoliday(objConnInfo, objHols, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::DeleteHoliday ( struct _DriveInfo * * objConnInfo, struct _DriveHolidayLists * * objHols ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_DeleteHoliday(objConnInfo, objHols, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetPasswordInfo ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetPasswordInfo(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::PasswordInfoHexToNum ( _bstr_t sHex, double * lMaxCount, double * lReocrdCount ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_PasswordInfoHexToNum(sHex, lMaxCount, lReocrdCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ClearPassword ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ClearPassword(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetPassword ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetPassword(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WritePassword ( struct _DriveInfo * * objConnInfo, struct _DrivePasswordLists * * objPw ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WritePassword(objConnInfo, objPw, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::DeletePassword ( struct _DriveInfo * * objConnInfo, struct _DrivePasswordLists * * objPw ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_DeletePassword(objConnInfo, objPw, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::TestPassword ( struct _DriveInfo * * objConnInfo, short iPort, _bstr_t sPassword ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_TestPassword(objConnInfo, iPort, sPassword, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::TestPassword_Elevator ( struct _DriveInfo * * objConnInfo, short iPort, _bstr_t sPassword, unsigned char lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_TestPassword_Elevator(objConnInfo, iPort, sPassword, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ClearTimeGroup ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ClearTimeGroup(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetTimeGroup ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetTimeGroup(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteTimeGroup ( struct _DriveInfo * * objConnInfo, struct _DriveTimeGroupLists * * objTs ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteTimeGroup(objConnInfo, objTs, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetCardCount ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetCardCount(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::CardCountInfoHexToNum ( _bstr_t sHex, double * lMaxCount, double * lCardCount, double * lSequenceCardMaxCount, double * lSequenceCardCount ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CardCountInfoHexToNum(sHex, lMaxCount, lCardCount, lSequenceCardMaxCount, lSequenceCardCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ClearCard ( struct _DriveInfo * * objConnInfo, long lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ClearCard(objConnInfo, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetCards ( struct _DriveInfo * * objConnInfo, long lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetCards(objConnInfo, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetCardInfo ( struct _DriveInfo * * objConnInfo, double dCard ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetCardInfo(objConnInfo, dCard, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteUserCard ( struct _DriveInfo * * objConnInfo, struct _DriveCardLists * * objCards ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteUserCard(objConnInfo, objCards, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::DeleteUserCard ( struct _DriveInfo * * objConnInfo, struct _DriveCardLists * * objCards ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_DeleteUserCard(objConnInfo, objCards, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::TestCard ( struct _DriveInfo * * objConnInfo, short iPort, double dCard, _bstr_t sPassword, long lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_TestCard(objConnInfo, iPort, dCard, sPassword, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteSequenceCard ( struct _DriveInfo * * objConnInfo, struct _DriveCardLists * * objCards, VARIANT_BOOL bSort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteSequenceCard(objConnInfo, objCards, bSort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetRecordInfo ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetRecordInfo(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::RecordInfoHexToNum ( long lRecordCode, _bstr_t sHex, long * lRecordMaxCount, double * lNewRecordCount, double * lRecordEndAddr, double * lUploadAddr, long * lReadAll ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_RecordInfoHexToNum(lRecordCode, sHex, lRecordMaxCount, lNewRecordCount, lRecordEndAddr, lUploadAddr, lReadAll, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ClearAllRecord ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ClearAllRecord(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ClearRecordOnly ( struct _DriveInfo * * objConnInfo, enum e_RecordFileCode lRecordType ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ClearRecordOnly(objConnInfo, lRecordType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::UpdateReocrdFlag ( struct _DriveInfo * * objConnInfo, enum e_RecordFileCode lRecordType, long lRecordFlay, VARIANT_BOOL bLoop ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_UpdateReocrdFlag(objConnInfo, lRecordType, lRecordFlay, bLoop, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::UpdateReocrdEndFlag ( struct _DriveInfo * * objConnInfo, enum e_RecordFileCode lRecordType, long lRecordEndFlay ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_UpdateReocrdEndFlag(objConnInfo, lRecordType, lRecordEndFlay, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::RepairRecord ( struct _DriveInfo * * objConnInfo, enum e_RecordFileCode lRecordType ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_RepairRecord(objConnInfo, lRecordType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetRecordOnFlay ( struct _DriveInfo * * objConnInfo, enum e_RecordFileCode lRecordType, long lBeginNum, long lReadCount ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetRecordOnFlay(objConnInfo, lRecordType, lBeginNum, lReadCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadRecord ( struct _DriveInfo * * objConnInfo, enum e_RecordFileCode lRecordType, long lReadCount ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadRecord(objConnInfo, lRecordType, lReadCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t _DriveMain::AscToStr ( _bstr_t strAsc ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_AscToStr(strAsc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DriveMain::StrToAsc ( _bstr_t strChr ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_StrToAsc(strChr, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL _DriveMain::CallSubByName ( _bstr_t sSubName, long lEquptType, struct _DriveInfo * * objConnInfo, SAFEARRAY * * oParList ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CallSubByName(sSubName, lEquptType, objConnInfo, oParList, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _DriveValueListPtr _DriveMain::AchieveValuetoList ( struct _DriveInfo * * objConnInfo, short iFunc, _bstr_t sValue ) {
+    struct _DriveValueList * _result = 0;
+    HRESULT _hr = raw_AchieveValuetoList(objConnInfo, iFunc, sValue, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _DriveValueListPtr(_result, false);
+}
+
+inline VARIANT_BOOL _DriveMain::WriteTimeDefine ( struct _DriveInfo * * objConnInfo, DATE oDate ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteTimeDefine(objConnInfo, oDate, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveMain::SetDrivePause ( ) {
+    HRESULT _hr = raw_SetDrivePause();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::SetDriveRun ( ) {
+    HRESULT _hr = raw_SetDriveRun();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long _DriveMain::GetChunelAlignmentCount ( struct _DriveInfo * * objConnInfo ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetChunelAlignmentCount(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::BeginWatch_Bro ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bUDP ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_BeginWatch_Bro(objConnInfo, bUDP, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::CloseWatch_Bro ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bUDP ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CloseWatch_Bro(objConnInfo, bUDP, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteMemory ( struct _DriveInfo * * objConnInfo, _bstr_t sHex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteMemory(objConnInfo, sHex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadMemory ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadMemory(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteTime_Bro ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bUDP ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteTime_Bro(objConnInfo, bUDP, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetPortSpeak ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bUse ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPortSpeak(objConnInfo, iPort, bUse, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetPortSpeak ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetPortSpeak(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetBothWayCheck ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bUse ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetBothWayCheck(objConnInfo, iPort, bUse, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetBothWayCheck ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetBothWayCheck(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetKeyboardManage ( struct _DriveInfo * * objConnInfo, short iPort, VARIANT_BOOL bUse ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetKeyboardManage(objConnInfo, iPort, bUse, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetKeyboardManage ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetKeyboardManage(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetKeyboardManagePassword ( struct _DriveInfo * * objConnInfo, short iPort, _bstr_t sPassword ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetKeyboardManagePassword(objConnInfo, iPort, sPassword, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetKeyboardManagePassword ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetKeyboardManagePassword(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetReaderCheckMode_Mode ( struct _DriveInfo * * objConnInfo, unsigned char lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetReaderCheckMode_Mode(objConnInfo, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT _DriveMain::ChunnelForciblyState ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bBool ) {
+    HRESULT _hr = raw_ChunnelForciblyState(objConnInfo, bBool);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT _DriveMain::StopConnOnSN ( struct _DriveInfo * * objConnInfo, _bstr_t sSN ) {
+    HRESULT _hr = raw_StopConnOnSN(objConnInfo, sSN);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteSN_Ps ( struct _DriveInfo * * objConnInfo, _bstr_t sPassword1, _bstr_t sPassword2, _bstr_t sSN ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteSN_Ps(objConnInfo, sPassword1, sPassword2, sSN, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::TestPassword_Ps ( struct _DriveInfo * * objConnInfo, _bstr_t sPassword1, _bstr_t sPassword2, short iPort, _bstr_t sPassword ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_TestPassword_Ps(objConnInfo, sPassword1, sPassword2, iPort, sPassword, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::TestCard_Ps ( struct _DriveInfo * * objConnInfo, _bstr_t sPassword1, _bstr_t sPassword2, short iPort, double dCard, _bstr_t sPassword, long lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_TestCard_Ps(objConnInfo, sPassword1, sPassword2, iPort, dCard, sPassword, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetFirstCardCheck ( struct _DriveInfo * * objConnInfo, short iPort, unsigned char lCardMode, unsigned char lPasswordMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetFirstCardCheck(objConnInfo, iPort, lCardMode, lPasswordMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetFirstCardCheck ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetFirstCardCheck(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetMuchCardCheck ( struct _DriveInfo * * objConnInfo, short iPort, unsigned char lCardMode, unsigned char lCheckInOut ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetMuchCardCheck(objConnInfo, iPort, lCardMode, lCheckInOut, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetMuchCardCheck ( struct _DriveInfo * * objConnInfo, short iPort ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetMuchCardCheck(objConnInfo, iPort, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetAlarmOutputTime ( struct _DriveInfo * * objConnInfo, unsigned char lTime ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetAlarmOutputTime(objConnInfo, lTime, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetAlarmOutputTime ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetAlarmOutputTime(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ClearAllOpenData ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ClearAllOpenData(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteUserCard_Mode ( struct _DriveInfo * * objConnInfo, struct _DriveCardLists * * objCards, long lMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteUserCard_Mode(objConnInfo, objCards, lMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteSN_Bro ( struct _DriveInfo * * objConnInfo, _bstr_t sPassword1, _bstr_t sPassword2, _bstr_t sSN ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteSN_Bro(objConnInfo, sPassword1, sPassword2, sSN, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetManageCard ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bUse ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetManageCard(objConnInfo, bUse, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetManageCard ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetManageCard(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::WriteTCPPar_MAC ( struct _DriveInfo * * objConnInfo, struct _DriveTCPInfo * * oTCPPar, VARIANT_BOOL mUDPBroadcast ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WriteTCPPar_MAC(objConnInfo, oTCPPar, mUDPBroadcast, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetKeyboardManagePassword_8832 ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bUse, _bstr_t sPassword ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetKeyboardManagePassword_8832(objConnInfo, bUse, sPassword, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetKeyboardManagePassword_8832 ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetKeyboardManagePassword_8832(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::CheckCommandIsAdd ( struct _DriveInfo * * objConnInfo, long lFunction ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CheckCommandIsAdd(objConnInfo, lFunction, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::DriveIsRun ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_DriveIsRun(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetShowTxRxLog ( VARIANT_BOOL bShow ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetShowTxRxLog(bShow, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetICPar ( struct _DriveInfo * * objConnInfo, short lSector, _bstr_t sSectorPassword, unsigned char lCheckType, long lIDCode1, long lIDCode2, long lIDCode3, long lIDCode4 ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetICPar(objConnInfo, lSector, sSectorPassword, lCheckType, lIDCode1, lIDCode2, lIDCode3, lIDCode4, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::ReadICPar ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReadICPar(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetBlacklistAlarm ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetBlacklistAlarm(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetBlacklistAlarm ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bOpen ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetBlacklistAlarm(objConnInfo, bOpen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::SetKeyboardManagePassword_IC ( struct _DriveInfo * * objConnInfo, VARIANT_BOOL bUse, _bstr_t sPassword ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetKeyboardManagePassword_IC(objConnInfo, bUse, sPassword, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL _DriveMain::GetKeyboardManagePassword_IC ( struct _DriveInfo * * objConnInfo ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetKeyboardManagePassword_IC(objConnInfo, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}

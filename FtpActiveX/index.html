@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="EmulateIE10, EmulateIE11">
+	<meta charset="UTF-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<!--title>SVR2830高清审讯主机</title-->
+	<link rel="shortcut icon" href="../img/loginpage/favicon.ico?v=1.0.0.0_20181214115959" type="image/x-icon" />
+	<link href="../css/indexpage/index.css?v=1.0.0.0_20181214115959" rel="stylesheet" type="text/css">
+	<!--[if lt IE 10]>
+	<script src="../js/json2.js?v=1.0.0.0_20181214115959"></script>
+	<script src="../js/jquery-1.12.4.min.js?v=1.0.0.0_20181214115959"></script>
+	<![endif]-->
+	<![if !IE]>
+	<script src="../js/jquery-3.3.1.min.js?v=1.0.0.0_20181214115959"></script>
+	<![endif]>
+	<script src="../js/mine-ajax-post-json.js?v=1.0.0.0_20181214115959"></script>
+	<script src="../js/md5.js?v=1.0.0.0_20181214115959"></script>
+	<script src="../js/base64.js?v=1.0.0.0_20181214115959"></script>
+	<script src="../js/jquery.cookie.js?v=1.0.0.0_20181214115959"></script>
+	<script src="./index.js?v=1.0.0.0_20181214115959"></script>
+	<style type="text/css">
+	</style>
+	<script>
+  </script>
+</head>
+<body>
+	<a title="测试" href="javascript:void(0);" onclick="onTest()">上传</a>
+	<div id="id_progress">dfsfds</div>
+	<object class="player" id="player" classid="CLSID:F770ACF3-7BD1-4D3A-B57D-52376D6189D3" style="display:block;width:0px;height:0px;"> 
+    </object>
+	<script language="Javascript" event="Notify_UploadFileStatus(nEvent, nErrorCode, nProgress, strLocalFile, strRemoteFile)" for="player">
+        onNotifyUploadFileStatus(nEvent, nErrorCode, nProgress, strLocalFile, strRemoteFile);
+    </script>
+</body>
+</html>

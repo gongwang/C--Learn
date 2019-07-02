@@ -1,0 +1,51 @@
+// mwplayer.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (mwplayer.tlb) that will become a resource in
+// mwplayer.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(2BF9D73A-294B-488A-B1D3-491308F1C806), version(1.0),
+  control ]
+library mwplayerLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CmwplayerCtrl
+	[ 
+		uuid(3681B6D3-533D-4D68-8EC7-6A2A020448D4)	
+	]
+	dispinterface _Dmwplayer
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CmwplayerCtrl
+
+	[ 
+		uuid(FA246079-4248-48E4-AA26-AA1534372437)	
+	]
+	dispinterface _DmwplayerEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+	};
+
+	//  Class information for CmwplayerCtrl
+	[
+		uuid(A9E2C003-1BE3-40AA-BA1B-77B787E381CC)
+	]
+	coclass mwplayer
+	{
+		[default] dispinterface _Dmwplayer;
+		[default, source] dispinterface _DmwplayerEvents;
+	};
+
+};

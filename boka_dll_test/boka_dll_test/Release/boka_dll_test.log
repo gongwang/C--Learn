@@ -1,0 +1,29 @@
+﻿Build started 2019/6/17 15:11:41.
+     1>Project "D:\VS2012_Project\boka_dll_test\boka_dll_test\boka_dll_test.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\boka_dll_test.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\boka_dll_test.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt bokatest.cpp
+         bokatest.cpp
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\VS2012_Project\boka_dll_test\Release\boka_dll_test.dll" /INCREMENTAL:NO /NOLOGO /DEF:".\boka_dll_test.def" /MANIFEST /ManifestFile:"Release\boka_dll_test.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\VS2012_Project\boka_dll_test\Release\boka_dll_test.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\VS2012_Project\boka_dll_test\Release\boka_dll_test.lib" /MACHINE:X86 /DLL Release\boka_dll_test.res
+         Release\bokatest.obj
+         Release\boka_dll_test.obj
+         Release\stdafx.obj
+            Creating library D:\VS2012_Project\boka_dll_test\Release\boka_dll_test.lib and object D:\VS2012_Project\boka_dll_test\Release\boka_dll_test.exp
+         Generating code
+         Finished generating code
+         boka_dll_test.vcxproj -> D:\VS2012_Project\boka_dll_test\Release\boka_dll_test.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\VS2012_Project\boka_dll_test\Release\boka_dll_test.dll;#2" /manifest Release\boka_dll_test.dll.intermediate.manifest "D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       FinalizeBuildStatus:
+         Deleting file "Release\boka_dll_test.unsuccessfulbuild".
+         Touching "Release\boka_dll_test.lastbuildstate".
+     1>Done Building Project "D:\VS2012_Project\boka_dll_test\boka_dll_test\boka_dll_test.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.98

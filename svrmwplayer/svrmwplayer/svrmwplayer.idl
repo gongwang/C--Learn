@@ -1,0 +1,51 @@
+// svrmwplayer.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (svrmwplayer.tlb) that will become a resource in
+// svrmwplayer.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(E0F6C8A5-1369-4A1E-8637-D7588BC06DA2), version(1.0),
+  control ]
+library svrmwplayerLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CsvrmwplayerCtrl
+	[ 
+		uuid(D3AB8013-7AED-46CC-B0EE-2B949BEB15EA)	
+	]
+	dispinterface _Dsvrmwplayer
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CsvrmwplayerCtrl
+
+	[ 
+		uuid(A0D18D48-22EB-4A76-AAAA-1AB64E789320)	
+	]
+	dispinterface _DsvrmwplayerEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+	};
+
+	//  Class information for CsvrmwplayerCtrl
+	[
+		uuid(E804F18D-1C55-487E-B7F5-4669026F8C61)
+	]
+	coclass svrmwplayer
+	{
+		[default] dispinterface _Dsvrmwplayer;
+		[default, source] dispinterface _DsvrmwplayerEvents;
+	};
+
+};

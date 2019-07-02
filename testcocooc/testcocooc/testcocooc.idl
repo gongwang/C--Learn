@@ -1,0 +1,51 @@
+// testcocooc.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (testcocooc.tlb) that will become a resource in
+// testcocooc.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(911DA389-4054-414D-8C64-3723EB7A8D9F), version(1.0),
+  control ]
+library testcocoocLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CtestcocoocCtrl
+	[ 
+		uuid(AF8FD425-6C2B-400F-A755-3E75CE6D3445)	
+	]
+	dispinterface _Dtestcocooc
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CtestcocoocCtrl
+
+	[ 
+		uuid(A699D8C6-E515-4639-BEEA-02E7F9914177)	
+	]
+	dispinterface _DtestcocoocEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+	};
+
+	//  Class information for CtestcocoocCtrl
+	[
+		uuid(B880D962-8460-4F20-8A32-91D45C7D96C6)
+	]
+	coclass testcocooc
+	{
+		[default] dispinterface _Dtestcocooc;
+		[default, source] dispinterface _DtestcocoocEvents;
+	};
+
+};

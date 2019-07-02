@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OcxTest", "OcxTest\OcxTest.vcxproj", "{CE516735-2079-45D0-BAD5-91EDA32FDF46}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestMFC", "TestMFC\TestMFC.vcxproj", "{42845123-9379-44BF-9359-DF51B6664E18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE516735-2079-45D0-BAD5-91EDA32FDF46}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CE516735-2079-45D0-BAD5-91EDA32FDF46}.Debug|Win32.Build.0 = Debug|Win32
+		{CE516735-2079-45D0-BAD5-91EDA32FDF46}.Release|Win32.ActiveCfg = Release|Win32
+		{CE516735-2079-45D0-BAD5-91EDA32FDF46}.Release|Win32.Build.0 = Release|Win32
+		{42845123-9379-44BF-9359-DF51B6664E18}.Debug|Win32.ActiveCfg = Debug|Win32
+		{42845123-9379-44BF-9359-DF51B6664E18}.Debug|Win32.Build.0 = Debug|Win32
+		{42845123-9379-44BF-9359-DF51B6664E18}.Release|Win32.ActiveCfg = Release|Win32
+		{42845123-9379-44BF-9359-DF51B6664E18}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

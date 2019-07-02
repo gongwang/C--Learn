@@ -1,0 +1,3728 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.40219.01 (4952cb2a).
+//
+// d:\vs2012_project\boka_dll_test\boka_dll_test\release\fcdrive8800.tlh
+//
+// C++ source equivalent of Win32 type library ../Release/FCDrive8800.Dll
+// compiler-generated file created 06/13/19 at 14:45:54 - DO NOT EDIT!
+
+//
+// Cross-referenced type libraries:
+//
+//  #import "C:\WINDOWS\SysWow64\MSVBVM60.DLL"
+//  #import "C:\WINDOWS\SysWow64\MSWINSCK.OCX"
+//
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("91555794-8ef6-45ca-851a-0ca061243e21"))
+/* LIBID */ __FCDrive8800;
+struct __declspec(uuid("bd6996a5-4500-4003-9877-80c1e80bfda1"))
+/* dual interface */ _DriveMain;
+struct /* coclass */ DriveMain;
+struct __declspec(uuid("54fd5d80-d438-4e96-a279-83ff9c0608f2"))
+/* dual interface */ _DriveInfo;
+struct /* coclass */ DriveInfo;
+struct __declspec(uuid("b9310053-a519-442b-aae6-3d669ee2804b"))
+/* dual interface */ _DriveCommandEvent;
+struct /* coclass */ DriveCommandEvent;
+struct __declspec(uuid("2a2212f7-afb9-45c2-96a9-db0cd854dc1b"))
+/* dual interface */ _DriveCard;
+struct /* coclass */ DriveCard;
+struct __declspec(uuid("8f959654-6872-4fb0-887b-ec7df27bd89d"))
+/* dual interface */ _DriveCardLists;
+struct /* coclass */ DriveCardLists;
+struct __declspec(uuid("befadb09-55cf-47be-ac82-5a394f103cf8"))
+/* dual interface */ _DrivePassword;
+struct /* coclass */ DrivePassword;
+struct __declspec(uuid("1d60bd1d-4010-4c5c-9dac-983bb036d109"))
+/* dual interface */ _DrivePasswordLists;
+struct /* coclass */ DrivePasswordLists;
+struct __declspec(uuid("d7f37cc3-e25c-4499-a64b-0b4107d7d26b"))
+/* dual interface */ _DriveHoliday;
+struct /* coclass */ DriveHoliday;
+struct __declspec(uuid("a561fcd5-14a3-4406-aeae-e474e5647e14"))
+/* dual interface */ _DriveHolidayLists;
+struct /* coclass */ DriveHolidayLists;
+struct __declspec(uuid("39b53b5a-4e34-4c0c-9f94-81631dc6cbf6"))
+/* dual interface */ _DriveRecord;
+struct /* coclass */ DriveRecord;
+struct __declspec(uuid("222354ad-6ea7-44f7-a1a5-7cf92f1c9f72"))
+/* dual interface */ _DriveRecordLists;
+struct /* coclass */ DriveRecordLists;
+struct __declspec(uuid("ffb2860c-d31b-4e68-a7a4-fc712c8fcfdf"))
+/* dual interface */ _DriveTimeGroup;
+struct /* coclass */ DriveTimeGroup;
+struct __declspec(uuid("d31efae7-1444-4a6f-b7f1-d99ff3ad7ae5"))
+/* dual interface */ _DriveTimeGroupLists;
+struct /* coclass */ DriveTimeGroupLists;
+struct __declspec(uuid("869abf28-031f-41c7-a53d-203f0459635c"))
+/* dual interface */ _DriveTCPInfo;
+struct /* coclass */ DriveTCPInfo;
+struct __declspec(uuid("ec819672-ce0e-490d-93e3-65716edc8f2e"))
+/* dual interface */ _DrivePortList;
+struct /* coclass */ DrivePortList;
+struct __declspec(uuid("7fbf4f78-79f8-4d5f-8ad7-d5b1e554dfdf"))
+/* dual interface */ _DriveValueList;
+struct /* coclass */ DriveValueList;
+struct __declspec(uuid("71c39abf-f1b7-4ae4-bb17-3182d7ada1aa"))
+/* dispinterface */ __DriveMain;
+enum e_WaitType;
+enum e_ConnectType;
+enum e_HolLenType;
+enum e_CardPwrType;
+enum e_ConnState;
+enum e_EquptType;
+enum e_RecordType;
+enum e_FuncType;
+enum e_ErrType;
+enum e_AlarmTimeType;
+enum e_ParameterGroupType;
+enum e_ParameterType;
+enum e_TCPMode;
+enum e_EquptTCPSettingMode;
+enum e_RecordFileCode;
+enum e_DoorInOutState;
+enum e_EquptDownloadCardType;
+enum e_CardState;
+enum e_PortList;
+typedef struct _DriveMain DriveMain___v0;
+typedef struct _DriveMain DriveMain___v1;
+typedef struct _DriveMain DriveMain___v2;
+typedef struct _DriveMain DriveMain___v3;
+typedef struct _DriveMain DriveMain___v4;
+typedef struct _DriveMain DriveMain___v5;
+typedef struct _DriveMain DriveMain___v6;
+typedef struct _DriveMain DriveMain___v7;
+typedef struct _DriveMain DriveMain___v8;
+typedef struct _DriveMain DriveMain___v9;
+typedef struct _DriveMain DriveMain___v10;
+typedef struct _DriveMain DriveMain___v11;
+typedef struct _DriveMain DriveMain___v12;
+typedef struct _DriveMain DriveMain___v13;
+typedef struct _DriveMain DriveMain___v14;
+typedef struct _DriveMain DriveMain___v15;
+typedef struct _DriveInfo DriveInfo___v0;
+typedef struct _DriveInfo DriveInfo___v1;
+typedef struct _DriveInfo DriveInfo___v2;
+typedef struct _DriveCard DriveCard___v0;
+typedef struct _DriveRecord DriveRecord___v0;
+typedef struct _DriveTCPInfo DriveTCPInfo___v0;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_DriveTimeGroup, __uuidof(_DriveTimeGroup));
+_COM_SMARTPTR_TYPEDEF(_DriveTimeGroupLists, __uuidof(_DriveTimeGroupLists));
+_COM_SMARTPTR_TYPEDEF(__DriveMain, __uuidof(__DriveMain));
+_COM_SMARTPTR_TYPEDEF(_DriveHoliday, __uuidof(_DriveHoliday));
+_COM_SMARTPTR_TYPEDEF(_DriveHolidayLists, __uuidof(_DriveHolidayLists));
+_COM_SMARTPTR_TYPEDEF(_DrivePassword, __uuidof(_DrivePassword));
+_COM_SMARTPTR_TYPEDEF(_DrivePasswordLists, __uuidof(_DrivePasswordLists));
+_COM_SMARTPTR_TYPEDEF(_DriveInfo, __uuidof(_DriveInfo));
+_COM_SMARTPTR_TYPEDEF(_DrivePortList, __uuidof(_DrivePortList));
+_COM_SMARTPTR_TYPEDEF(_DriveValueList, __uuidof(_DriveValueList));
+_COM_SMARTPTR_TYPEDEF(_DriveTCPInfo, __uuidof(_DriveTCPInfo));
+_COM_SMARTPTR_TYPEDEF(_DriveRecord, __uuidof(_DriveRecord));
+_COM_SMARTPTR_TYPEDEF(_DriveRecordLists, __uuidof(_DriveRecordLists));
+_COM_SMARTPTR_TYPEDEF(_DriveCard, __uuidof(_DriveCard));
+_COM_SMARTPTR_TYPEDEF(_DriveCardLists, __uuidof(_DriveCardLists));
+_COM_SMARTPTR_TYPEDEF(_DriveCommandEvent, __uuidof(_DriveCommandEvent));
+_COM_SMARTPTR_TYPEDEF(_DriveMain, __uuidof(_DriveMain));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("25271578-fbf1-43b2-bf84-4b1e43febcc5"))
+DriveMain;
+    // [ default ] interface _DriveMain
+    // [ default, source ] dispinterface __DriveMain
+
+struct __declspec(uuid("7ca87022-f525-4d5f-b3e1-9653f1465ded"))
+DriveInfo;
+    // [ default ] interface _DriveInfo
+
+struct __declspec(uuid("f987335e-6852-4f14-aece-d5716d208ed7"))
+DriveCommandEvent;
+    // [ default ] interface _DriveCommandEvent
+
+struct __declspec(uuid("303c294b-23c8-43db-933e-0ae1cae7e616"))
+DriveCard;
+    // [ default ] interface _DriveCard
+
+struct __declspec(uuid("5a78e9f5-92b6-4435-9372-c31b33a8173f"))
+DriveCardLists;
+    // [ default ] interface _DriveCardLists
+
+struct __declspec(uuid("0b93c02d-5856-4cff-b8b7-44d5bb76124f"))
+DrivePassword;
+    // [ default ] interface _DrivePassword
+
+struct __declspec(uuid("6959141e-589b-423f-ae85-411cbad51488"))
+DrivePasswordLists;
+    // [ default ] interface _DrivePasswordLists
+
+struct __declspec(uuid("db04c64d-746c-4560-8335-7056632c34b7"))
+DriveHoliday;
+    // [ default ] interface _DriveHoliday
+
+struct __declspec(uuid("8dbd945d-9ad1-476b-a2dd-f9f072e53dbb"))
+DriveHolidayLists;
+    // [ default ] interface _DriveHolidayLists
+
+struct __declspec(uuid("ba369735-5279-4700-93a2-1638ccbbc433"))
+DriveRecord;
+    // [ default ] interface _DriveRecord
+
+struct __declspec(uuid("ed177ff6-2cdf-419d-b4cb-0c4845bc8ce0"))
+DriveRecordLists;
+    // [ default ] interface _DriveRecordLists
+
+struct __declspec(uuid("ffb2860c-d31b-4e68-a7a4-fc712c8fcfdf"))
+_DriveTimeGroup : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCheckModeGroup,put=PutCheckModeGroup))
+    VARIANT_BOOL CheckModeGroup;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL GetCheckModeGroup ( );
+    void PutCheckModeGroup (
+        VARIANT_BOOL _arg1 );
+    HRESULT SetCheckMode (
+        enum VbDayOfWeek iWeekIndex,
+        short TimeIndex,
+        unsigned char lMode );
+    unsigned char GetCheckMode (
+        enum VbDayOfWeek iWeekIndex,
+        short TimeIndex );
+    HRESULT SetBeginTime (
+        enum VbDayOfWeek iWeekIndex,
+        short TimeIndex,
+        DATE dTime );
+    HRESULT SetEndTime (
+        enum VbDayOfWeek iWeekIndex,
+        short TimeIndex,
+        DATE dTime );
+    HRESULT SetTimeGroupNum (
+        short lNum );
+    DATE GetBeginTime (
+        enum VbDayOfWeek iWeekIndex,
+        short TimeIndex );
+    DATE GetEndTime (
+        enum VbDayOfWeek iWeekIndex,
+        short TimeIndex );
+    short GetTimeGroupNum ( );
+    _bstr_t toString_FC8800 (
+        enum VbDayOfWeek iWeekIndex );
+    _bstr_t toString_FC8800_All ( );
+    _bstr_t toString_FC8000 (
+        _bstr_t iIndex );
+    VARIANT_BOOL SetTimeHex_FC8800 (
+        _bstr_t sHex );
+    VARIANT_BOOL SetTimeHex_FC8800_CheckMode (
+        _bstr_t sHex );
+    _bstr_t toString_FC8800_CheckMode ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_CheckModeGroup (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_CheckModeGroup (
+        /*[in]*/ VARIANT_BOOL _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetCheckMode (
+        /*[in]*/ enum VbDayOfWeek iWeekIndex,
+        /*[in]*/ short TimeIndex,
+        /*[in]*/ unsigned char lMode ) = 0;
+      virtual HRESULT __stdcall raw_GetCheckMode (
+        /*[in]*/ enum VbDayOfWeek iWeekIndex,
+        /*[in]*/ short TimeIndex,
+        /*[out,retval]*/ unsigned char * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetBeginTime (
+        /*[in]*/ enum VbDayOfWeek iWeekIndex,
+        /*[in]*/ short TimeIndex,
+        /*[in]*/ DATE dTime ) = 0;
+      virtual HRESULT __stdcall raw_SetEndTime (
+        /*[in]*/ enum VbDayOfWeek iWeekIndex,
+        /*[in]*/ short TimeIndex,
+        /*[in]*/ DATE dTime ) = 0;
+      virtual HRESULT __stdcall raw_SetTimeGroupNum (
+        /*[in]*/ short lNum ) = 0;
+      virtual HRESULT __stdcall raw_GetBeginTime (
+        /*[in]*/ enum VbDayOfWeek iWeekIndex,
+        /*[in]*/ short TimeIndex,
+        /*[out,retval]*/ DATE * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetEndTime (
+        /*[in]*/ enum VbDayOfWeek iWeekIndex,
+        /*[in]*/ short TimeIndex,
+        /*[out,retval]*/ DATE * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetTimeGroupNum (
+        /*[out,retval]*/ short * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_toString_FC8800 (
+        /*[in]*/ enum VbDayOfWeek iWeekIndex,
+        /*[out,retval]*/ BSTR * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_toString_FC8800_All (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_toString_FC8000 (
+        /*[in]*/ BSTR iIndex,
+        /*[out,retval]*/ BSTR * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetTimeHex_FC8800 (
+        /*[in]*/ BSTR sHex,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetTimeHex_FC8800_CheckMode (
+        /*[in]*/ BSTR sHex,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_toString_FC8800_CheckMode (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+};
+
+struct __declspec(uuid("c4e8a88d-e66a-44bb-9b6b-f26bc362f530"))
+DriveTimeGroup;
+    // [ default ] interface _DriveTimeGroup
+
+struct __declspec(uuid("d31efae7-1444-4a6f-b7f1-d99ff3ad7ae5"))
+_DriveTimeGroupLists : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetNewEnum))
+    IUnknownPtr NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _DriveTimeGroupPtr Add (
+        BSTR * sKey );
+    _DriveTimeGroupPtr GetItem (
+        VARIANT * vntIndexKey );
+    long GetCount ( );
+    HRESULT Remove (
+        VARIANT * vntIndexKey );
+    IUnknownPtr GetNewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Add (
+        /*[in,out]*/ BSTR * sKey,
+        /*[out,retval]*/ struct _DriveTimeGroup * * _arg2 ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in,out]*/ VARIANT * vntIndexKey,
+        /*[out,retval]*/ struct _DriveTimeGroup * * _arg2 ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_Remove (
+        /*[in,out]*/ VARIANT * vntIndexKey ) = 0;
+      virtual HRESULT __stdcall get_NewEnum (
+        /*[out,retval]*/ struct IUnknown * * _arg1 ) = 0;
+};
+
+struct __declspec(uuid("f6571e3c-5f00-4a1f-9191-829ad5c805d1"))
+DriveTimeGroupLists;
+    // [ default ] interface _DriveTimeGroupLists
+
+struct __declspec(uuid("10fc34d0-d6ae-4142-95b8-09464e0d025c"))
+DriveTCPInfo;
+    // [ default ] interface _DriveTCPInfo
+
+struct __declspec(uuid("3e84d2f1-d933-49e7-b08d-f9d4386687d5"))
+DrivePortList;
+    // [ default ] interface _DrivePortList
+
+struct __declspec(uuid("7b3981ba-72b2-4887-b9a0-7ad440bd5978"))
+DriveValueList;
+    // [ default ] interface _DriveValueList
+
+struct __declspec(uuid("71c39abf-f1b7-4ae4-bb17-3182d7ada1aa"))
+__DriveMain : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT WatchEvents (
+        struct _DriveInfo * * objConnInfo,
+        short iWatchType,
+        _bstr_t sValue );
+    HRESULT FrameAchieve (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc,
+        _bstr_t sValue );
+    HRESULT PasswordErr (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc );
+    HRESULT SendProcess (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc,
+        long iStep,
+        long iStepCount );
+    HRESULT ContainOverflow (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc );
+    HRESULT CommandTimeout (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc,
+        short iStep );
+    HRESULT ReadRecordAchieve (
+        struct _DriveInfo * * objConnInfo,
+        _bstr_t lRecordCount,
+        struct _DriveRecordLists * * objRecords );
+    HRESULT ReadCardAchieve (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveCardLists * * objCol );
+    HRESULT ReadHolidayAchieve (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveHolidayLists * * objCol );
+    HRESULT ReadTimeGroupAchieve (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveTimeGroupLists * * objCol );
+    HRESULT ReadPasswordAchieve (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePasswordLists * * objCol );
+    HRESULT OpenPortErr (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc );
+    HRESULT SendEvent (
+        struct _DriveInfo * * objConnInfo,
+        long lDataLen,
+        _bstr_t sHex );
+    HRESULT DataArrivalEvent (
+        struct _DriveInfo * * objConnInfo,
+        long lDataLen,
+        _bstr_t sHex );
+};
+
+enum __declspec(uuid("0049fcb3-2c12-4072-bd71-bbffd019c1d0"))
+e_WaitType
+{
+    vbWating = -1,
+    vbSendNew = -2
+};
+
+enum __declspec(uuid("f9f1881c-0251-42bc-9346-16d72019bc37"))
+e_ConnectType
+{
+    OnComm = 0,
+    OnTCP = 1,
+    OnUDP = 2
+};
+
+enum __declspec(uuid("eca1aa5c-3af0-4176-b850-984b12040e97"))
+e_HolLenType
+{
+    hAm = 1,
+    hPm = 2,
+    hDay = 3
+};
+
+struct __declspec(uuid("d7f37cc3-e25c-4499-a64b-0b4107d7d26b"))
+_DriveHoliday : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetYearly (
+        VARIANT_BOOL bData );
+    VARIANT_BOOL GetYearly ( );
+    HRESULT SetDate (
+        DATE nDate );
+    DATE GetDate ( );
+    HRESULT SetHolLen (
+        enum e_HolLenType lh );
+    enum e_HolLenType GetHolLen ( );
+    HRESULT SetHolNum (
+        short lh );
+    short GetHolNum ( );
+    _bstr_t ToString ( );
+    _bstr_t toString_Hol ( );
+    _bstr_t toString_FC8800 ( );
+    HRESULT SetHolHex_FC8800 (
+        _bstr_t sHex );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetYearly (
+        /*[in]*/ VARIANT_BOOL bData ) = 0;
+      virtual HRESULT __stdcall raw_GetYearly (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetDate (
+        /*[in]*/ DATE nDate ) = 0;
+      virtual HRESULT __stdcall raw_GetDate (
+        /*[out,retval]*/ DATE * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetHolLen (
+        /*[in]*/ enum e_HolLenType lh ) = 0;
+      virtual HRESULT __stdcall raw_GetHolLen (
+        /*[out,retval]*/ enum e_HolLenType * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetHolNum (
+        /*[in]*/ short lh ) = 0;
+      virtual HRESULT __stdcall raw_GetHolNum (
+        /*[out,retval]*/ short * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_ToString (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_toString_Hol (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_toString_FC8800 (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetHolHex_FC8800 (
+        /*[in]*/ BSTR sHex ) = 0;
+};
+
+struct __declspec(uuid("a561fcd5-14a3-4406-aeae-e474e5647e14"))
+_DriveHolidayLists : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetNewEnum))
+    IUnknownPtr NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _DriveHolidayPtr Add (
+        BSTR * sKey );
+    _DriveHolidayPtr GetItem (
+        VARIANT * vntIndexKey );
+    long GetCount ( );
+    HRESULT Remove (
+        VARIANT * vntIndexKey );
+    IUnknownPtr GetNewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Add (
+        /*[in,out]*/ BSTR * sKey,
+        /*[out,retval]*/ struct _DriveHoliday * * _arg2 ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in,out]*/ VARIANT * vntIndexKey,
+        /*[out,retval]*/ struct _DriveHoliday * * _arg2 ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_Remove (
+        /*[in,out]*/ VARIANT * vntIndexKey ) = 0;
+      virtual HRESULT __stdcall get_NewEnum (
+        /*[out,retval]*/ struct IUnknown * * _arg1 ) = 0;
+};
+
+enum __declspec(uuid("70a86564-d2f8-47a7-a972-c451ebe9c089"))
+e_CardPwrType
+{
+    cRefuse = 0,
+    cOpen = 1
+};
+
+struct __declspec(uuid("befadb09-55cf-47be-ac82-5a394f103cf8"))
+_DrivePassword : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetClickButton,put=PutClickButton))
+    VARIANT_BOOL ClickButton;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL GetClickButton ( );
+    void PutClickButton (
+        VARIANT_BOOL _arg1 );
+    HRESULT SetPassword (
+        _bstr_t vNew );
+    _bstr_t GetPassword ( );
+    enum e_CardPwrType GetPwr (
+        short vDoorNum );
+    HRESULT SetPwr (
+        short vDoorNum,
+        enum e_CardPwrType iPwr );
+    _bstr_t GetPasswordPwrStr ( );
+    _bstr_t ToString ( );
+    _bstr_t toString_FC8800 ( );
+    HRESULT SetPasswordHex_FC8800 (
+        _bstr_t sHex );
+    _bstr_t toString_FC8832 ( );
+    HRESULT SetPasswordHex_FC8832 (
+        _bstr_t sHex );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ClickButton (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_ClickButton (
+        /*[in]*/ VARIANT_BOOL _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetPassword (
+        /*[in]*/ BSTR vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetPassword (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetPwr (
+        /*[in]*/ short vDoorNum,
+        /*[out,retval]*/ enum e_CardPwrType * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetPwr (
+        /*[in]*/ short vDoorNum,
+        /*[in]*/ enum e_CardPwrType iPwr ) = 0;
+      virtual HRESULT __stdcall raw_GetPasswordPwrStr (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_ToString (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_toString_FC8800 (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetPasswordHex_FC8800 (
+        /*[in]*/ BSTR sHex ) = 0;
+      virtual HRESULT __stdcall raw_toString_FC8832 (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetPasswordHex_FC8832 (
+        /*[in]*/ BSTR sHex ) = 0;
+};
+
+struct __declspec(uuid("1d60bd1d-4010-4c5c-9dac-983bb036d109"))
+_DrivePasswordLists : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetNewEnum))
+    IUnknownPtr NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _DrivePasswordPtr Add (
+        BSTR * sKey );
+    _DrivePasswordPtr GetItem (
+        VARIANT * vntIndexKey );
+    long GetCount ( );
+    HRESULT Remove (
+        VARIANT * vntIndexKey );
+    IUnknownPtr GetNewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Add (
+        /*[in,out]*/ BSTR * sKey,
+        /*[out,retval]*/ struct _DrivePassword * * _arg2 ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in,out]*/ VARIANT * vntIndexKey,
+        /*[out,retval]*/ struct _DrivePassword * * _arg2 ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_Remove (
+        /*[in,out]*/ VARIANT * vntIndexKey ) = 0;
+      virtual HRESULT __stdcall get_NewEnum (
+        /*[out,retval]*/ struct IUnknown * * _arg1 ) = 0;
+};
+
+enum __declspec(uuid("e22fdd6a-b2f0-44d5-92f9-4a05ab67b93f"))
+e_ConnState
+{
+    tConnClosed = 0,
+    tConnConnecting = 1,
+    tConnConnected = 2,
+    tConnSending = 3,
+    tConnError = 4,
+    tConnSendEvent = 5
+};
+
+enum __declspec(uuid("a81afa64-02d6-4565-856e-4aa70f14a0b5"))
+e_EquptType
+{
+    ZXC3012 = 0,
+    ZXC3012Max = 1,
+    ZXC3011 = 2,
+    ZXC_R_211 = 3,
+    ZXC8024 = 4,
+    ZXC8048 = 5,
+    ZXC918 = 6,
+    ZXC_R_221 = 7,
+    FC8800 = 8,
+    FC8832 = 9,
+    FC9800 = 10,
+    FC9800IC = 11
+};
+
+struct __declspec(uuid("54fd5d80-d438-4e96-a279-83ff9c0608f2"))
+_DriveInfo : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetRestartCount,put=PutRestartCount))
+    long RestartCount;
+    __declspec(property(get=GetTimeOutMSEL,put=PutTimeOutMSEL))
+    long TimeOutMSEL;
+    __declspec(property(get=GetName,put=PutName))
+    _bstr_t Name;
+    __declspec(property(get=GetID,put=PutID))
+    long ID;
+    __declspec(property(get=GetPassword,put=PutPassword))
+    _bstr_t Password;
+    __declspec(property(get=GetSN,put=PutSN))
+    _bstr_t SN;
+    __declspec(property(get=GetCommBaudrate,put=PutCommBaudrate))
+    long CommBaudrate;
+    __declspec(property(get=GetCommPort,put=PutCommPort))
+    short CommPort;
+    __declspec(property(get=GetNetPort,put=PutNetPort))
+    long NetPort;
+    __declspec(property(get=GetIP,put=PutIP))
+    _bstr_t IP;
+    __declspec(property(get=GetConnType,put=PutConnType))
+    enum e_ConnectType ConnType;
+    __declspec(property(get=GetEquptType,put=PutEquptType))
+    enum e_EquptType EquptType;
+    __declspec(property(get=GetEquptAddr,put=PutEquptAddr))
+    long EquptAddr;
+    __declspec(property(get=GetBeginTime,put=PutBeginTime))
+    DATE BeginTime;
+    __declspec(property(get=GetEndTimeSec,put=PutEndTimeSec))
+    long EndTimeSec;
+    __declspec(property(get=GetBeginTimeSec,put=PutBeginTimeSec))
+    long BeginTimeSec;
+    __declspec(property(get=GetErrNumber,put=PutErrNumber))
+    long ErrNumber;
+    __declspec(property(get=GetErrDescription,put=PutErrDescription))
+    _bstr_t ErrDescription;
+    __declspec(property(get=GetDesc,put=PutDesc))
+    _bstr_t Desc;
+    __declspec(property(get=GetConnectionTimeoutCount,put=PutConnectionTimeoutCount))
+    long ConnectionTimeoutCount;
+    __declspec(property(get=GetConnectionTimeout,put=PutConnectionTimeout))
+    long ConnectionTimeout;
+    __declspec(property(get=GetSNIsHex,put=PutSNIsHex))
+    VARIANT_BOOL SNIsHex;
+    __declspec(property(get=GetSNHex,put=PutSNHex))
+    _bstr_t SNHex;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetBeginTimeSec ( );
+    void PutBeginTimeSec (
+        long _arg1 );
+    long GetEndTimeSec ( );
+    void PutEndTimeSec (
+        long _arg1 );
+    DATE GetBeginTime ( );
+    void PutBeginTime (
+        DATE _arg1 );
+    long GetEquptAddr ( );
+    void PutEquptAddr (
+        long _arg1 );
+    enum e_EquptType GetEquptType ( );
+    void PutEquptType (
+        enum e_EquptType _arg1 );
+    enum e_ConnectType GetConnType ( );
+    void PutConnType (
+        enum e_ConnectType _arg1 );
+    _bstr_t GetIP ( );
+    void PutIP (
+        _bstr_t _arg1 );
+    long GetNetPort ( );
+    void PutNetPort (
+        long _arg1 );
+    short GetCommPort ( );
+    void PutCommPort (
+        short _arg1 );
+    long GetCommBaudrate ( );
+    void PutCommBaudrate (
+        long _arg1 );
+    _bstr_t GetSN ( );
+    void PutSN (
+        _bstr_t _arg1 );
+    _bstr_t GetPassword ( );
+    void PutPassword (
+        _bstr_t _arg1 );
+    long GetID ( );
+    void PutID (
+        long _arg1 );
+    _bstr_t GetName ( );
+    void PutName (
+        _bstr_t _arg1 );
+    long GetTimeOutMSEL ( );
+    void PutTimeOutMSEL (
+        long _arg1 );
+    long GetRestartCount ( );
+    void PutRestartCount (
+        long _arg1 );
+    _bstr_t GetDesc ( );
+    void PutDesc (
+        _bstr_t _arg1 );
+    _bstr_t GetErrDescription ( );
+    void PutErrDescription (
+        _bstr_t _arg1 );
+    long GetErrNumber ( );
+    void PutErrNumber (
+        long _arg1 );
+    long GetConnectionTimeout ( );
+    void PutConnectionTimeout (
+        long _arg1 );
+    long GetConnectionTimeoutCount ( );
+    void PutConnectionTimeoutCount (
+        long _arg1 );
+    _bstr_t GetSNHex ( );
+    void PutSNHex (
+        _bstr_t _arg1 );
+    VARIANT_BOOL GetSNIsHex ( );
+    void PutSNIsHex (
+        VARIANT_BOOL _arg1 );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_BeginTimeSec (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_BeginTimeSec (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_EndTimeSec (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_EndTimeSec (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_BeginTime (
+        /*[out,retval]*/ DATE * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_BeginTime (
+        /*[in]*/ DATE _arg1 ) = 0;
+      virtual HRESULT __stdcall get_EquptAddr (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_EquptAddr (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_EquptType (
+        /*[out,retval]*/ enum e_EquptType * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_EquptType (
+        /*[in]*/ enum e_EquptType _arg1 ) = 0;
+      virtual HRESULT __stdcall get_ConnType (
+        /*[out,retval]*/ enum e_ConnectType * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_ConnType (
+        /*[in]*/ enum e_ConnectType _arg1 ) = 0;
+      virtual HRESULT __stdcall get_IP (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_IP (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_NetPort (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_NetPort (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_CommPort (
+        /*[out,retval]*/ short * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_CommPort (
+        /*[in]*/ short _arg1 ) = 0;
+      virtual HRESULT __stdcall get_CommBaudrate (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_CommBaudrate (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_SN (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_SN (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_Password (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_Password (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_ID (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_ID (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_Name (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_TimeOutMSEL (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_TimeOutMSEL (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_RestartCount (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_RestartCount (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_Desc (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_Desc (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_ErrDescription (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_ErrDescription (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_ErrNumber (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_ErrNumber (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_ConnectionTimeout (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_ConnectionTimeout (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_ConnectionTimeoutCount (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_ConnectionTimeoutCount (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_SNHex (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_SNHex (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_SNIsHex (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_SNIsHex (
+        /*[in]*/ VARIANT_BOOL _arg1 ) = 0;
+};
+
+struct __declspec(uuid("ec819672-ce0e-490d-93e3-65716edc8f2e"))
+_DrivePortList : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetEquptType (
+        enum e_EquptType lEquptType );
+    enum e_EquptType GetEquptType ( );
+    long GetPortCount ( );
+    HRESULT SetPortValue (
+        long iPort,
+        long lValue );
+    long GetPortValue (
+        long iPort );
+    _bstr_t ToString ( );
+    _bstr_t ToString_PortValue1B ( );
+    _bstr_t ToString_PortValue2B ( );
+    _bstr_t ToString_PortValue4B ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetEquptType (
+        /*[in]*/ enum e_EquptType lEquptType ) = 0;
+      virtual HRESULT __stdcall raw_GetEquptType (
+        /*[out,retval]*/ enum e_EquptType * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetPortCount (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetPortValue (
+        /*[in]*/ long iPort,
+        /*[in]*/ long lValue ) = 0;
+      virtual HRESULT __stdcall raw_GetPortValue (
+        /*[in]*/ long iPort,
+        /*[out,retval]*/ long * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_ToString (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_ToString_PortValue1B (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_ToString_PortValue2B (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_ToString_PortValue4B (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+};
+
+struct __declspec(uuid("7fbf4f78-79f8-4d5f-8ad7-d5b1e554dfdf"))
+_DriveValueList : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    _bstr_t GetItemKey (
+        long lItem );
+    HRESULT AddValue (
+        _bstr_t sKey,
+        long lValue,
+        _bstr_t sValue,
+        struct _DrivePortList * * oPortList,
+        struct _DriveTimeGroup * * oTimeGroup );
+    _bstr_t GetValue_String (
+        _bstr_t sKey );
+    long GetValue_Num (
+        _bstr_t sKey );
+    _DrivePortListPtr GetValue_PortList (
+        _bstr_t sKey );
+    _DriveTimeGroupPtr GetValue_TimeGroup (
+        _bstr_t sKey );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetCount (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetItemKey (
+        /*[in]*/ long lItem,
+        /*[out,retval]*/ BSTR * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_AddValue (
+        /*[in]*/ BSTR sKey,
+        /*[in]*/ long lValue,
+        /*[in]*/ BSTR sValue,
+        /*[in,out]*/ struct _DrivePortList * * oPortList,
+        /*[in,out]*/ struct _DriveTimeGroup * * oTimeGroup ) = 0;
+      virtual HRESULT __stdcall raw_GetValue_String (
+        /*[in]*/ BSTR sKey,
+        /*[out,retval]*/ BSTR * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_GetValue_Num (
+        /*[in]*/ BSTR sKey,
+        /*[out,retval]*/ long * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_GetValue_PortList (
+        /*[in]*/ BSTR sKey,
+        /*[out,retval]*/ struct _DrivePortList * * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_GetValue_TimeGroup (
+        /*[in]*/ BSTR sKey,
+        /*[out,retval]*/ struct _DriveTimeGroup * * _arg2 ) = 0;
+};
+
+enum __declspec(uuid("f0e5ae2c-3164-4a54-abcd-55b3d29f056f"))
+e_RecordType
+{
+    vbEnableUserCard = 0,
+    vbUnableUserCard = 1,
+    vbNoCard = 2,
+    vbOpenInfo = 3,
+    vbPasswordOpenDoor = 4,
+    vbTelecontrolOpenDoor = 5,
+    vbFireAnnunciator = 6,
+    vbOVERDUECARD = 7,
+    vbNOTIMEGROUPCARD = 8,
+    vbHOLIDAYCARD = 9,
+    vbSysIni = 10,
+    vbSYSLOCK = 11,
+    vbLosePort = 12,
+    vbDoorState = 13,
+    vbDoorAlarm = 14,
+    vbLawlessAlarm = 15,
+    vbManuallyOpen = 16,
+    vbRemoteControl = 17,
+    vbClose = 18,
+    vbFireInform = 19,
+    vbCardAndPassword = 20,
+    vbInputCardAndPassword = 21,
+    vbFirstCardOpen = 22,
+    vbDoorLongOpen = 23,
+    vbMuchCardOpen = 24,
+    vbRepeatCard = 25,
+    vbPatrolmanCard = 26,
+    vbButtonOpenNoTime = 27,
+    vbDoorStateOpen = 28,
+    vbDoorStateClose = 29,
+    vbSoftworeCloseDoor = 30,
+    vbSoftworeOpenLongDoor = 31,
+    vbControlSoftworeOpenLongDoor = 32,
+    vbEquptLOSTCARD = 33,
+    vbEquptBLACKCARD = 34,
+    vbSysStart = 35,
+    vbSysRestart = 36,
+    vbSysTemperatureAlarm = 37,
+    vbSysUPSInput = 38,
+    vbNoCardOpenCount = 39,
+    vbAntiPassBack = 40,
+    vbOpenPasswordErr = 41,
+    vbCardOpenPasswordErr = 42,
+    vbLockingReadCard = 43,
+    vbLockingPassword = 44,
+    vbLockingButton = 45,
+    vbFirstCardNoRead = 46,
+    vbBanditAlarm = 47,
+    vbNoRegCardAlarm = 48,
+    vbKidnapAlarm = 49,
+    vbFireAnnunciatorSoftware = 50,
+    vbDoorAlarmClose = 51,
+    vbBanditAlarmClose = 52,
+    vbFireAnnunciatorClose = 53,
+    vbNoRegCardAlarmClose = 54,
+    vbKidnapAlarmClose = 55,
+    vbDoorAlarmCloseSoftware = 56,
+    vbBanditAlarmCloseSoftware = 57,
+    vbFireAnnunciatorCloseSoftware = 58,
+    vbNoRegCardAlarmCloseSoftware = 59,
+    vbKidnapAlarmCloseSoftware = 60,
+    vbSysThermometerDestroy = 61,
+    vbSysVoltageHighAlarm = 62,
+    vbSysVoltageLowAlarm = 63,
+    vbSysReaderLineErr = 64,
+    vbSysReaderLineLose = 65,
+    vbSysReaderUnrecognizable = 66,
+    vbDoorEquptCloseLongOpen = 67,
+    vbButtonLongOpen = 68,
+    vbButtonCloseLongOpen = 69,
+    vbBeginAlarmWatchState = 70,
+    vbEndAlarmWatchState = 71,
+    vbDoorCardMax = 72,
+    vbBeginTheftAlarmOnCard = 73,
+    vbStopTheftAlarmOnCard = 74,
+    vbBeginTheftAlarmOnPassword = 75,
+    vbStopTheftAlarmOnPassword = 76,
+    vbRecordAssistantAlert = 77,
+    vbRecordTheftAlarm = 78,
+    vbRecordBLACKCARDAlarm = 79,
+    vbRecordOpenLongAlarm = 80,
+    vbRecordAssistantAlertClose = 81,
+    vbRecordTheftAlarmClose = 82,
+    vbRecordBLACKCARDAlarmClose = 83,
+    vbRecordOpenLongAlarmClose = 84,
+    vbRecordAssistantAlertCloseSoftware = 85,
+    vbRecordTheftAlarmCloseSoftware = 86,
+    vbRecordBLACKCARDAlarmCloseSoftware = 87,
+    vbRecordOpenLongAlarmCloseSoftware = 88,
+    vbSysVoltageRefresh = 89,
+    vbRecordLockInteractionReader = 90,
+    vbRecordLockInteractionPassword = 91,
+    vbRecordNOCloseDoor = 92,
+    vbRecordProhibitCheck = 93,
+    vbRecordMuchCardWait = 94,
+    vbRecordMuchCardErr = 95,
+    vbFirstCardErr = 96,
+    vbFirstPasswordErr = 97,
+    vbEstopCard = 98,
+    vbEstopPassword = 99,
+    vbWaitManageCard = 100,
+    vbWaitReadCard = 101
+};
+
+enum __declspec(uuid("e30556ef-166b-4a8b-82e4-d0bbd9df3917"))
+e_FuncType
+{
+    vbWrite_Addr = 0,
+    vbReadSN = 1,
+    vbFormatEqupt = 2,
+    vbWriteLockOpenTime = 3,
+    vbClearHoliday = 4,
+    vbWriteHoliday = 5,
+    vbWrite_WTPT = 6,
+    vbClearPassword = 7,
+    vbWritePassword = 8,
+    vbWriteUserCard = 9,
+    vbDeleteCard = 10,
+    vbDeleteAllCard = 11,
+    vbGetRecordCount = 12,
+    vbGetRecordCount_NotFat = 13,
+    vbReadRecord = 14,
+    VbRepairRecord = 15,
+    vbWriteEquptSysInfo = 16,
+    vbReadEquptSysInfo = 17,
+    vbWriteTime = 18,
+    vbReadTime = 19,
+    vbOpenDoor = 20,
+    vbCloseFireBuzzer = 21,
+    vbOpenFireBuzzer = 22,
+    vbStartWatch = 23,
+    vbCloseWatch = 24,
+    vbGetDoorState = 25,
+    vbResetEqupt = 26,
+    vbMasterCard = 27,
+    vbGetBackSetting = 28,
+    vbWritePeriodOfTime = 29,
+    vbWriteTelecontrol = 30,
+    vbWriteAlarmTime = 31,
+    vbWriteSystemPar = 32,
+    vbLockReaderState = 33,
+    vbReadCard = 34,
+    vbZXC918ReadRecord = 35,
+    vbLongOpenDoor = 36,
+    vbCloseOpenDoor = 37,
+    vbWriteLED = 38,
+    vbWriteSN = 39,
+    vbReadAddr = 40,
+    vbCloseDoor = 41,
+    vbOpenDooralways = 42,
+    vbEquipmentDeadline = 43,
+    vbLockPort = 44,
+    vbUnLockPort = 45,
+    vbReadLockOpenTime = 46,
+    vbWriteReaderByte = 47,
+    vbReadReaderByte = 48,
+    vbGetHolidayCount = 49,
+    vbGetHoliday = 50,
+    vbClearTimeGroup = 51,
+    vbGetTimeGroup = 52,
+    vbGetCardCount = 53,
+    vbReadNewRecord = 54,
+    vbReadNewAlamRecord = 55,
+    vbSetConnPassword = 56,
+    vbGetConnPassword = 57,
+    vbClearConnPassword = 58,
+    vbGetTCPPar = 59,
+    vbWriteTCPPar = 60,
+    vbReadEquptVer = 61,
+    vbReadEquptStateInfo = 62,
+    vbWriteRecordMode = 63,
+    vbWriteKeyboard = 64,
+    vbIniKeyboardPassword = 65,
+    vbWriteLockInteraction = 66,
+    vbWriteFireAlarm = 67,
+    vbWriteOpenAlarm = 68,
+    vbReadSysPar = 69,
+    vbCloseAlarm = 70,
+    vbSetSpeakOpen = 71,
+    vbReadTimePar = 72,
+    vbWriteTimePar = 73,
+    vbGetReaderPar = 74,
+    vbWriteReaderPar = 75,
+    vbGetLockPar = 76,
+    vbWriteLockPar = 77,
+    vbGetPortCheckMode = 78,
+    vbWritePortCheckMode = 79,
+    vbGetPortWorkMode = 80,
+    vbWritePortWorkMode = 81,
+    vbGetReaderInterval = 82,
+    vbWriteReaderInterval = 83,
+    vbSetReadErrCardAlarm = 84,
+    vbGetReadErrCardAlarm = 85,
+    vbSetAlarmPassword = 86,
+    vbGetAlarmPassword = 87,
+    vbGetCheckCardInOutState = 88,
+    vbSetCheckCardInOutState = 89,
+    vbGetLongOpenAlarm = 90,
+    vbSetLongOpenAlarm = 91,
+    vbGetButtonPar = 92,
+    vbSetButtonPar = 93,
+    vbGetDoorStateAlarm = 94,
+    vbSetDoorStateAlarm = 95,
+    vbGetHolidayInfo = 96,
+    vbDeleteHoliday = 97,
+    vbGetPasswordInfo = 98,
+    vbGetPassword = 99,
+    vbTestPassword = 100,
+    vbTestCard = 101,
+    vbDeletePassword = 102,
+    vbGetCardInfo = 103,
+    vbClearAllRecord = 104,
+    vbClearRecordOnly = 105,
+    vbUpdateReocrdFlag = 106,
+    vbUpdateReocrdEndFlag = 107,
+    VbGetRecordOnFlay = 108,
+    vbWriteEquptDeadline = 109,
+    vbUDPSearch = 110,
+    vbSetReaderIntervalTime = 111,
+    vbGetReaderIntervalTime = 112,
+    vbSetEquptBuzzerMode = 113,
+    vbSetReaderCheckMode = 114,
+    vbWriteSequenceCard = 115,
+    vbSearchEquptOnNetNum = 116,
+    vbSetEquptNetNum = 117,
+    vbReadRecordMode = 118,
+    vbReadKeyboard = 119,
+    vbReadLockInteraction = 120,
+    vbReadFireAlarm = 121,
+    vbReadOpenAlarm = 122,
+    vbReadSpeakOpen = 123,
+    vbReadReaderCheckMode = 124,
+    vbReadEquptBuzzerMode = 125,
+    vbWriteAssistantAlertPar = 126,
+    vbReadAssistantAlertPar = 127,
+    vbWriteCardMaxPar = 128,
+    vbReadCardMaxPar = 129,
+    vbWriteTheftAlarmPar = 130,
+    vbReadTheftAlarmPar = 131,
+    vbWriteCheckInOutPar = 132,
+    vbReadCheckInOutPar = 133,
+    vbWriteCardPeriodSpeak = 134,
+    vbReadCardPeriodSpeak = 135,
+    vbWriteReadCardSpeak = 136,
+    vbReadReadCardSpeak = 137,
+    vbReadWatchState = 138,
+    vbReadFireAlarmState = 139,
+    vbSendAssistantAlarm = 140,
+    vbCloseAssistantAlarm = 141,
+    vbReadAssistantAlarm = 142,
+    vbReadLockReadTime = 143,
+    vbWriteLockReadTime = 144,
+    vbGetProhibitCheck = 145,
+    vbSetProhibitCheck = 146,
+    vbGetMuchCardPar = 147,
+    vbSetMuchCardPar = 148,
+    vbGetMuchCardGroup = 149,
+    vbSetMuchCardGroup = 150,
+    vbGetTheftAlarmState = 151,
+    vbOpenDoor_Check = 152,
+    vbReadKeyboardPassword = 153,
+    vbWriteTimeDefine = 154,
+    vbStartWatch_Bro = 155,
+    vbCloseWatch_Bro = 156,
+    vbWriteMemory = 157,
+    vbReadMemory = 158,
+    vbWriteTime_Bro = 159,
+    vbSetPortSpeak = 160,
+    vbGetPortSpeak = 161,
+    vbSetBothWayCheck = 162,
+    vbGetBothWayCheck = 163,
+    vbSetKeyboardManage = 164,
+    vbGetKeyboardManage = 165,
+    vbSetKeyboardManagePassword = 166,
+    vbGetKeyboardManagePassword = 167,
+    vbSetFirstCardCheck = 168,
+    vbGetFirstCardCheck = 169,
+    vbSetMuchCardCheck = 170,
+    vbGetMuchCardCheck = 171,
+    vbClearAllOpenData = 172,
+    vbGetAlarmOutputTime = 173,
+    vbSetAlarmOutputTime = 174,
+    vbSetManageCard = 175,
+    vbGetManageCard = 176,
+    vbSetICPar = 177,
+    vbReadICPar = 178,
+    vbGetBlacklistAlarm = 179,
+    vbSetBlacklistAlarm = 180
+};
+
+enum __declspec(uuid("9ec27745-2c8a-4c38-b2c9-09fb453144b2"))
+e_ErrType
+{
+    vbRecordOverflow_DriveHoliday = -2147218984,
+    vbRecordOverflow_Password = -2147218983,
+    vbRecordOverflow_WTPT = -2147218982,
+    vbRecordOverflow_UserCard = -2147218981
+};
+
+enum __declspec(uuid("1fb18c38-3668-49c0-8566-859cc9b04da0"))
+e_AlarmTimeType
+{
+    vbOpenTime = 0,
+    vbLongOpen = 1,
+    vbOpenAlarm = 2
+};
+
+enum __declspec(uuid("6cb206e5-c8a8-4d79-87a6-83f721e3fe3d"))
+e_ParameterGroupType
+{
+    vbGroupSystemParmet = 0,
+    vbGroupReaderType = 1
+};
+
+enum __declspec(uuid("e7a48a2d-819c-4c78-9939-76d459dd43e0"))
+e_ParameterType
+{
+    vbSetOpenTime = 0,
+    vbSetLockTime = 1,
+    vbFirstCard = 2,
+    vbParDoorState = 3,
+    vbOpenTimeAlarm = 4,
+    vbBargeInAlarm = 5,
+    vbOpenTip = 6,
+    vbSuperEncryption = 7,
+    vbAdvancedEncryption = 8,
+    vbReaderType = 9,
+    vbReaderDecode = 10
+};
+
+enum __declspec(uuid("0083f274-0b8c-407f-af18-fb51a7f4fe8e"))
+e_TCPMode
+{
+    vbTCPClient = 1,
+    vbTCPServer = 2,
+    vbTCPAll = 3
+};
+
+enum __declspec(uuid("5c242665-7c23-4057-947d-0ef850798cd5"))
+e_EquptTCPSettingMode
+{
+    vbEquptTTCPClient = 1,
+    vbEquptTTCPServer = 2
+};
+
+struct __declspec(uuid("869abf28-031f-41c7-a53d-203f0459635c"))
+_DriveTCPInfo : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetTCPServerAddr,put=PutTCPServerAddr))
+    _bstr_t TCPServerAddr;
+    __declspec(property(get=GetTCPServerIP,put=PutTCPServerIP))
+    _bstr_t TCPServerIP;
+    __declspec(property(get=GetTCPServerPort,put=PutTCPServerPort))
+    long TCPServerPort;
+    __declspec(property(get=GetUDPPort,put=PutUDPPort))
+    long UDPPort;
+    __declspec(property(get=GetTCPPort,put=PutTCPPort))
+    long TCPPort;
+    __declspec(property(get=GetIPMode,put=PutIPMode))
+    enum e_EquptTCPSettingMode IPMode;
+    __declspec(property(get=GetDNSBuckup,put=PutDNSBuckup))
+    _bstr_t DNSBuckup;
+    __declspec(property(get=GetDNS,put=PutDNS))
+    _bstr_t DNS;
+    __declspec(property(get=GetIPGateway,put=PutIPGateway))
+    _bstr_t IPGateway;
+    __declspec(property(get=GetIPMask,put=PutIPMask))
+    _bstr_t IPMask;
+    __declspec(property(get=GetIP,put=PutIP))
+    _bstr_t IP;
+    __declspec(property(get=GetMAC,put=PutMAC))
+    _bstr_t MAC;
+    __declspec(property(get=GetAutoIP,put=PutAutoIP))
+    VARIANT_BOOL AutoIP;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetMAC ( );
+    void PutMAC (
+        _bstr_t _arg1 );
+    _bstr_t GetIP ( );
+    void PutIP (
+        _bstr_t _arg1 );
+    _bstr_t GetIPMask ( );
+    void PutIPMask (
+        _bstr_t _arg1 );
+    _bstr_t GetIPGateway ( );
+    void PutIPGateway (
+        _bstr_t _arg1 );
+    _bstr_t GetDNS ( );
+    void PutDNS (
+        _bstr_t _arg1 );
+    _bstr_t GetDNSBuckup ( );
+    void PutDNSBuckup (
+        _bstr_t _arg1 );
+    enum e_EquptTCPSettingMode GetIPMode ( );
+    void PutIPMode (
+        enum e_EquptTCPSettingMode _arg1 );
+    long GetTCPPort ( );
+    void PutTCPPort (
+        long _arg1 );
+    long GetUDPPort ( );
+    void PutUDPPort (
+        long _arg1 );
+    long GetTCPServerPort ( );
+    void PutTCPServerPort (
+        long _arg1 );
+    _bstr_t GetTCPServerIP ( );
+    void PutTCPServerIP (
+        _bstr_t _arg1 );
+    _bstr_t GetTCPServerAddr ( );
+    void PutTCPServerAddr (
+        _bstr_t _arg1 );
+    _variant_t ToHexString ( );
+    _variant_t SetTCPParHexString (
+        _bstr_t sPar );
+    HRESULT SetEquptType (
+        enum e_EquptType * lEquptType );
+    VARIANT_BOOL GetAutoIP ( );
+    void PutAutoIP (
+        VARIANT_BOOL _arg1 );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_MAC (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_MAC (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_IP (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_IP (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_IPMask (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_IPMask (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_IPGateway (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_IPGateway (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_DNS (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_DNS (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_DNSBuckup (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_DNSBuckup (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_IPMode (
+        /*[out,retval]*/ enum e_EquptTCPSettingMode * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_IPMode (
+        /*[in]*/ enum e_EquptTCPSettingMode _arg1 ) = 0;
+      virtual HRESULT __stdcall get_TCPPort (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_TCPPort (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_UDPPort (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_UDPPort (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_TCPServerPort (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_TCPServerPort (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall get_TCPServerIP (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_TCPServerIP (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall get_TCPServerAddr (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_TCPServerAddr (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_ToHexString (
+        /*[out,retval]*/ VARIANT * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetTCPParHexString (
+        /*[in]*/ BSTR sPar,
+        /*[out,retval]*/ VARIANT * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetEquptType (
+        /*[in,out]*/ enum e_EquptType * lEquptType ) = 0;
+      virtual HRESULT __stdcall get_AutoIP (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_AutoIP (
+        /*[in]*/ VARIANT_BOOL _arg1 ) = 0;
+};
+
+enum __declspec(uuid("788e77ce-ce37-4081-881e-202232737581"))
+e_RecordFileCode
+{
+    vbCardRecord = 1,
+    vbDoorButtonRecord = 2,
+    vbDoorStateRecord = 3,
+    vbSoftwareOpenRecord = 4,
+    vbAlarmRecord = 5,
+    vbSysRecord = 6
+};
+
+struct __declspec(uuid("39b53b5a-4e34-4c0c-9f94-81631dc6cbf6"))
+_DriveRecord : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetNum (
+        long lNum );
+    long GetNum ( );
+    HRESULT SetCode (
+        enum e_RecordFileCode lCode );
+    enum e_RecordFileCode GetCode ( );
+    enum e_RecordType GetType ( );
+    DATE GetDateTime ( );
+    double GetCard ( );
+    _bstr_t GetPassword ( );
+    long GetDoorPort ( );
+    _bstr_t GetRecordStr ( );
+    HRESULT SetRecordStr (
+        BSTR * sNew );
+    HRESULT SetRecordFC8800Str (
+        enum e_RecordFileCode lCode,
+        BSTR * sNew );
+    HRESULT SetRecordFC9800ICStr (
+        enum e_RecordFileCode lCode,
+        BSTR * sNew );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetNum (
+        /*[in]*/ long lNum ) = 0;
+      virtual HRESULT __stdcall raw_GetNum (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetCode (
+        /*[in]*/ enum e_RecordFileCode lCode ) = 0;
+      virtual HRESULT __stdcall raw_GetCode (
+        /*[out,retval]*/ enum e_RecordFileCode * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetType (
+        /*[out,retval]*/ enum e_RecordType * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetDateTime (
+        /*[out,retval]*/ DATE * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetCard (
+        /*[out,retval]*/ double * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetPassword (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetDoorPort (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetRecordStr (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetRecordStr (
+        /*[in,out]*/ BSTR * sNew ) = 0;
+      virtual HRESULT __stdcall raw_SetRecordFC8800Str (
+        /*[in]*/ enum e_RecordFileCode lCode,
+        /*[in,out]*/ BSTR * sNew ) = 0;
+      virtual HRESULT __stdcall raw_SetRecordFC9800ICStr (
+        /*[in]*/ enum e_RecordFileCode lCode,
+        /*[in,out]*/ BSTR * sNew ) = 0;
+};
+
+struct __declspec(uuid("222354ad-6ea7-44f7-a1a5-7cf92f1c9f72"))
+_DriveRecordLists : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetCode (
+        enum e_RecordFileCode lCode );
+    enum e_RecordFileCode GetCode ( );
+    _DriveRecordPtr Add (
+        BSTR * sKey );
+    _variant_t SetRecordCount (
+        long lCount );
+    _DriveRecordPtr GetItem (
+        long vntIndexKey );
+    void PutRefItem (
+        long vntIndexKey,
+        struct _DriveRecord * * _arg2 );
+    long GetCount ( );
+    HRESULT Remove (
+        long vntIndexKey,
+        VARIANT_BOOL * bResList );
+    HRESULT RefreshList ( );
+    HRESULT Unload ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetCode (
+        /*[in]*/ enum e_RecordFileCode lCode ) = 0;
+      virtual HRESULT __stdcall raw_GetCode (
+        /*[out,retval]*/ enum e_RecordFileCode * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_Add (
+        /*[in,out]*/ BSTR * sKey,
+        /*[out,retval]*/ struct _DriveRecord * * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetRecordCount (
+        /*[in]*/ long lCount,
+        /*[out,retval]*/ VARIANT * _arg2 ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long vntIndexKey,
+        /*[out,retval]*/ struct _DriveRecord * * _arg2 ) = 0;
+      virtual HRESULT __stdcall putref_Item (
+        /*[in]*/ long vntIndexKey,
+        /*[in,out]*/ struct _DriveRecord * * _arg2 ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_Remove (
+        /*[in]*/ long vntIndexKey,
+        /*[in,out]*/ VARIANT_BOOL * bResList ) = 0;
+      virtual HRESULT __stdcall raw_RefreshList ( ) = 0;
+      virtual HRESULT __stdcall raw_Unload ( ) = 0;
+};
+
+enum __declspec(uuid("de36ab1c-2546-43b7-a82b-41033fad81a7"))
+e_DoorInOutState
+{
+    vbDoorInOut = 0,
+    vbDoorOut = 1,
+    vbDoorIn = 2
+};
+
+enum __declspec(uuid("49dfa41e-f564-48db-9588-2ba53260bd3d"))
+e_EquptDownloadCardType
+{
+    vbSequenceCard = 1,
+    vbNoSequenceCard = 2,
+    vbEquptDownloadAllCard = 3
+};
+
+enum __declspec(uuid("2d0f4524-0f74-461e-b9a1-41314f1b1a61"))
+e_CardState
+{
+    eCardNormal = 0,
+    eCardLoseState = 1,
+    eCardBlackList = 2
+};
+
+struct __declspec(uuid("2a2212f7-afb9-45c2-96a9-db0cd854dc1b"))
+_DriveCard : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMuchReader,put=PutMuchReader))
+    unsigned char MuchReader;
+    __declspec(property(get=GetClickButton,put=PutClickButton))
+    VARIANT_BOOL ClickButton;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL GetClickButton ( );
+    void PutClickButton (
+        VARIANT_BOOL _arg1 );
+    unsigned char GetMuchReader ( );
+    void PutMuchReader (
+        unsigned char _arg1 );
+    HRESULT SetCardData (
+        double vNew );
+    double GetCardData ( );
+    HRESULT SetCardNum (
+        _bstr_t vNew );
+    _bstr_t GetCardNum ( );
+    HRESULT SetPassword (
+        _bstr_t vNew );
+    _bstr_t GetPassword ( );
+    HRESULT SetUsePassword (
+        VARIANT_BOOL vNew );
+    VARIANT_BOOL GetUsePassword ( );
+    HRESULT SetName (
+        _bstr_t vNew );
+    _bstr_t GetName ( );
+    HRESULT SetUseHoliday (
+        VARIANT_BOOL vNew );
+    VARIANT_BOOL GetUseHoliday ( );
+    HRESULT SetDoorInOutState (
+        short vDoorNum,
+        enum e_DoorInOutState vNew );
+    enum e_DoorInOutState GetDoorInOutState (
+        short vDoorNum );
+    enum e_CardPwrType GetDoorPwr (
+        short vDoorNum );
+    HRESULT SetDoorPwr (
+        short vDoorNum,
+        enum e_CardPwrType iPwr );
+    _bstr_t GetDoorPwrStr ( );
+    HRESULT SetDoorPwrStr (
+        _bstr_t sPwrStr );
+    HRESULT SetTimeLimit (
+        DATE vNew );
+    DATE GetTimeLimit ( );
+    short GetTimeGroup (
+        short iPort );
+    HRESULT SetTimeGroup (
+        short iPort,
+        short vNew );
+    long GetReadCount ( );
+    HRESULT SetReadCount (
+        long vNew );
+    VARIANT_BOOL GetFirstCard ( );
+    HRESULT SetFirstCard (
+        VARIANT_BOOL vNew );
+    VARIANT_BOOL GetLongOpen ( );
+    HRESULT SetLongOpen (
+        VARIANT_BOOL vNew );
+    VARIANT_BOOL GetPatrol ( );
+    HRESULT SetPatrol (
+        VARIANT_BOOL vNew );
+    VARIANT_BOOL GetTheftSeting ( );
+    HRESULT SetTheftSeting (
+        VARIANT_BOOL vNew );
+    enum e_CardState GetState ( );
+    HRESULT SetState (
+        enum e_CardState lState );
+    _bstr_t toString_Len17 ( );
+    _bstr_t ToString (
+        enum e_EquptType lEquptType );
+    VARIANT_BOOL GetHolidayPwr (
+        short vHolidayNum );
+    HRESULT SetHolidayPwr (
+        short vHolidayNum,
+        VARIANT_BOOL bUse );
+    _bstr_t GetHolidayPwrStr ( );
+    HRESULT SetHolidayPwrStr (
+        BSTR * sPwrStr );
+    _bstr_t toString_FC8800 ( );
+    HRESULT SetCardHex_FC8800 (
+        BSTR * sHex );
+    _bstr_t toString_FC8832 ( );
+    HRESULT SetCardHex_FC8832 (
+        BSTR * sHex );
+    VARIANT_BOOL GetManageCard ( );
+    HRESULT SetManageCard (
+        VARIANT_BOOL vNew );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ClickButton (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_ClickButton (
+        /*[in]*/ VARIANT_BOOL _arg1 ) = 0;
+      virtual HRESULT __stdcall get_MuchReader (
+        /*[out,retval]*/ unsigned char * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_MuchReader (
+        /*[in]*/ unsigned char _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetCardData (
+        /*[in]*/ double vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetCardData (
+        /*[out,retval]*/ double * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetCardNum (
+        /*[in]*/ BSTR vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetCardNum (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetPassword (
+        /*[in]*/ BSTR vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetPassword (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetUsePassword (
+        /*[in]*/ VARIANT_BOOL vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetUsePassword (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetName (
+        /*[in]*/ BSTR vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetName (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetUseHoliday (
+        /*[in]*/ VARIANT_BOOL vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetUseHoliday (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetDoorInOutState (
+        /*[in]*/ short vDoorNum,
+        /*[in]*/ enum e_DoorInOutState vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetDoorInOutState (
+        /*[in]*/ short vDoorNum,
+        /*[out,retval]*/ enum e_DoorInOutState * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_GetDoorPwr (
+        /*[in]*/ short vDoorNum,
+        /*[out,retval]*/ enum e_CardPwrType * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetDoorPwr (
+        /*[in]*/ short vDoorNum,
+        /*[in]*/ enum e_CardPwrType iPwr ) = 0;
+      virtual HRESULT __stdcall raw_GetDoorPwrStr (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetDoorPwrStr (
+        /*[in]*/ BSTR sPwrStr ) = 0;
+      virtual HRESULT __stdcall raw_SetTimeLimit (
+        /*[in]*/ DATE vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetTimeLimit (
+        /*[out,retval]*/ DATE * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetTimeGroup (
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ short * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetTimeGroup (
+        /*[in]*/ short iPort,
+        /*[in]*/ short vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetReadCount (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetReadCount (
+        /*[in]*/ long vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetFirstCard (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetFirstCard (
+        /*[in]*/ VARIANT_BOOL vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetLongOpen (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetLongOpen (
+        /*[in]*/ VARIANT_BOOL vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetPatrol (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetPatrol (
+        /*[in]*/ VARIANT_BOOL vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetTheftSeting (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetTheftSeting (
+        /*[in]*/ VARIANT_BOOL vNew ) = 0;
+      virtual HRESULT __stdcall raw_GetState (
+        /*[out,retval]*/ enum e_CardState * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetState (
+        /*[in]*/ enum e_CardState lState ) = 0;
+      virtual HRESULT __stdcall raw_toString_Len17 (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_ToString (
+        /*[in]*/ enum e_EquptType lEquptType,
+        /*[out,retval]*/ BSTR * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_GetHolidayPwr (
+        /*[in]*/ short vHolidayNum,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetHolidayPwr (
+        /*[in]*/ short vHolidayNum,
+        /*[in]*/ VARIANT_BOOL bUse ) = 0;
+      virtual HRESULT __stdcall raw_GetHolidayPwrStr (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetHolidayPwrStr (
+        /*[in,out]*/ BSTR * sPwrStr ) = 0;
+      virtual HRESULT __stdcall raw_toString_FC8800 (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetCardHex_FC8800 (
+        /*[in,out]*/ BSTR * sHex ) = 0;
+      virtual HRESULT __stdcall raw_toString_FC8832 (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetCardHex_FC8832 (
+        /*[in,out]*/ BSTR * sHex ) = 0;
+      virtual HRESULT __stdcall raw_GetManageCard (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetManageCard (
+        /*[in]*/ VARIANT_BOOL vNew ) = 0;
+};
+
+struct __declspec(uuid("8f959654-6872-4fb0-887b-ec7df27bd89d"))
+_DriveCardLists : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetEquptCardType (
+        long lType );
+    long GetEquptCardType ( );
+    _DriveCardPtr Add (
+        BSTR * sKey );
+    _variant_t SetCardCount (
+        long lCount );
+    _DriveCardPtr GetItem (
+        long vntIndexKey );
+    void PutRefItem (
+        long vntIndexKey,
+        struct _DriveCard * * _arg2 );
+    long GetCount ( );
+    HRESULT Remove (
+        long vntIndexKey,
+        VARIANT_BOOL * bResList );
+    HRESULT RefreshList ( );
+    HRESULT Unload ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetEquptCardType (
+        /*[in]*/ long lType ) = 0;
+      virtual HRESULT __stdcall raw_GetEquptCardType (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_Add (
+        /*[in,out]*/ BSTR * sKey,
+        /*[out,retval]*/ struct _DriveCard * * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetCardCount (
+        /*[in]*/ long lCount,
+        /*[out,retval]*/ VARIANT * _arg2 ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long vntIndexKey,
+        /*[out,retval]*/ struct _DriveCard * * _arg2 ) = 0;
+      virtual HRESULT __stdcall putref_Item (
+        /*[in]*/ long vntIndexKey,
+        /*[in,out]*/ struct _DriveCard * * _arg2 ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_Remove (
+        /*[in]*/ long vntIndexKey,
+        /*[in,out]*/ VARIANT_BOOL * bResList ) = 0;
+      virtual HRESULT __stdcall raw_RefreshList ( ) = 0;
+      virtual HRESULT __stdcall raw_Unload ( ) = 0;
+};
+
+struct __declspec(uuid("b9310053-a519-442b-aae6-3d669ee2804b"))
+_DriveCommandEvent : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetEventConnInfo,put=PutRefEventConnInfo))
+    _DriveInfoPtr EventConnInfo;
+    __declspec(property(get=GetEventCols,put=PutRefEventCols))
+    IDispatchPtr EventCols;
+    __declspec(property(get=GetEventType,put=PutEventType))
+    long EventType;
+    __declspec(property(get=GetEventiFunc,put=PutEventiFunc))
+    long EventiFunc;
+    __declspec(property(get=GetEventiWatchType,put=PutEventiWatchType))
+    long EventiWatchType;
+    __declspec(property(get=GetEventsValue,put=PutEventsValue))
+    _bstr_t EventsValue;
+    __declspec(property(get=GetEventiStep,put=PutEventiStep))
+    long EventiStep;
+    __declspec(property(get=GetEventiStepCount,put=PutEventiStepCount))
+    long EventiStepCount;
+    __declspec(property(get=GetEventlRecordCount,put=PutEventlRecordCount))
+    long EventlRecordCount;
+    __declspec(property(get=GetEventlDataLen,put=PutEventlDataLen))
+    long EventlDataLen;
+    __declspec(property(get=GetEventsHex,put=PutEventsHex))
+    _bstr_t EventsHex;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _DriveInfoPtr GetEventConnInfo ( );
+    void PutRefEventConnInfo (
+        struct _DriveInfo * EventConnInfo );
+    IDispatchPtr GetEventCols ( );
+    void PutRefEventCols (
+        IDispatch * EventCols );
+    long GetEventType ( );
+    void PutEventType (
+        long EventType );
+    long GetEventiFunc ( );
+    void PutEventiFunc (
+        long EventiFunc );
+    long GetEventiWatchType ( );
+    void PutEventiWatchType (
+        long EventiWatchType );
+    _bstr_t GetEventsValue ( );
+    void PutEventsValue (
+        _bstr_t EventsValue );
+    long GetEventiStep ( );
+    void PutEventiStep (
+        long EventiStep );
+    long GetEventiStepCount ( );
+    void PutEventiStepCount (
+        long EventiStepCount );
+    long GetEventlRecordCount ( );
+    void PutEventlRecordCount (
+        long EventlRecordCount );
+    long GetEventlDataLen ( );
+    void PutEventlDataLen (
+        long EventlDataLen );
+    _bstr_t GetEventsHex ( );
+    void PutEventsHex (
+        _bstr_t EventsHex );
+    _DriveRecordListsPtr GetRecords ( );
+    _DriveCardListsPtr GetCards ( );
+    _DriveHolidayListsPtr GetHolidays ( );
+    _DriveTimeGroupListsPtr GetTimeGroups ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_EventConnInfo (
+        /*[out,retval]*/ struct _DriveInfo * * EventConnInfo ) = 0;
+    virtual HRESULT _VtblGapPlaceholder1( ) { return E_NOTIMPL; }
+      virtual HRESULT __stdcall putref_EventConnInfo (
+        /*[in]*/ struct _DriveInfo * EventConnInfo ) = 0;
+      virtual HRESULT __stdcall get_EventCols (
+        /*[out,retval]*/ IDispatch * * EventCols ) = 0;
+    virtual HRESULT _VtblGapPlaceholder2( ) { return E_NOTIMPL; }
+      virtual HRESULT __stdcall putref_EventCols (
+        /*[in]*/ IDispatch * EventCols ) = 0;
+      virtual HRESULT __stdcall get_EventType (
+        /*[out,retval]*/ long * EventType ) = 0;
+      virtual HRESULT __stdcall put_EventType (
+        /*[in]*/ long EventType ) = 0;
+      virtual HRESULT __stdcall get_EventiFunc (
+        /*[out,retval]*/ long * EventiFunc ) = 0;
+      virtual HRESULT __stdcall put_EventiFunc (
+        /*[in]*/ long EventiFunc ) = 0;
+      virtual HRESULT __stdcall get_EventiWatchType (
+        /*[out,retval]*/ long * EventiWatchType ) = 0;
+      virtual HRESULT __stdcall put_EventiWatchType (
+        /*[in]*/ long EventiWatchType ) = 0;
+      virtual HRESULT __stdcall get_EventsValue (
+        /*[out,retval]*/ BSTR * EventsValue ) = 0;
+      virtual HRESULT __stdcall put_EventsValue (
+        /*[in]*/ BSTR EventsValue ) = 0;
+      virtual HRESULT __stdcall get_EventiStep (
+        /*[out,retval]*/ long * EventiStep ) = 0;
+      virtual HRESULT __stdcall put_EventiStep (
+        /*[in]*/ long EventiStep ) = 0;
+      virtual HRESULT __stdcall get_EventiStepCount (
+        /*[out,retval]*/ long * EventiStepCount ) = 0;
+      virtual HRESULT __stdcall put_EventiStepCount (
+        /*[in]*/ long EventiStepCount ) = 0;
+      virtual HRESULT __stdcall get_EventlRecordCount (
+        /*[out,retval]*/ long * EventlRecordCount ) = 0;
+      virtual HRESULT __stdcall put_EventlRecordCount (
+        /*[in]*/ long EventlRecordCount ) = 0;
+      virtual HRESULT __stdcall get_EventlDataLen (
+        /*[out,retval]*/ long * EventlDataLen ) = 0;
+      virtual HRESULT __stdcall put_EventlDataLen (
+        /*[in]*/ long EventlDataLen ) = 0;
+      virtual HRESULT __stdcall get_EventsHex (
+        /*[out,retval]*/ BSTR * EventsHex ) = 0;
+      virtual HRESULT __stdcall put_EventsHex (
+        /*[in]*/ BSTR EventsHex ) = 0;
+      virtual HRESULT __stdcall raw_GetRecords (
+        /*[out,retval]*/ struct _DriveRecordLists * * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetCards (
+        /*[out,retval]*/ struct _DriveCardLists * * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetHolidays (
+        /*[out,retval]*/ struct _DriveHolidayLists * * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetTimeGroups (
+        /*[out,retval]*/ struct _DriveTimeGroupLists * * _arg1 ) = 0;
+};
+
+struct __declspec(uuid("bd6996a5-4500-4003-9877-80c1e80bfda1"))
+_DriveMain : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCheckMaxChunnel,put=PutCheckMaxChunnel))
+    long CheckMaxChunnel;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCheckMaxChunnel ( );
+    void PutCheckMaxChunnel (
+        long _arg1 );
+    long GetAlignmentCount ( );
+    HRESULT SetShowEvent (
+        VARIANT_BOOL bShowEvent );
+    _DriveCommandEventPtr GetEvent ( );
+    _DriveCommandEventPtr GetEventSending ( );
+    _DriveInfoPtr GetTmpConnInfo ( );
+    _DriveRecordListsPtr GetTmpRecords ( );
+    _DriveCardListsPtr GetTmpCards ( );
+    _DriveHolidayListsPtr GetTmpHolidays ( );
+    _DriveTimeGroupListsPtr GetTmpTimeGroups ( );
+    _DrivePasswordListsPtr GetTmpPasswords ( );
+    HRESULT RaiseWatchEvents (
+        struct _DriveInfo * * objConnInfo,
+        short iWatchType,
+        _bstr_t sValue );
+    HRESULT RaiseFrameAchieve (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc,
+        _bstr_t sValue );
+    HRESULT RaiseFrameAchieve_Obj (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc,
+        _bstr_t sValue,
+        IDispatch * * oCols );
+    HRESULT RaiseSendProcess (
+        struct _DriveInfo * * objConnInfo,
+        long iFunc,
+        long iStep,
+        long iStepCount,
+        _bstr_t sValue );
+    HRESULT RaiseContainOverflow (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc,
+        _bstr_t sValue );
+    HRESULT RaiseReadRecordAchieve (
+        struct _DriveInfo * * objConnInfo,
+        long lRecordCount,
+        struct _DriveRecordLists * * objRecords );
+    HRESULT RaiseReadCardAchieve (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveCardLists * * objCards );
+    HRESULT RaiseReadHolidayAchieve (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveHolidayLists * * objCol );
+    HRESULT RaiseReadTimeGroupAchieve (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveTimeGroupLists * * objCol );
+    HRESULT RaisePasswordErr (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc,
+        _bstr_t sValue );
+    HRESULT RaiseReadPasswordAchieve (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePasswordLists * * objCol );
+    HRESULT RaiseOpenPortErr (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc,
+        struct _DriveCardLists * * objCards,
+        _bstr_t sValue );
+    HRESULT RaiseCommandTimeout (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc,
+        short iStep,
+        struct _DriveCardLists * * objCards,
+        _bstr_t sValue );
+    HRESULT RaiseSendEvent (
+        struct _DriveInfo * * objConnInfo,
+        long lDataLen,
+        _bstr_t sHex );
+    HRESULT RaiseDataArrivalEvent (
+        struct _DriveInfo * * objConnInfo,
+        long lDataLen,
+        _bstr_t sHex );
+    HRESULT Unload ( );
+    _bstr_t GetVer ( );
+    enum StateConstants GetWinSockState (
+        long lIndex );
+    HRESULT StopConnAll ( );
+    HRESULT StopConn (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteSN (
+        struct _DriveInfo * * objConnInfo,
+        _bstr_t sSN );
+    VARIANT_BOOL ReadSN (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteConnPassword (
+        struct _DriveInfo * * objConnInfo,
+        _bstr_t sPassword );
+    VARIANT_BOOL ReadConnPassword (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL DeleteConnPassword (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL GetTCPPar (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL mUDPBroadcast );
+    VARIANT_BOOL WriteTCPPar (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveTCPInfo * * oTCPPar,
+        VARIANT_BOOL mUDPBroadcast );
+    VARIANT_BOOL ReadEquptDeadline (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteEquptDeadline (
+        struct _DriveInfo * * objConnInfo,
+        long lDeadline );
+    VARIANT_BOOL ReadEquptVer (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL ReadEquptStateInfo (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL ReadSysPar (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteRecordMode (
+        struct _DriveInfo * * objConnInfo,
+        short lMode );
+    VARIANT_BOOL ReadRecordMode (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteKeyboard (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePortList * * oPort );
+    VARIANT_BOOL ReadKeyboard (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL IniKeyboardPassword (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL ReadKeyboardPassword (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteLockInteraction (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bDoor1,
+        VARIANT_BOOL bDoor2,
+        VARIANT_BOOL bDoor3,
+        VARIANT_BOOL bDoor4 );
+    VARIANT_BOOL ReadLockInteraction (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteFireAlarm (
+        struct _DriveInfo * * objConnInfo,
+        short lMode );
+    VARIANT_BOOL ReadFireAlarm (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteOpenAlarm (
+        struct _DriveInfo * * objConnInfo,
+        short lMode );
+    VARIANT_BOOL ReadOpenAlarm (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL SetReaderIntervalTime (
+        struct _DriveInfo * * objConnInfo,
+        long lInterval );
+    VARIANT_BOOL GetReaderIntervalTime (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL SetReaderIntervalTime_Elevator (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bUse,
+        long lInterval,
+        short lMode );
+    VARIANT_BOOL SetSpeakOpen (
+        struct _DriveInfo * * objConnInfo,
+        _bstr_t sOpen );
+    VARIANT_BOOL ReadSpeakOpen (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL SetReaderCheckMode (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bOpen );
+    VARIANT_BOOL ReadReaderCheckMode (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL SetEquptBuzzerMode (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bOpen );
+    VARIANT_BOOL ReadEquptBuzzerMode (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteAssistantAlertPar (
+        struct _DriveInfo * * objConnInfo,
+        unsigned char lMode );
+    VARIANT_BOOL ReadAssistantAlertPar (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteCardMaxPar (
+        struct _DriveInfo * * objConnInfo,
+        long lCardMax,
+        struct _DrivePortList * * oDoorCardMax,
+        struct _DrivePortList * * oDoorInCardCount );
+    VARIANT_BOOL ReadCardMaxPar (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteTheftAlarmPar (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bOpen,
+        unsigned char lInTime,
+        unsigned char lOutTime,
+        long lBeginPassword,
+        long lClosePassword,
+        long lAlarmTime );
+    VARIANT_BOOL ReadTheftAlarmPar (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteCheckInOutPar (
+        struct _DriveInfo * * objConnInfo,
+        unsigned char lMode );
+    VARIANT_BOOL ReadCheckInOutPar (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteCardPeriodSpeak (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL lOpen );
+    VARIANT_BOOL ReadCardPeriodSpeak (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteReadCardSpeak (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bOpen,
+        unsigned char lMsgIndex,
+        DATE dBeginDate,
+        DATE dEndDate );
+    VARIANT_BOOL ReadReadCardSpeak (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL BeginWatch (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL CloseWatch (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL ReadWatchState (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL SendFireAlarm (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL CloseFireAlarm (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL ReadFireAlarmState (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL SendAssistantAlarm (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL CloseAssistantAlarm (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL ReadAssistantAlarm (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL CloseAlarm (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        long lAlarmPar );
+    VARIANT_BOOL CloseAlarm_Elevator (
+        struct _DriveInfo * * objConnInfo,
+        long lAlarmPar );
+    VARIANT_BOOL GetPortState (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL GetTheftAlarmState (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL IniEqupt (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL SearchEquptOnNetNum (
+        struct _DriveInfo * * objConnInfo,
+        long lNetNum );
+    VARIANT_BOOL SetEquptNetNum (
+        struct _DriveInfo * * objConnInfo,
+        long lNetNum,
+        VARIANT_BOOL mUDPBroadcast );
+    VARIANT_BOOL ReadTime (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteTime (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL ReadTimePar (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteTimePar (
+        struct _DriveInfo * * objConnInfo,
+        short lParMode,
+        short lSecond );
+    VARIANT_BOOL GetReaderPar (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteReaderPar (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePortList * * oPort );
+    VARIANT_BOOL GetLockPar (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteLockPar (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePortList * * oPort );
+    VARIANT_BOOL OpenDoor (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePortList * * oPort );
+    VARIANT_BOOL OpenDoor_Check (
+        struct _DriveInfo * * objConnInfo,
+        unsigned char lNum,
+        struct _DrivePortList * * oPort );
+    VARIANT_BOOL CloseDoor (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePortList * * oPort );
+    VARIANT_BOOL OpenDoor_always (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePortList * * oPort );
+    VARIANT_BOOL LockPort (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePortList * * oPort );
+    VARIANT_BOOL UnLockPort (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePortList * * oPort );
+    VARIANT_BOOL GetPortCheckMode (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL WritePortCheckMode (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        struct _DriveTimeGroup * * oTime );
+    VARIANT_BOOL GetPortCheckMode_Elevator (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WritePortCheckMode_Elevator (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveTimeGroup * * oTime );
+    VARIANT_BOOL GetPortWorkMode (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL WritePortWorkMode (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bUse,
+        short lOpenMode,
+        short lLongOpenMode,
+        struct _DriveTimeGroup * * oTimeG );
+    VARIANT_BOOL ReadLockReadTime (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL WriteLockReadTime (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bOpen,
+        struct _DriveTimeGroup * * oTime );
+    VARIANT_BOOL ReadLockOpenTime (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL WriteLockOpenTime (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        long lLockOpenTime );
+    VARIANT_BOOL ReadLockOpenTime_Elevator (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteLockOpenTime_Elevator (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePortList * * oPort );
+    VARIANT_BOOL GetReaderInterval (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL WriteReaderInterval (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bUse,
+        short lMode );
+    VARIANT_BOOL SetReadErrCardAlarm (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bUse );
+    VARIANT_BOOL GetReadErrCardAlarm (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetReadErrCardAlarm_Elevator (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bUse );
+    VARIANT_BOOL GetReadErrCardAlarm_Elevator (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL SetAlarmPassword (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bUse,
+        _bstr_t sPasswrod,
+        short lMode );
+    VARIANT_BOOL GetAlarmPassword (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetAlarmPassword_Elevator (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bUse,
+        _bstr_t sPasswrod,
+        short lMode );
+    VARIANT_BOOL GetAlarmPassword_Elevator (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL GetCheckCardInOutState (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetCheckCardInOutState (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bUse );
+    VARIANT_BOOL GetLongOpenAlarm (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetLongOpenAlarm (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bOpen,
+        long lLongOpenTime,
+        VARIANT_BOOL bAlarm );
+    VARIANT_BOOL GetButtonPar (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetButtonPar (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bUse,
+        VARIANT_BOOL bUseLongOpen,
+        struct _DriveTimeGroup * * oTimeG );
+    VARIANT_BOOL GetDoorStateAlarm (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetDoorStateAlarm (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bUse,
+        struct _DriveTimeGroup * * oTimeG );
+    VARIANT_BOOL GetProhibitCheck (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetProhibitCheck (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bOpen,
+        VARIANT_BOOL bSaveCard,
+        long lTimeGroupIndex );
+    VARIANT_BOOL GetMuchCardPar (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetMuchCardPar (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        unsigned char lInCardMax,
+        unsigned char lOutCardMax );
+    VARIANT_BOOL GetMuchCardGroup (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetMuchCardGroup (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        unsigned char lGroupIndex,
+        long lGroupMode,
+        struct _DriveCardLists * * oCards );
+    VARIANT_BOOL GetHolidayInfo (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL HolidayInfoHexToNum (
+        _bstr_t sHex,
+        double * lMaxCount,
+        double * lReocrdCount );
+    VARIANT_BOOL ClearHoliday (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL GetHoliday (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteHoliday (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveHolidayLists * * objHols );
+    VARIANT_BOOL DeleteHoliday (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveHolidayLists * * objHols );
+    VARIANT_BOOL GetPasswordInfo (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL PasswordInfoHexToNum (
+        _bstr_t sHex,
+        double * lMaxCount,
+        double * lReocrdCount );
+    VARIANT_BOOL ClearPassword (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL GetPassword (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WritePassword (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePasswordLists * * objPw );
+    VARIANT_BOOL DeletePassword (
+        struct _DriveInfo * * objConnInfo,
+        struct _DrivePasswordLists * * objPw );
+    VARIANT_BOOL TestPassword (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        _bstr_t sPassword );
+    VARIANT_BOOL TestPassword_Elevator (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        _bstr_t sPassword,
+        unsigned char lMode );
+    VARIANT_BOOL ClearTimeGroup (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL GetTimeGroup (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteTimeGroup (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveTimeGroupLists * * objTs );
+    VARIANT_BOOL GetCardCount (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL CardCountInfoHexToNum (
+        _bstr_t sHex,
+        double * lMaxCount,
+        double * lCardCount,
+        double * lSequenceCardMaxCount,
+        double * lSequenceCardCount );
+    VARIANT_BOOL ClearCard (
+        struct _DriveInfo * * objConnInfo,
+        long lMode );
+    VARIANT_BOOL GetCards (
+        struct _DriveInfo * * objConnInfo,
+        long lMode );
+    VARIANT_BOOL GetCardInfo (
+        struct _DriveInfo * * objConnInfo,
+        double dCard );
+    VARIANT_BOOL WriteUserCard (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveCardLists * * objCards );
+    VARIANT_BOOL DeleteUserCard (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveCardLists * * objCards );
+    VARIANT_BOOL TestCard (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        double dCard,
+        _bstr_t sPassword,
+        long lMode );
+    VARIANT_BOOL WriteSequenceCard (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveCardLists * * objCards,
+        VARIANT_BOOL bSort );
+    VARIANT_BOOL GetRecordInfo (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL RecordInfoHexToNum (
+        long lRecordCode,
+        _bstr_t sHex,
+        long * lRecordMaxCount,
+        double * lNewRecordCount,
+        double * lRecordEndAddr,
+        double * lUploadAddr,
+        long * lReadAll );
+    VARIANT_BOOL ClearAllRecord (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL ClearRecordOnly (
+        struct _DriveInfo * * objConnInfo,
+        enum e_RecordFileCode lRecordType );
+    VARIANT_BOOL UpdateReocrdFlag (
+        struct _DriveInfo * * objConnInfo,
+        enum e_RecordFileCode lRecordType,
+        long lRecordFlay,
+        VARIANT_BOOL bLoop );
+    VARIANT_BOOL UpdateReocrdEndFlag (
+        struct _DriveInfo * * objConnInfo,
+        enum e_RecordFileCode lRecordType,
+        long lRecordEndFlay );
+    VARIANT_BOOL RepairRecord (
+        struct _DriveInfo * * objConnInfo,
+        enum e_RecordFileCode lRecordType );
+    VARIANT_BOOL GetRecordOnFlay (
+        struct _DriveInfo * * objConnInfo,
+        enum e_RecordFileCode lRecordType,
+        long lBeginNum,
+        long lReadCount );
+    VARIANT_BOOL ReadRecord (
+        struct _DriveInfo * * objConnInfo,
+        enum e_RecordFileCode lRecordType,
+        long lReadCount );
+    _bstr_t AscToStr (
+        _bstr_t strAsc );
+    _bstr_t StrToAsc (
+        _bstr_t strChr );
+    VARIANT_BOOL CallSubByName (
+        _bstr_t sSubName,
+        long lEquptType,
+        struct _DriveInfo * * objConnInfo,
+        SAFEARRAY * * oParList );
+    _DriveValueListPtr AchieveValuetoList (
+        struct _DriveInfo * * objConnInfo,
+        short iFunc,
+        _bstr_t sValue );
+    VARIANT_BOOL WriteTimeDefine (
+        struct _DriveInfo * * objConnInfo,
+        DATE oDate );
+    HRESULT SetDrivePause ( );
+    HRESULT SetDriveRun ( );
+    long GetChunelAlignmentCount (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL BeginWatch_Bro (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bUDP );
+    VARIANT_BOOL CloseWatch_Bro (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bUDP );
+    VARIANT_BOOL WriteMemory (
+        struct _DriveInfo * * objConnInfo,
+        _bstr_t sHex );
+    VARIANT_BOOL ReadMemory (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteTime_Bro (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bUDP );
+    VARIANT_BOOL SetPortSpeak (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bUse );
+    VARIANT_BOOL GetPortSpeak (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetBothWayCheck (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bUse );
+    VARIANT_BOOL GetBothWayCheck (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetKeyboardManage (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        VARIANT_BOOL bUse );
+    VARIANT_BOOL GetKeyboardManage (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetKeyboardManagePassword (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        _bstr_t sPassword );
+    VARIANT_BOOL GetKeyboardManagePassword (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetReaderCheckMode_Mode (
+        struct _DriveInfo * * objConnInfo,
+        unsigned char lMode );
+    HRESULT ChunnelForciblyState (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bBool );
+    HRESULT StopConnOnSN (
+        struct _DriveInfo * * objConnInfo,
+        _bstr_t sSN );
+    VARIANT_BOOL WriteSN_Ps (
+        struct _DriveInfo * * objConnInfo,
+        _bstr_t sPassword1,
+        _bstr_t sPassword2,
+        _bstr_t sSN );
+    VARIANT_BOOL TestPassword_Ps (
+        struct _DriveInfo * * objConnInfo,
+        _bstr_t sPassword1,
+        _bstr_t sPassword2,
+        short iPort,
+        _bstr_t sPassword );
+    VARIANT_BOOL TestCard_Ps (
+        struct _DriveInfo * * objConnInfo,
+        _bstr_t sPassword1,
+        _bstr_t sPassword2,
+        short iPort,
+        double dCard,
+        _bstr_t sPassword,
+        long lMode );
+    VARIANT_BOOL SetFirstCardCheck (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        unsigned char lCardMode,
+        unsigned char lPasswordMode );
+    VARIANT_BOOL GetFirstCardCheck (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetMuchCardCheck (
+        struct _DriveInfo * * objConnInfo,
+        short iPort,
+        unsigned char lCardMode,
+        unsigned char lCheckInOut );
+    VARIANT_BOOL GetMuchCardCheck (
+        struct _DriveInfo * * objConnInfo,
+        short iPort );
+    VARIANT_BOOL SetAlarmOutputTime (
+        struct _DriveInfo * * objConnInfo,
+        unsigned char lTime );
+    VARIANT_BOOL GetAlarmOutputTime (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL ClearAllOpenData (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteUserCard_Mode (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveCardLists * * objCards,
+        long lMode );
+    VARIANT_BOOL WriteSN_Bro (
+        struct _DriveInfo * * objConnInfo,
+        _bstr_t sPassword1,
+        _bstr_t sPassword2,
+        _bstr_t sSN );
+    VARIANT_BOOL SetManageCard (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bUse );
+    VARIANT_BOOL GetManageCard (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL WriteTCPPar_MAC (
+        struct _DriveInfo * * objConnInfo,
+        struct _DriveTCPInfo * * oTCPPar,
+        VARIANT_BOOL mUDPBroadcast );
+    VARIANT_BOOL SetKeyboardManagePassword_8832 (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bUse,
+        _bstr_t sPassword );
+    VARIANT_BOOL GetKeyboardManagePassword_8832 (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL CheckCommandIsAdd (
+        struct _DriveInfo * * objConnInfo,
+        long lFunction );
+    VARIANT_BOOL DriveIsRun ( );
+    VARIANT_BOOL SetShowTxRxLog (
+        VARIANT_BOOL bShow );
+    VARIANT_BOOL SetICPar (
+        struct _DriveInfo * * objConnInfo,
+        short lSector,
+        _bstr_t sSectorPassword,
+        unsigned char lCheckType,
+        long lIDCode1,
+        long lIDCode2,
+        long lIDCode3,
+        long lIDCode4 );
+    VARIANT_BOOL ReadICPar (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL GetBlacklistAlarm (
+        struct _DriveInfo * * objConnInfo );
+    VARIANT_BOOL SetBlacklistAlarm (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bOpen );
+    VARIANT_BOOL SetKeyboardManagePassword_IC (
+        struct _DriveInfo * * objConnInfo,
+        VARIANT_BOOL bUse,
+        _bstr_t sPassword );
+    VARIANT_BOOL GetKeyboardManagePassword_IC (
+        struct _DriveInfo * * objConnInfo );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_CheckMaxChunnel (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_CheckMaxChunnel (
+        /*[in]*/ long _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetAlignmentCount (
+        /*[out,retval]*/ long * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetShowEvent (
+        /*[in]*/ VARIANT_BOOL bShowEvent ) = 0;
+      virtual HRESULT __stdcall raw_GetEvent (
+        /*[out,retval]*/ struct _DriveCommandEvent * * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetEventSending (
+        /*[out,retval]*/ struct _DriveCommandEvent * * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetTmpConnInfo (
+        /*[out,retval]*/ struct _DriveInfo * * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetTmpRecords (
+        /*[out,retval]*/ struct _DriveRecordLists * * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetTmpCards (
+        /*[out,retval]*/ struct _DriveCardLists * * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetTmpHolidays (
+        /*[out,retval]*/ struct _DriveHolidayLists * * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetTmpTimeGroups (
+        /*[out,retval]*/ struct _DriveTimeGroupLists * * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetTmpPasswords (
+        /*[out,retval]*/ struct _DrivePasswordLists * * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_RaiseWatchEvents (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iWatchType,
+        /*[in]*/ BSTR sValue ) = 0;
+      virtual HRESULT __stdcall raw_RaiseFrameAchieve (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iFunc,
+        /*[in]*/ BSTR sValue ) = 0;
+      virtual HRESULT __stdcall raw_RaiseFrameAchieve_Obj (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iFunc,
+        /*[in]*/ BSTR sValue,
+        /*[in,out]*/ IDispatch * * oCols ) = 0;
+      virtual HRESULT __stdcall raw_RaiseSendProcess (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long iFunc,
+        /*[in]*/ long iStep,
+        /*[in]*/ long iStepCount,
+        /*[in]*/ BSTR sValue ) = 0;
+      virtual HRESULT __stdcall raw_RaiseContainOverflow (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iFunc,
+        /*[in]*/ BSTR sValue ) = 0;
+      virtual HRESULT __stdcall raw_RaiseReadRecordAchieve (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long lRecordCount,
+        /*[in,out]*/ struct _DriveRecordLists * * objRecords ) = 0;
+      virtual HRESULT __stdcall raw_RaiseReadCardAchieve (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveCardLists * * objCards ) = 0;
+      virtual HRESULT __stdcall raw_RaiseReadHolidayAchieve (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveHolidayLists * * objCol ) = 0;
+      virtual HRESULT __stdcall raw_RaiseReadTimeGroupAchieve (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveTimeGroupLists * * objCol ) = 0;
+      virtual HRESULT __stdcall raw_RaisePasswordErr (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iFunc,
+        /*[in]*/ BSTR sValue ) = 0;
+      virtual HRESULT __stdcall raw_RaiseReadPasswordAchieve (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DrivePasswordLists * * objCol ) = 0;
+      virtual HRESULT __stdcall raw_RaiseOpenPortErr (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iFunc,
+        /*[in,out]*/ struct _DriveCardLists * * objCards,
+        /*[in]*/ BSTR sValue ) = 0;
+      virtual HRESULT __stdcall raw_RaiseCommandTimeout (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iFunc,
+        /*[in]*/ short iStep,
+        /*[in,out]*/ struct _DriveCardLists * * objCards,
+        /*[in]*/ BSTR sValue ) = 0;
+      virtual HRESULT __stdcall raw_RaiseSendEvent (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long lDataLen,
+        /*[in]*/ BSTR sHex ) = 0;
+      virtual HRESULT __stdcall raw_RaiseDataArrivalEvent (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long lDataLen,
+        /*[in]*/ BSTR sHex ) = 0;
+      virtual HRESULT __stdcall raw_Unload ( ) = 0;
+      virtual HRESULT __stdcall raw_GetVer (
+        /*[out,retval]*/ BSTR * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_GetWinSockState (
+        /*[in]*/ long lIndex,
+        /*[out,retval]*/ enum StateConstants * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_StopConnAll ( ) = 0;
+      virtual HRESULT __stdcall raw_StopConn (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo ) = 0;
+      virtual HRESULT __stdcall raw_WriteSN (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ BSTR sSN,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadSN (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteConnPassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ BSTR sPassword,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadConnPassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_DeleteConnPassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_GetTCPPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL mUDPBroadcast,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_WriteTCPPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveTCPInfo * * oTCPPar,
+        /*[in]*/ VARIANT_BOOL mUDPBroadcast,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_ReadEquptDeadline (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteEquptDeadline (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long lDeadline,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadEquptVer (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_ReadEquptStateInfo (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_ReadSysPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteRecordMode (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadRecordMode (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteKeyboard (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DrivePortList * * oPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadKeyboard (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_IniKeyboardPassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_ReadKeyboardPassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteLockInteraction (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bDoor1,
+        /*[in]*/ VARIANT_BOOL bDoor2,
+        /*[in]*/ VARIANT_BOOL bDoor3,
+        /*[in]*/ VARIANT_BOOL bDoor4,
+        /*[out,retval]*/ VARIANT_BOOL * _arg6 ) = 0;
+      virtual HRESULT __stdcall raw_ReadLockInteraction (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteFireAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadFireAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteOpenAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadOpenAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetReaderIntervalTime (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long lInterval,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetReaderIntervalTime (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetReaderIntervalTime_Elevator (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[in]*/ long lInterval,
+        /*[in]*/ short lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_SetSpeakOpen (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ BSTR sOpen,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadSpeakOpen (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetReaderCheckMode (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bOpen,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadReaderCheckMode (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetEquptBuzzerMode (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bOpen,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadEquptBuzzerMode (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteAssistantAlertPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ unsigned char lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadAssistantAlertPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteCardMaxPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long lCardMax,
+        /*[in,out]*/ struct _DrivePortList * * oDoorCardMax,
+        /*[in,out]*/ struct _DrivePortList * * oDoorInCardCount,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_ReadCardMaxPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteTheftAlarmPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bOpen,
+        /*[in]*/ unsigned char lInTime,
+        /*[in]*/ unsigned char lOutTime,
+        /*[in]*/ long lBeginPassword,
+        /*[in]*/ long lClosePassword,
+        /*[in]*/ long lAlarmTime,
+        /*[out,retval]*/ VARIANT_BOOL * _arg8 ) = 0;
+      virtual HRESULT __stdcall raw_ReadTheftAlarmPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteCheckInOutPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ unsigned char lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadCheckInOutPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteCardPeriodSpeak (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL lOpen,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadCardPeriodSpeak (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteReadCardSpeak (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bOpen,
+        /*[in]*/ unsigned char lMsgIndex,
+        /*[in]*/ DATE dBeginDate,
+        /*[in]*/ DATE dEndDate,
+        /*[out,retval]*/ VARIANT_BOOL * _arg6 ) = 0;
+      virtual HRESULT __stdcall raw_ReadReadCardSpeak (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_BeginWatch (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_CloseWatch (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_ReadWatchState (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SendFireAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_CloseFireAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_ReadFireAlarmState (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SendAssistantAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_CloseAssistantAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_ReadAssistantAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_CloseAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ long lAlarmPar,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_CloseAlarm_Elevator (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long lAlarmPar,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetPortState (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_GetTheftAlarmState (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_IniEqupt (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SearchEquptOnNetNum (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long lNetNum,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetEquptNetNum (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long lNetNum,
+        /*[in]*/ VARIANT_BOOL mUDPBroadcast,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_ReadTime (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteTime (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_ReadTimePar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteTimePar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short lParMode,
+        /*[in]*/ short lSecond,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_GetReaderPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteReaderPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DrivePortList * * oPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetLockPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteLockPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DrivePortList * * oPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_OpenDoor (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DrivePortList * * oPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_OpenDoor_Check (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ unsigned char lNum,
+        /*[in,out]*/ struct _DrivePortList * * oPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_CloseDoor (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DrivePortList * * oPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_OpenDoor_always (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DrivePortList * * oPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_LockPort (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DrivePortList * * oPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_UnLockPort (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DrivePortList * * oPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetPortCheckMode (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_WritePortCheckMode (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in,out]*/ struct _DriveTimeGroup * * oTime,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_GetPortCheckMode_Elevator (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WritePortCheckMode_Elevator (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveTimeGroup * * oTime,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetPortWorkMode (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_WritePortWorkMode (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[in]*/ short lOpenMode,
+        /*[in]*/ short lLongOpenMode,
+        /*[in,out]*/ struct _DriveTimeGroup * * oTimeG,
+        /*[out,retval]*/ VARIANT_BOOL * _arg7 ) = 0;
+      virtual HRESULT __stdcall raw_ReadLockReadTime (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_WriteLockReadTime (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bOpen,
+        /*[in,out]*/ struct _DriveTimeGroup * * oTime,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_ReadLockOpenTime (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_WriteLockOpenTime (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ long lLockOpenTime,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_ReadLockOpenTime_Elevator (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteLockOpenTime_Elevator (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DrivePortList * * oPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetReaderInterval (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_WriteReaderInterval (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[in]*/ short lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_SetReadErrCardAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_GetReadErrCardAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetReadErrCardAlarm_Elevator (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetReadErrCardAlarm_Elevator (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetAlarmPassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[in]*/ BSTR sPasswrod,
+        /*[in]*/ short lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg6 ) = 0;
+      virtual HRESULT __stdcall raw_GetAlarmPassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetAlarmPassword_Elevator (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[in]*/ BSTR sPasswrod,
+        /*[in]*/ short lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_GetAlarmPassword_Elevator (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_GetCheckCardInOutState (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetCheckCardInOutState (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_GetLongOpenAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetLongOpenAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bOpen,
+        /*[in]*/ long lLongOpenTime,
+        /*[in]*/ VARIANT_BOOL bAlarm,
+        /*[out,retval]*/ VARIANT_BOOL * _arg6 ) = 0;
+      virtual HRESULT __stdcall raw_GetButtonPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetButtonPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[in]*/ VARIANT_BOOL bUseLongOpen,
+        /*[in,out]*/ struct _DriveTimeGroup * * oTimeG,
+        /*[out,retval]*/ VARIANT_BOOL * _arg6 ) = 0;
+      virtual HRESULT __stdcall raw_GetDoorStateAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetDoorStateAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[in,out]*/ struct _DriveTimeGroup * * oTimeG,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_GetProhibitCheck (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetProhibitCheck (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bOpen,
+        /*[in]*/ VARIANT_BOOL bSaveCard,
+        /*[in]*/ long lTimeGroupIndex,
+        /*[out,retval]*/ VARIANT_BOOL * _arg6 ) = 0;
+      virtual HRESULT __stdcall raw_GetMuchCardPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetMuchCardPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ unsigned char lInCardMax,
+        /*[in]*/ unsigned char lOutCardMax,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_GetMuchCardGroup (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetMuchCardGroup (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ unsigned char lGroupIndex,
+        /*[in]*/ long lGroupMode,
+        /*[in,out]*/ struct _DriveCardLists * * oCards,
+        /*[out,retval]*/ VARIANT_BOOL * _arg6 ) = 0;
+      virtual HRESULT __stdcall raw_GetHolidayInfo (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_HolidayInfoHexToNum (
+        /*[in]*/ BSTR sHex,
+        /*[in,out]*/ double * lMaxCount,
+        /*[in,out]*/ double * lReocrdCount,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_ClearHoliday (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_GetHoliday (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteHoliday (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveHolidayLists * * objHols,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_DeleteHoliday (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveHolidayLists * * objHols,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetPasswordInfo (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_PasswordInfoHexToNum (
+        /*[in]*/ BSTR sHex,
+        /*[in,out]*/ double * lMaxCount,
+        /*[in,out]*/ double * lReocrdCount,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_ClearPassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_GetPassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WritePassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DrivePasswordLists * * objPw,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_DeletePassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DrivePasswordLists * * objPw,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_TestPassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ BSTR sPassword,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_TestPassword_Elevator (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ BSTR sPassword,
+        /*[in]*/ unsigned char lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_ClearTimeGroup (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_GetTimeGroup (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteTimeGroup (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveTimeGroupLists * * objTs,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetCardCount (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_CardCountInfoHexToNum (
+        /*[in]*/ BSTR sHex,
+        /*[in,out]*/ double * lMaxCount,
+        /*[in,out]*/ double * lCardCount,
+        /*[in,out]*/ double * lSequenceCardMaxCount,
+        /*[in,out]*/ double * lSequenceCardCount,
+        /*[out,retval]*/ VARIANT_BOOL * _arg6 ) = 0;
+      virtual HRESULT __stdcall raw_ClearCard (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetCards (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetCardInfo (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ double dCard,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_WriteUserCard (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveCardLists * * objCards,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_DeleteUserCard (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveCardLists * * objCards,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_TestCard (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ double dCard,
+        /*[in]*/ BSTR sPassword,
+        /*[in]*/ long lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg6 ) = 0;
+      virtual HRESULT __stdcall raw_WriteSequenceCard (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveCardLists * * objCards,
+        /*[in]*/ VARIANT_BOOL bSort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_GetRecordInfo (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_RecordInfoHexToNum (
+        /*[in]*/ long lRecordCode,
+        /*[in]*/ BSTR sHex,
+        /*[in,out]*/ long * lRecordMaxCount,
+        /*[in,out]*/ double * lNewRecordCount,
+        /*[in,out]*/ double * lRecordEndAddr,
+        /*[in,out]*/ double * lUploadAddr,
+        /*[in,out]*/ long * lReadAll,
+        /*[out,retval]*/ VARIANT_BOOL * _arg8 ) = 0;
+      virtual HRESULT __stdcall raw_ClearAllRecord (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_ClearRecordOnly (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ enum e_RecordFileCode lRecordType,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_UpdateReocrdFlag (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ enum e_RecordFileCode lRecordType,
+        /*[in]*/ long lRecordFlay,
+        /*[in]*/ VARIANT_BOOL bLoop,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_UpdateReocrdEndFlag (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ enum e_RecordFileCode lRecordType,
+        /*[in]*/ long lRecordEndFlay,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_RepairRecord (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ enum e_RecordFileCode lRecordType,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetRecordOnFlay (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ enum e_RecordFileCode lRecordType,
+        /*[in]*/ long lBeginNum,
+        /*[in]*/ long lReadCount,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_ReadRecord (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ enum e_RecordFileCode lRecordType,
+        /*[in]*/ long lReadCount,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_AscToStr (
+        /*[in]*/ BSTR strAsc,
+        /*[out,retval]*/ BSTR * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_StrToAsc (
+        /*[in]*/ BSTR strChr,
+        /*[out,retval]*/ BSTR * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_CallSubByName (
+        /*[in]*/ BSTR sSubName,
+        /*[in]*/ long lEquptType,
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ SAFEARRAY * * oParList,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_AchieveValuetoList (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iFunc,
+        /*[in]*/ BSTR sValue,
+        /*[out,retval]*/ struct _DriveValueList * * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_WriteTimeDefine (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ DATE oDate,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetDrivePause ( ) = 0;
+      virtual HRESULT __stdcall raw_SetDriveRun ( ) = 0;
+      virtual HRESULT __stdcall raw_GetChunelAlignmentCount (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ long * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_BeginWatch_Bro (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bUDP,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_CloseWatch_Bro (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bUDP,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_WriteMemory (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ BSTR sHex,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ReadMemory (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteTime_Bro (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bUDP,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetPortSpeak (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_GetPortSpeak (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetBothWayCheck (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_GetBothWayCheck (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetKeyboardManage (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_GetKeyboardManage (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetKeyboardManagePassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ BSTR sPassword,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_GetKeyboardManagePassword (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetReaderCheckMode_Mode (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ unsigned char lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_ChunnelForciblyState (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bBool ) = 0;
+      virtual HRESULT __stdcall raw_StopConnOnSN (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ BSTR sSN ) = 0;
+      virtual HRESULT __stdcall raw_WriteSN_Ps (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ BSTR sPassword1,
+        /*[in]*/ BSTR sPassword2,
+        /*[in]*/ BSTR sSN,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_TestPassword_Ps (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ BSTR sPassword1,
+        /*[in]*/ BSTR sPassword2,
+        /*[in]*/ short iPort,
+        /*[in]*/ BSTR sPassword,
+        /*[out,retval]*/ VARIANT_BOOL * _arg6 ) = 0;
+      virtual HRESULT __stdcall raw_TestCard_Ps (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ BSTR sPassword1,
+        /*[in]*/ BSTR sPassword2,
+        /*[in]*/ short iPort,
+        /*[in]*/ double dCard,
+        /*[in]*/ BSTR sPassword,
+        /*[in]*/ long lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg8 ) = 0;
+      virtual HRESULT __stdcall raw_SetFirstCardCheck (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ unsigned char lCardMode,
+        /*[in]*/ unsigned char lPasswordMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_GetFirstCardCheck (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetMuchCardCheck (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[in]*/ unsigned char lCardMode,
+        /*[in]*/ unsigned char lCheckInOut,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_GetMuchCardCheck (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short iPort,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetAlarmOutputTime (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ unsigned char lTime,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetAlarmOutputTime (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_ClearAllOpenData (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteUserCard_Mode (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveCardLists * * objCards,
+        /*[in]*/ long lMode,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_WriteSN_Bro (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ BSTR sPassword1,
+        /*[in]*/ BSTR sPassword2,
+        /*[in]*/ BSTR sSN,
+        /*[out,retval]*/ VARIANT_BOOL * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_SetManageCard (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_GetManageCard (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_WriteTCPPar_MAC (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in,out]*/ struct _DriveTCPInfo * * oTCPPar,
+        /*[in]*/ VARIANT_BOOL mUDPBroadcast,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_SetKeyboardManagePassword_8832 (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[in]*/ BSTR sPassword,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_GetKeyboardManagePassword_8832 (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_CheckCommandIsAdd (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ long lFunction,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_DriveIsRun (
+        /*[out,retval]*/ VARIANT_BOOL * _arg1 ) = 0;
+      virtual HRESULT __stdcall raw_SetShowTxRxLog (
+        /*[in]*/ VARIANT_BOOL bShow,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetICPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ short lSector,
+        /*[in]*/ BSTR sSectorPassword,
+        /*[in]*/ unsigned char lCheckType,
+        /*[in]*/ long lIDCode1,
+        /*[in]*/ long lIDCode2,
+        /*[in]*/ long lIDCode3,
+        /*[in]*/ long lIDCode4,
+        /*[out,retval]*/ VARIANT_BOOL * _arg9 ) = 0;
+      virtual HRESULT __stdcall raw_ReadICPar (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_GetBlacklistAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+      virtual HRESULT __stdcall raw_SetBlacklistAlarm (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bOpen,
+        /*[out,retval]*/ VARIANT_BOOL * _arg3 ) = 0;
+      virtual HRESULT __stdcall raw_SetKeyboardManagePassword_IC (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[in]*/ VARIANT_BOOL bUse,
+        /*[in]*/ BSTR sPassword,
+        /*[out,retval]*/ VARIANT_BOOL * _arg4 ) = 0;
+      virtual HRESULT __stdcall raw_GetKeyboardManagePassword_IC (
+        /*[in,out]*/ struct _DriveInfo * * objConnInfo,
+        /*[out,retval]*/ VARIANT_BOOL * _arg2 ) = 0;
+};
+
+enum __declspec(uuid("35e23859-e5ea-4fe8-9c53-5ffc23d523c9"))
+e_PortList
+{
+    eClickButton = 65,
+    eElevatorAlarm = 66,
+    eFireAlarm = 5,
+    eBandittiAlarm = 6,
+    eSmogAlarm = 7,
+    eBrigandageAlarm = 8
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "d:\vs2012_project\boka_dll_test\boka_dll_test\release\fcdrive8800.tli"
+
+#pragma pack(pop)

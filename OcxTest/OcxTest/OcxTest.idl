@@ -1,0 +1,56 @@
+// OcxTest.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (OcxTest.tlb) that will become a resource in
+// OcxTest.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(E549B9D8-8A72-4D03-8747-7C628E8B9364), version(1.0),
+  control ]
+library OcxTestLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for COcxTestCtrl
+	[ 
+		uuid(905E7170-806B-477C-93E9-A65A1FC47EAF)	
+	]
+	dispinterface _DOcxTest
+	{
+		properties:
+			[id(1) ] LONG TimeStyle;
+	methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+			[id(2)] void Start(void);
+	};
+
+	//  Event dispatch interface for COcxTestCtrl
+
+	[ 
+		uuid(56AFC954-4EEB-43B4-92CF-2441BE36FA6B)	
+	]
+	dispinterface _DOcxTestEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			[id(1)] void OnSend(BSTR lpStrTime);
+//			[id(2)] void Hello();
+			[id(DISPID_CLICK)] void Click(void);
+	};
+
+	//  Class information for COcxTestCtrl
+	[
+		uuid(92F94649-535A-4C1E-BEB8-A4F7C2EFDD26)
+	]
+	coclass OcxTest
+	{
+		[default] dispinterface _DOcxTest;
+		[default, source] dispinterface _DOcxTestEvents;
+	};
+
+};

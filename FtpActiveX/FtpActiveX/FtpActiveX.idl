@@ -1,0 +1,54 @@
+// FtpActiveX.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (FtpActiveX.tlb) that will become a resource in
+// FtpActiveX.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(36407BDF-D73C-4A0E-A1D9-C4574F84B89A), version(1.0),
+  control ]
+library FtpActiveXLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CFtpActiveXCtrl
+	[ 
+		uuid(CDEF82FB-13BE-4B83-B13C-0CA2562CF16E)	
+	]
+	dispinterface _DFtpActiveX
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+			[id(1)] ULONG FTP_StartUploadFile(BSTR szServerIp, ULONG nServerPort, BSTR szUsername, BSTR szPassword, BSTR szLocalFile, BSTR szRemoteFile);
+			[id(2)] BSTR FTP_GetVersion(void);
+	};
+
+	//  Event dispatch interface for CFtpActiveXCtrl
+
+	[ 
+		uuid(C13A54AB-5E27-47D4-B899-8E865B20A592)	
+	]
+	dispinterface _DFtpActiveXEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			[id(3)] void Notify_UploadFileStatus(LONG nEvent, LONG nErrorCode, LONG nProgress, BSTR strLocalFile, BSTR strRemoteFile);
+	};
+
+	//  Class information for CFtpActiveXCtrl
+	[
+		uuid(F770ACF3-7BD1-4D3A-B57D-52376D6189D3)
+	]
+	coclass FtpActiveX
+	{
+		[default] dispinterface _DFtpActiveX;
+		[default, source] dispinterface _DFtpActiveXEvents;
+	};
+
+};

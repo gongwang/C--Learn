@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Base64Demo">
+</Property><Property Name="Solution File" Value="E:\VS2008_Project\Base64Demo\Base64Demo.sln">
+</Property><Property Name="User Options File" Value="E:\VS2008_Project\Base64Demo\Base64Demo.suo">
+</Property><Property Name="Date" Value="2019年3月27日">
+</Property><Property Name="Time" Value="10:17">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Base64Demo.sln" Description="File successfully backed up as E:\VS2008_Project\Base64Demo\Base64Demo.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="Base64Demo.suo" Description="File successfully backed up as E:\VS2008_Project\Base64Demo\Base64Demo.suo.old">
+</Event><Event ErrorLevel="0" Project="Base64Demo" Source="Base64Demo\Base64Demo.vcproj" Description="Converting project file 'E:\VS2008_Project\Base64Demo\Base64Demo\Base64Demo.vcproj'.">
+</Event><Event ErrorLevel="1" Project="Base64Demo" Source="Base64Demo\Base64Demo.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="Base64Demo" Source="Base64Demo\Base64Demo.vcproj" Description="Done converting to new project file 'E:\VS2008_Project\Base64Demo\Base64Demo\Base64Demo.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="Base64Demo" Source="Base64Demo\Base64Demo.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Base64Demo.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Base64Demo.sln" Description="Converted">
+</Event></UpgradeLog>

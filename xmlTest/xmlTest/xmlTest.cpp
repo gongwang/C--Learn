@@ -34,11 +34,30 @@ public:
 	string m_tAlwayClose;
 };
 
+//设备端IP结构定义
+typedef struct tagICBAddress
+{
+	tagICBAddress() { m_dwIp = 0; m_wPort = 0; }
+	unsigned long m_dwIp;
+	unsigned int m_wPort;
+
+	bool friend operator<(const tagICBAddress &x, const tagICBAddress &y)
+	{
+		return x.m_dwIp < y.m_dwIp;
+	}
+
+}TICBAddress, *PTICBAddress;
+
 int main()
 {
 
 
 	std::cout << "Hello World!\n";
+
+	TICBAddress tICBAddress;
+	tICBAddress.m_dwIp = 157515456;
+	tICBAddress.m_wPort = 80;
+
 	//system("pause");
 	structDOORSTATE m_tDoorState;
 
@@ -80,7 +99,7 @@ int main()
 
 	if (NULL == rootElement)
 	{
-		OutputDebugString("Failed to parse data.");
+//		OutputDebugString("Failed to parse data.");
 		doc->Clear();
 		return FALSE;
 	}

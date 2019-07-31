@@ -35,12 +35,31 @@ private:
 void main()
 {
 	double i = 0.0;
-	double j = 1.0;
+	double j = 0.0;
 	double k = fabs(i - j);
-	if (!k)
+	if (k == 0)
 	{
 		printf("hello \n");
 	}
+
+	for (size_t i = 0; i < 0; i++)
+	{
+		cout << "loop" << endl;
+		_sleep(100);
+	}
+
+	string s1("172.16.128.51");
+	string s2(".");
+	int nPos = s1.compare(s2);
+	if (s1.compare(s2) > 0)
+	{
+		cout << "nPos is at: " << nPos << endl;
+	}
+
+
+	wchar_t *achPrintBuf = new wchar_t[2024];
+	memset(achPrintBuf, NULL, 2024);
+
     //2019-05-23 10:11:12
     char pDataTime[128] ="2019-05-23 10:11:12";
     char cTimeYear[8] = {0};

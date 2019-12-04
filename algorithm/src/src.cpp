@@ -27,6 +27,33 @@ void SingleListTest()
     printf("recv value: %d ptr:%p next: %p\n", revc->val, revc, revc->next);
 }
 
+//单向链表操作 判断是否有环
+void SingleList_HasCycle()
+{
+    printf("====单向链表操作 判断是否有环===\n");
+    ListNode temp1(1);
+    ListNode temp2(2);
+    temp2.next = &temp1;
+    ListNode temp3(3);
+    temp3.next = &temp2;
+    
+    //环
+    temp1.next = &temp2;
+
+    printf("temp1: value: %d ptr:%p next: %p \n temp2: value: %d ptr:%p next: %p \n temp3: value: %d ptr:%p next: %p \n", temp1.val, &temp1, temp1.next, 
+        temp2.val, &temp2,temp2.next, temp3.val, &temp3, temp3.next);
+
+    Solution slu;
+
+    bool bRet = slu.hasCycle_hash(&temp3);
+
+    printf("hascycle_hash ret: %d \n", bRet);
+
+    bool bRet1 = slu.hasCycle_Fast_Slow_ptr(&temp3);
+
+     printf("hascycle_hash ret: %d \n", bRet1);
+}
+
 //双向链表操作
 void DoubleListTest()
 {
@@ -74,6 +101,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
     DoubleListTest();
     
+    SingleList_HasCycle();
+
     system("pause");
 
 	return 0;

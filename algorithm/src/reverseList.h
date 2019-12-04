@@ -22,6 +22,8 @@
  空间复杂度：O(1)O(1)。
 
  */
+#include <assert.h>
+
 struct ListNode {
     int val;
     ListNode *next;
@@ -50,6 +52,137 @@ public:
     }
 };
 
+//双向链表反转
+
+struct DoubleListNode {
+    int val;
+    DoubleListNode *pre;
+    DoubleListNode *next;
+};
+
+typedef struct DoubleListNode* pElem;
+typedef struct DoubleListNode eElem;
+
+class DoubleListSolution {
+public:
+    //1.创建双向链表
+    pElem CreateList()
+    {
+        pElem head = (pElem)malloc(sizeof(eElem));
+        assert(head != NULL);
+
+        head->next = head->pre = NULL;
+
+        return head;
+    }
+    //2.插入数据
+    void InsertElem(pElem head, int date)
+    {
+        if (head == NULL)
+        {
+            printf("head is null\n");
+            return;
+        }
+        
+        pElem tempHead = head;//临时头
+
+        if (tempHead->next == NULL)
+        {
+            /*  当双向链表只有一个头结点时 */
+            pElem addition = (pElem)malloc(sizeof(eElem));
+
+            addition->val = date;
+            addition->next = tempHead->next;
+            addition->pre = tempHead;
+            tempHead->next = addition;         
+        }else
+        {
+            /* 当双向链表不只一个头结点时 超过1个节点*/
+            pElem addition = (pElem)malloc(sizeof(eElem));
+
+            addition->val = date;
+
+            addition->next = head->next;
+            head->next->pre = addition;
+            head->next = addition;
+            addition->pre = head;                  
+        }
+    }
+
+    //3.遍历链表 输出打印
+    void printfElem(pElem head)
+    {
+        if (head == NULL)
+        {
+            printf("head is null\n");
+            return;
+        }
+
+        pElem tempNode = head;
+
+        while(tempNode->next != NULL)
+        {                 
+            tempNode = tempNode->next;
+            printf("list[%p]:[%d]\n",tempNode, tempNode->val);
+        }
+      
+    }
+
+    //4.删除
+    BOOL DeleteElem(pElem head, int data)
+    {
+        BOOL bRet = FALSE;
+
+        if (head == NULL)
+        {
+            printf("head is null\n");
+            return bRet;
+        }
+
+        pElem tempHead = head;
+
+        while(tempHead->next != NULL)
+        {
+            tempHead = tempHead->next;
+
+            if (tempHead->val == data)
+            {
+                tempHead->pre->next = tempHead->next;
+                tempHead->next->pre = tempHead->pre; 
+                printf("delete succ: %d \n", data);
+                bRet = TRUE;
+                break;
+            }
+        }
+        free(tempHead);
+        return bRet;
+    }
+    
+    //5.反转双向列表
+    //取出每个值，然后按照插入，从头开始插，倒序
+    DoubleListNode* reverseList(DoubleListNode* head) 
+    {
+        if (head == NULL)
+        {
+            printf("head is null\n");
+            return NULL;
+        }
+
+        pElem tempHead = head;
+
+        pElem temp = CreateList();
+
+        while(tempHead->next != NULL)
+        {
+            tempHead = tempHead->next;
+
+            //重新插入
+            InsertElem(temp, tempHead->val);
+        }
+        return temp;
+    }
+    
+};
 
 //class Solution {
 //public:

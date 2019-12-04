@@ -8,11 +8,9 @@
 #include "reverseList.h"
 
 //////////////////////////////////////////////////////////////////////////
-
-int _tmain(int argc, _TCHAR* argv[])
+//单向链表操作
+void SingleListTest()
 {
-    printf("hello world!\n");
-   
     //反转list
     ListNode temp1(1);
     ListNode temp2(2);
@@ -21,14 +19,17 @@ int _tmain(int argc, _TCHAR* argv[])
     temp3.next = &temp2;
     printf("temp1: value: %d ptr:%p next: %p \n temp2: value: %d ptr:%p next: %p \n temp3: value: %d ptr:%p next: %p \n", temp1.val, &temp1, temp1.next, 
         temp2.val, &temp2,temp2.next, temp3.val, &temp3, temp3.next);
-   
+
     Solution slu;
-    
+
     ListNode *revc = slu.reverseList(&temp3);
 
     printf("recv value: %d ptr:%p next: %p\n", revc->val, revc, revc->next);
+}
 
-
+//双向链表操作
+void DoubleListTest()
+{
     //双向链表测试
     printf("========================\n");
     //1.创建
@@ -47,7 +48,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
     ////4.查找并删除
     DoubleList.DeleteElem(head, 4);
-    
+
     DoubleList.printfElem(head);
 
     //5.反转双向列表
@@ -62,6 +63,17 @@ int _tmain(int argc, _TCHAR* argv[])
     free(tempList);
 
     printf("========================\n");
+}
+
+//main 函数
+int _tmain(int argc, _TCHAR* argv[])
+{
+    printf("hello world!\n");
+   
+    SingleListTest();
+
+    DoubleListTest();
+    
     system("pause");
 
 	return 0;

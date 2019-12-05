@@ -39,17 +39,17 @@ public:
         ListNode* line1 = l1;
         ListNode* line2 = l2;
 
-        ListNode *retNode = (ListNode*)malloc(sizeof(ListNode));
+        ListNode *retNode = new ListNode(NULL);
         retNode->val = NULL;
         retNode->next = NULL;
 
-        ListNode *retNodeOld = (ListNode*)malloc(sizeof(ListNode));
+        ListNode *retNodeOld = new ListNode(NULL);
         retNodeOld->val  = NULL;
         retNodeOld->next = NULL;
 
         while (line1 != NULL || line2 != NULL)
         {
-            ListNode *tempNode = (ListNode*)malloc(sizeof(ListNode));
+            ListNode *tempNode = new ListNode(NULL);
             tempNode->val = NULL;
             tempNode->next = NULL;
 
@@ -95,8 +95,5 @@ public:
             //
         }
         return retNode->next;
-
-        free(retNode);
-        free(retNodeOld);
     }
 };

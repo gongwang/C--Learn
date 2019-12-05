@@ -47,21 +47,34 @@ public:
         retNodeOld->val  = NULL;
         retNodeOld->next = NULL;
 
-        while (line1 != NULL || line2 != NULL)
+        while (line1 != NULL || line2 != NULL || retNodeOld->val == 1)
         {
             ListNode *tempNode = new ListNode(NULL);
             tempNode->val = NULL;
             tempNode->next = NULL;
 
-            if (line1 == NULL)
-            {
-                tempNode->val = line2->val;
+            if (line1 == NULL && line2 != NULL)
+            {                    
+                if (retNodeOld->val == 1) 
+                {
+                        tempNode->val = line2->val +retNodeOld->val;
+                }else
+                {
+                    tempNode->val = line2->val;
+                }
                 line2 = line2->next;
-            }else if(line2 == NULL)
+            }else if(line2 == NULL && line1 != NULL)
             {
-                tempNode->val = line1->val;
+                if (retNodeOld->val == 1) 
+                {
+                   tempNode->val = line1->val +retNodeOld->val;
+                }else
+                {
+                   tempNode->val = line1->val;
+                }
+                
                 line1 = line1->next;
-            }else
+            }else if (line1 != NULL && line2 != NULL)       
             {
                 //如果上一个 相加大于10 则本次应多+1
                 if (retNodeOld->val == 1)
@@ -74,6 +87,9 @@ public:
                
                 line1 = line1->next;
                 line2 = line2->next;
+            }else
+            {
+                tempNode->val = retNodeOld->val;
             }
 
             if (retNodeOld->next != NULL)
@@ -86,8 +102,11 @@ public:
 
             if (tempNode->val >9)
             {
-                tempNode->val = 0;
+                tempNode->val = tempNode->val%10;
                 retNodeOld->val = 1; //赋值
+            }else
+            {
+                retNodeOld->val = 0; //赋值
             }
 
             if(retNode->next == NULL)retNode->next = tempNode;

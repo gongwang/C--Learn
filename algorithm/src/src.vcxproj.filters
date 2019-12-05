@@ -33,6 +33,12 @@
     <ClInclude Include="common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="myAtoiFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OnceNum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

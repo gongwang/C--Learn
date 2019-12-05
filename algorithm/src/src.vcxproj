@@ -78,6 +78,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h" />
+    <ClInclude Include="myAtoiFunc.h" />
+    <ClInclude Include="OnceNum.h" />
     <ClInclude Include="reverseList.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />

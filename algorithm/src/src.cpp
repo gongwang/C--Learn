@@ -8,6 +8,8 @@
 #include "common.h"
 #include "reverseList.h"
 #include "TwoListAddFunc.h"
+#include "myAtoiFunc.h"
+#include "OnceNum.h"
 //////////////////////////////////////////////////////////////////////////
 //单向链表操作
 void SingleListTest()
@@ -133,6 +135,23 @@ void DoubleListTest()
     printf("========================\n");
 }
 
+//原型
+/*
+char *mytest = "-42";
+int nIndex = 0;
+sscanf(mytest, "%d", &nIndex);
+printf("myTest str: %s int: %d\n", mytest, nIndex);
+*/
+
+void myAtoi()
+{
+    SolutionAtoi suatoi;
+    //suatoi.myAtoi("0-1");
+    //suatoi.myAtoi("42");
+    suatoi.myAtoi(" -42");
+    //suatoi.myAtoi(" -5-");
+}
+
 //main 函数
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -145,6 +164,8 @@ int _tmain(int argc, _TCHAR* argv[])
     SingleList_HasCycle();
 
     addTwoList();
+
+    myAtoi();
 
     system("pause");
 

@@ -62,7 +62,8 @@ void freeMemory(ListNode* listNode)
         freeMemory(listNode->next);
         break;
     }
-    free(listNode);
+    delete listNode;
+    listNode = NULL;
 }
 
 void addTwoList()

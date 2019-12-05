@@ -5,8 +5,9 @@
 #include <Windows.h>
 
 //////////////////////////////////////////////////////////////////////////
+#include "common.h"
 #include "reverseList.h"
-
+#include "TwoListAddFunc.h"
 //////////////////////////////////////////////////////////////////////////
 //单向链表操作
 void SingleListTest()
@@ -52,6 +53,45 @@ void SingleList_HasCycle()
     bool bRet1 = slu.hasCycle_Fast_Slow_ptr(&temp3);
 
      printf("hascycle_hash ret: %d \n", bRet1);
+}
+
+void freeMemory(ListNode* listNode)
+{
+    while(listNode->next != NULL)
+    {
+        freeMemory(listNode->next);
+        break;
+    }
+    free(listNode);
+}
+
+void addTwoList()
+{
+    ListNode temp1(3);
+    ListNode temp2(4);
+    temp2.next = &temp1;
+    ListNode temp3(2);
+    temp3.next = &temp2;
+
+    ListNode temp4(4);
+    ListNode temp5(6);
+    temp5.next = &temp4;
+    ListNode temp6(5);
+    temp6.next = &temp5;
+
+    Solution_addtwolist addSlu;
+    ListNode * ret = (ListNode*)addSlu.addTwoNumbers(&temp3, &temp6);
+    ListNode* freeRet = ret;
+    //7 0 9
+   while(ret != NULL)
+   {
+       printf("ret : %d\n", ret->val);
+       ret = ret->next;
+   }
+    
+   //释放free 内存 倒序释放内存
+   freeMemory(freeRet);
+
 }
 
 //双向链表操作
@@ -102,6 +142,8 @@ int _tmain(int argc, _TCHAR* argv[])
     DoubleListTest();
     
     SingleList_HasCycle();
+
+    addTwoList();
 
     system("pause");
 

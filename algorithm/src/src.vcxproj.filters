@@ -27,6 +27,12 @@
     <ClInclude Include="reverseList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TwoListAddFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

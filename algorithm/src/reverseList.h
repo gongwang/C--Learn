@@ -53,17 +53,12 @@
   著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
  */
+#pragma once
 #include <assert.h>
 #include <hash_set>
 #include <set>
+
 using namespace std;
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
-
 
 class Solution {
 public:

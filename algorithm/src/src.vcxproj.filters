@@ -39,6 +39,9 @@
     <ClInclude Include="OnceNum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ValidParentheses.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

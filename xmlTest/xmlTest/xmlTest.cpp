@@ -295,3 +295,56 @@ int main()
 //   4. 使用错误列表窗口查看错误
 //   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
 //   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
+
+
+
+/*
+
+
+//解析文件
+//尽量使用 FirstChildElement 和 NextSiblingElement
+
+TiXmlDocument* myDocument = new TiXmlDocument();
+	BOOL32 isFile = IcpIsDirorFileExit("../config/serverconfig.xml");
+	if (isFile)
+	{
+		myDocument->LoadFile("../config/serverconfig.xml");
+
+		TiXmlElement* rootElement = myDocument->RootElement();  //resouce
+		TiXmlElement* serviceElement = rootElement->FirstChildElement();  //servicetypes
+		TiXmlElement * imageElement = serviceElement->NextSiblingElement();//image
+
+		TiXmlElement* pathElement = imageElement->FirstChildElement();//path
+		printf("image path: %s\n", pathElement->GetText());
+		g_pcSerData->imagePath = pathElement->GetText();
+		if (!IcpIsDirorFileExit(g_pcSerData->imagePath.c_str()))
+		{
+			printf("文件夹不存在\n");
+			if (!IcpCreateDir(g_pcSerData->imagePath.c_str()))
+			{
+				printf("创建文件夹失败\n");
+			}
+		}
+
+		TiXmlElement * heartbeatElement = imageElement->NextSiblingElement();//heartbeat
+		TiXmlElement * intervalElement = heartbeatElement->FirstChildElement();//interval
+		//m_heartbeatInterval = atoi(intervalElement->GetText());
+		//printf("m_heartbeatInterval = %d\n",m_heartbeatInterval);
+		TiXmlElement * extranetaddrElement = heartbeatElement->NextSiblingElement();//extranetaddr
+		if (extranetaddrElement)
+		{
+			TiXmlElement * ipElement = extranetaddrElement->FirstChildElement();//ip
+			if (ipElement)
+			{
+				g_pcSerData->m_extranetAddr.ip= ipElement->GetText();
+				TiXmlElement* portElement = ipElement->NextSiblingElement();//port
+				if (portElement)
+				{
+					g_pcSerData->m_extranetAddr.port = atoi(portElement->GetText());
+					printf("m_extranetAddr:%s:%d\n", g_pcSerData->m_extranetAddr.ip.c_str(), g_pcSerData->m_extranetAddr.port);
+				}
+			}
+		}
+	}
+	delete myDocument;
+*/

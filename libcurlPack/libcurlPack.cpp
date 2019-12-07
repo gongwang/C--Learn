@@ -122,7 +122,7 @@ std::string HttpsPost( std::string url, std::string header,std::string content )
         }
 
         ////get
-        curl_easy_setopt(curl, CURLOPT_URL, "https://172.16.129.240:24408/syris/device/assign"); //1. url 参数
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str()); //1. url 参数
         curl_easy_setopt(curl, CURLOPT_POST, 1); // 0：get reqest 1：post   //3. 类型 参数      
         curl_easy_setopt(curl, CURLOPT_POSTFIELDS,  content.c_str()); //4.发送内容
         curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, (long)strlen(content.c_str()));

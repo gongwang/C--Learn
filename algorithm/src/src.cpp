@@ -10,6 +10,7 @@
 #include "TwoListAddFunc.h"
 #include "myAtoiFunc.h"
 #include "OnceNum.h"
+#include "ValidParentheses.h"
 //////////////////////////////////////////////////////////////////////////
 //单向链表操作
 void SingleListTest()
@@ -152,6 +153,124 @@ void myAtoi()
     //suatoi.myAtoi(" -5-");
 }
 
+//判断字符串包含有效括号
+
+bool isValid(string s) {
+
+    if (s.empty())
+    {
+        return true;
+    }
+
+    int nLength = s.length();
+
+    printf("input : %s \n", s.c_str());
+
+    //三个二维数组
+    int nAt0 = -999;//(
+    int nAt1= -999;//{
+    int nAt2= -999;//[
+
+    for (int i = 0; i< nLength; i++)
+    {
+        char c = s.at(i);
+
+        //()
+        if (c == '(' || c == ')')
+        {    
+            if (c == '(')
+            {
+                nAt0 = i;
+            }else
+            {
+                if (nAt0>= 0)
+                {       
+                    int nTemp = i - nAt0;
+                    nAt0 = -999;
+                    if (nTemp %2 == 0)
+                    {
+                        printf("nat0 false\n");
+                        return false;
+                    }
+                }else
+                {
+                    printf("nat0 false\n");
+                    return false;
+                }
+
+            }
+        }
+        //{}
+        if (c == '{' || c == '}')
+        {
+            if (c == '{')
+            {
+                nAt1 = i;
+            }else
+            {
+                if (nAt1>= 0)
+                {       
+                    int nTemp = i - nAt1;
+                    nAt1 = -999;
+                    if (nTemp %2 == 0)
+                    {
+                        printf("nat1 false\n");
+                        return false;
+                    }
+                }else
+                {
+                    printf("nat1 false\n");
+                    return false;
+                }
+
+            }      
+        }
+
+        //[]
+        if (c == '[' || c == ']')
+        {
+            if (c == '[')
+            {
+                nAt2 = i;
+            }else
+            {
+                if (nAt2>= 0)
+                {       
+                    int nTemp = i - nAt2;
+                    nAt2 = -999;
+                    if (nTemp %2 == 0)
+                    {
+                        printf("nat2 false\n");
+                        return false;
+                    }
+                }else
+                {
+                    printf("nat2 false\n");
+                    return false;
+                }
+
+            }  
+        }
+    }
+    
+    if (nAt0 >= 0 || nAt1 >= 0 || nAt2 >= 0)
+    {
+        printf("return false\n");
+        return false;
+    }
+
+    printf("return true\n");
+    return true;
+   
+}
+
+bool isValid_stack(string s)
+{
+      SolutionValidPar su;
+
+      return su.isValid(s);
+}
+
 //main 函数
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -166,6 +285,22 @@ int _tmain(int argc, _TCHAR* argv[])
     addTwoList();
 
     myAtoi();
+
+    //isValid("([)]");
+
+    //isValid("{[]}");
+
+    //isValid("[{()}]");
+
+    isValid_stack("(([]){})");
+    
+    isValid_stack("()");
+
+    isValid_stack("([)]");
+
+    isValid_stack("{[]}");
+
+    isValid_stack("[{()}]");
 
     system("pause");
 

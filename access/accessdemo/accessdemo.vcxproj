@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D9B5E85E-F570-4A8F-8C37-DD0419D1E4FF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>accessdemo</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;ACCESSDEMO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ACCESSDEMO_EXPORTS;KDI_SDK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\common\include;.\common\include\curl;.\common\include\ticpp;..\..\..\10-common\include\adptodll;..\..\..\10-common\include\cbb;..\..\..\10-common\include\constant;..\..\..\10-common\include\adptodll\convert_v1_to_v2;..\..\..\10-common\include;..\..\..\30-utility\include;..\..\..\10-common\include\cbb\osp;..\..\..\10-common\include\cbb\ospext;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>.\common\lib;..\..\..\10-common\lib\release\vs2010\cbb\osp;..\..\..\10-common\lib\release\vs2010\cbb\ospext</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcurl.lib;libssh2.lib;communication.lib;lib_json.lib;osplib.lib;ospextlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AccessBasePolicy.h" />
+    <ClInclude Include="common\include\accessproto.h" />
+    <ClInclude Include="common\include\analyze.h" />
+    <ClInclude Include="common\include\CCreateDump.h" />
+    <ClInclude Include="common\include\cJSON.h" />
+    <ClInclude Include="common\include\connectbase.h" />
+    <ClInclude Include="common\include\formattranfer.h" />
+    <ClInclude Include="common\include\httpclient.h" />
+    <ClInclude Include="common\include\http_parser.h" />
+    <ClInclude Include="common\include\http_server.h" />
+    <ClInclude Include="common\include\iconnectbase.h" />
+    <ClInclude Include="common\include\interface_alive_fun.h" />
+    <ClInclude Include="common\include\libcurlPack.h" />
+    <ClInclude Include="common\include\logclass.h" />
+    <ClInclude Include="common\include\mongoose.h" />
+    <ClInclude Include="common\include\multipart_parser.h" />
+    <ClInclude Include="common\include\pingserver.h" />
+    <ClInclude Include="common\include\sim_parser.h" />
+    <ClInclude Include="common\include\telnetServer.h" />
+    <ClInclude Include="subclass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="accessdemo.cpp" />
+    <ClCompile Include="common\src\interface_alive_fun.cpp" />
+    <ClCompile Include="common\src\logclass.cpp" />
+    <ClCompile Include="common\src\telnetServer.cpp" />
+    <ClCompile Include="subclass.cpp" />
+    <ClCompile Include="common\include\http_parser.c" />
+    <ClCompile Include="common\include\multipart_parser.c" />
+    <ClCompile Include="common\src\CcreateDump.cpp" />
+    <ClCompile Include="common\src\cJSON.c" />
+    <ClCompile Include="common\src\commonsaproto.cpp" />
+    <ClCompile Include="common\src\connnectbase.cpp" />
+    <ClCompile Include="common\src\httpclient.cpp" />
+    <ClCompile Include="common\src\http_server.cpp" />
+    <ClCompile Include="common\src\libcurlPack.cpp" />
+    <ClCompile Include="common\src\mongoose.c" />
+    <ClCompile Include="common\src\sim_parser.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

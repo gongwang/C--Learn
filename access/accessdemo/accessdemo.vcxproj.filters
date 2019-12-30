@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{fe81bde2-19e2-4cca-85a9-4bd594606bed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\include">
+      <UniqueIdentifier>{d8ab86a7-f0da-49e4-8fec-81a0658580d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\src">
+      <UniqueIdentifier>{aca2255a-01a5-4028-9a51-12c984a4ccf9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\include\connectbase.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\accessproto.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\analyze.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\CCreateDump.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\http_server.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\httpclient.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\iconnectbase.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\http_parser.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\mongoose.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\multipart_parser.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\sim_parser.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\libcurlPack.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\interface_alive_fun.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\pingserver.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\cJSON.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\formattranfer.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\telnetServer.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="AccessBasePolicy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="subclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\logclass.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="accessdemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\commonsaproto.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\connnectbase.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\CcreateDump.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\http_server.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\httpclient.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\include\http_parser.c">
+      <Filter>common\include</Filter>
+    </ClCompile>
+    <ClCompile Include="common\include\multipart_parser.c">
+      <Filter>common\include</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\mongoose.c">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\sim_parser.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\libcurlPack.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\cJSON.c">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="subclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\telnetServer.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\interface_alive_fun.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\logclass.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

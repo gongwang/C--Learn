@@ -1,0 +1,4 @@
+TEST ?= src/test.cpp
+all: $(TEST)
+test: $(TEST)
+CXXFLAGS += -I./include

@@ -1,0 +1,34 @@
+﻿Build started 2019/8/14 17:03:25.
+     1>Project "D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mqkafka\test\test.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\test.lastbuildstate".
+       InitializeBuildStatus:
+         Touching "Debug\test.unsuccessfulbuild".
+       ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt include\wingetopt.c
+         wingetopt.c
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\test.cpp
+         test.cpp
+     1>d:\svn_svr\20190227_ismp_v1r2\20-cbb\mqkafka\test\src\test.cpp(224): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>d:\svn_svr\20190227_ismp_v1r2\20-cbb\mqkafka\test\src\test.cpp(235): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>d:\svn_svr\20190227_ismp_v1r2\20-cbb\mqkafka\test\src\test.cpp(278): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>d:\svn_svr\20190227_ismp_v1r2\20-cbb\mqkafka\test\src\test.cpp(297): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>d:\svn_svr\20190227_ismp_v1r2\20-cbb\mqkafka\test\src\test.cpp(310): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mqkafka\prj_vs2010\Debug\test.exe" /INCREMENTAL /NOLOGO mqkafka.lib pthreadVC2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\test.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mqkafka\prj_vs2010\Debug\test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mqkafka\prj_vs2010\Debug\test.lib" /MACHINE:X86 Debug\wingetopt.obj
+         Debug\test.obj
+         test.vcxproj -> D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mqkafka\prj_vs2010\Debug\test.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mqkafka\prj_vs2010\Debug\test.exe.manifest" /manifest Debug\test.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\test.unsuccessfulbuild".
+         Touching "Debug\test.lastbuildstate".
+     1>Done Building Project "D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mqkafka\test\test.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.52

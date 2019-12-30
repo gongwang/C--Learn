@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="interface">
+      <UniqueIdentifier>{e7029e44-c9aa-4141-b6f2-2039f05f8c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{cd0ed16e-a32a-4a88-93e6-49e233a4aa4f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\code\connect_pool.h" />
+    <ClInclude Include="..\code\dbi_layer.h" />
+    <ClInclude Include="..\code\inner_common.h" />
+    <ClInclude Include="..\code\sql_layer.h" />
+    <ClInclude Include="..\code\task_queue.h" />
+    <ClInclude Include="..\code\thread_pool.h" />
+    <ClInclude Include="..\code\utils\inner_util.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\10-common\include\dbix\dbix.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\10-common\include\dbix\dbix_criteria.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\10-common\include\dbix\dbix_define.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\10-common\include\dbix\dbix_util.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\10-common\include\dbix\dbresult_callback_imp4osptask.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\10-common\include\dbix\variant.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\code\dbix_debug.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\code\connect_pool.cpp" />
+    <ClCompile Include="..\code\dbcmd.cpp" />
+    <ClCompile Include="..\code\dbentity.cpp" />
+    <ClCompile Include="..\code\dbix.cpp" />
+    <ClCompile Include="..\code\dbi_layer.cpp" />
+    <ClCompile Include="..\code\sql_layer.cpp" />
+    <ClCompile Include="..\code\task_queue.cpp" />
+    <ClCompile Include="..\code\thread_pool.cpp" />
+    <ClCompile Include="..\code\utils\inner_util.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\10-common\include\dbix\dbresult_callback_imp4osptask.cpp">
+      <Filter>interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\code\dbix_debug.cpp" />
+  </ItemGroup>
+</Project>

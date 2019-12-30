@@ -1,0 +1,56 @@
+1. dbix是什么
+dbix的全称是database interface x, x表示类似扩展、加强等含义。dbix是一个数据库编程框架，采用“异步请求+结果回调返回”的编程模型。dbix实现数据库的对象化，封装数据库操作线程池，屏蔽数据库差异，数据库连接、SQL执行、数据获取等操作。
+
+2. 为什么需要dbix
+最大程度地进行代码复用，提高整体工作效率
+降低数据库编程的复杂度，避免多人重复学习数据库技术
+分离C++代码与SQL代码，提高程序的可读性和可维护性
+
+3. dbix编程模型
+a. 采用异步的回调返回的编程模型
+b. dbix抽象数据库中的表、视图为数据库实体(也即CDBEntity); 抽象数据库中的存储过程为数据库命令(也即CDBCmd)
+c. 使用三步骤：构造CDBEntity或CDBCmd, 利用操作函数(OperateDBEntity或ExecDBCmd)投递请求，回调函数中处理返回结果(DBIXInit参数中的回调函数)
+
+4. 使用过程(请参见dbix自带的demo)
+
+DBIXInit (注意，调用它之前先初始化dbix依赖的库，它依赖的库请参考常见QA)
+使用过程中重复dbix编程模型c项目描述的使用三步骤
+DBIXQuit
+
+4.1 CDBEntity使用细节
+定义表或视图的结构信息CDBEntitySchema子类
+定义CDBEntity对象(下面称为cEntity)
+设置cEntity的操作类型，也即调用SetxxxFlag
+操作类型为Add, Mod时，设置列值
+设置cEntity的回调参数
+利用OperateDBEntity投递请求
+
+4.2 CDBCmd使用细节
+存在参数时定义存储过程的参数数组vector<TParmVal>对象
+定义CDBCmd对象(下面称为cCmd)
+设置cCmd的回调参数
+利用ExecDBCmd投递请求
+
+4.3 过虑条件CDBCriteria使用举例
+"(f_tbl1_col1<=v1) and (f_tbl1_col2>v2)"构造方法为"sql_and(le(f_tbl1_col1, v1), gt(f_tbl1_col2, v2))"
+
+更加详细的信息请直接参考dbix_criteria.h头文件注释
+
+5. 常见QA
+a. dbix支持的数据库字段类型，c++数据类型以及转换关系如何？
+   答：参见ENDBDataType类型说明
+b. dbix依赖于哪些库？
+   答：dbi相关库，osp,ospext; 另外还依赖cms/utility/cmstime.h文件
+c. 查询时一页数据里面有多条时，dbix是只回调一次返回吗？
+   答：对
+d. CDBEntity自动生成的代码，对哪种操作类型有返回结果集？
+   答：Add, Del, Mod, Qry四种操作类型中，只有Qry可能有返回值. 执行失败时自动生成的代码会自动释放结果集.
+   目前自动生成代码中，Add只能实现一次插入一条记录
+e. CDBEntity和CCmd的实现逻辑可以自定义吗？
+   答：可以.
+f. 框架为什么提供对连接的直接操作机制？
+   答：原因有两点.
+   1是因为一个连接上面同时只能有一个结果集在操作，如果操作过程中需要用到数据库中的其它数据，这时可以在一个新的连接上获取其它数据。
+   2是可以处理操作多数据库的应用场景。
+g. CDBEntity自动生成的代码，能够同时涉及多个表吗？
+   答：不能。同时涉及多个表时，请派生CDBEntity类自定义实现。

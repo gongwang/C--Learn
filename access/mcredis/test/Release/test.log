@@ -1,0 +1,24 @@
+﻿Build started 2019/8/14 17:03:01.
+     1>Project "D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mcredis\test\test.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Release\test.lastbuildstate".
+       InitializeBuildStatus:
+         Touching "Release\test.unsuccessfulbuild".
+       ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt test.cpp
+         test.cpp
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mcredis\prj_vs2010\Release\test.exe" /INCREMENTAL:NO /NOLOGO mcredis.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\test.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mcredis\prj_vs2010\Release\test.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mcredis\prj_vs2010\Release\test.lib" /MACHINE:X86 Release\test.obj
+         Generating code
+         Finished generating code
+         test.vcxproj -> D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mcredis\prj_vs2010\Release\test.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mcredis\prj_vs2010\Release\test.exe;#1" /manifest Release\test.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Release\test.unsuccessfulbuild".
+         Touching "Release\test.lastbuildstate".
+     1>Done Building Project "D:\SVN_SVR\20190227_ISMP_V1R2\20-cbb\mcredis\test\test.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.83

@@ -1,0 +1,11 @@
+hiredis库是redis源码自带c/c++语言对接库，编译语言版本为c99
+linux下的可以用redis源码直接生成，也可以从git下载hiredis项目库生成。
+windows下的需要根据redis-win项目的源码，手动生成动态库。
+windows下项目修改说明：
+1.将redis项目输出改为动态库，引用Win32_Interop和libjemalloc两个静态库文件
+2.Win32_Interop项目的Win32_QFork.cpp和Win32_QFork.h文件移除
+3.Win32_Interop项目Win32_service.cpp中main的定义和使用直接移除
+4.hiredis项目添加src目录中的adlist.c ae.c zmalloc.c三个文件
+5.hiredis.h头文件修改函数声明，增加__declspec(dllexport)前缀
+6.win32_types_hiredis.h文件复制一份到hiredis.h目录，并修改include路径
+7.依次生成jemalloc、Win32_Interop和hiredis项目

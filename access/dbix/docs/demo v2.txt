@@ -1,0 +1,37 @@
+一、实体类操作方法举例1(查询类)
+#define t_tbl1 "table name"
+#define f_tbl1_col1 "column name"
+
+class CDeviceSchema: CDBEntitySchema
+{
+}
+
+CDBEntity cDBEntity(CDeviceSchema());
+? cDBEntity.SetCBParm(xx);
+? CDBCriteria cDBCriteria;
+? cDBCriteria.xxxx ... // 设置条件
+? TOrderby tOrderby;
+? tOrderby.xxx ...     // 设置排序列表
+cDBEntity.SetQryFlag(0, 100, &cDBCriteria, &tOrderby);
+OperateDBEntity(cDBEntity);
+
+..... CBDBResult will be called in the future...
+pResultData的值可以自定义；它的默认结果为：add, mod, insert时为空, qry时为CDBEntityValue指针。
+
+二、存储过程执行方法举例1(不单独定义类)
+
+#define p_proc1 "xxxx"
+
+CDBCmd cDBCmd;
+cDBCmd.InitCmdInfo(p_proc1, NULL);
+ExecDBCmd(cDBCmd);
+
+.... CBDBResult will be called in the future...
+pResultData的值自定义。
+
+
+三、过虑条件使用举例
+
+"(f_tbl1_col1<=v1) and (f_tbl1_col2>v2)"构造方法,
+   sql_and(le(f_tbl1_col1, v1), gt(f_tbl1_col2, v2))
+

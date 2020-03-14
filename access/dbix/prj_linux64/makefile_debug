@@ -1,0 +1,52 @@
+###
+### Copyright (c) 2004 Keda Telecom, Inc.
+###
+
+#########################################################################
+###
+###  DESCRIPTION:
+###    Common definitions for all Makefiles in tinyxml linux project.
+###
+#########################################################################
+
+TOP := ..
+
+COMM_DIR := ../..
+
+SRC_DIR := $(TOP)/code
+
+## Name and type of the target for this Makefile
+
+ARC_TARGET := dbix64
+
+## Define debugging symbols
+DEBUG = 1
+LINUX_COMPILER=_LINUX_# _EQUATOR_, _HHPPC_, _LINUX_ and so on
+
+CFLAGS += -D_LINUX_
+CFLAGS += -D_LINUX64_
+CFLAGS += -fno-omit-frame-pointer
+CFLAGS += -Wformat
+CFLAGS += -fPIC
+
+PWLIB_SUPPORT = 0
+
+## Object files that compose the target(s)
+CPP_FILES = $(wildcard $(SRC_DIR)/*.cpp) \
+            $(wildcard $(SRC_DIR)/utils/*.cpp)
+			
+OBJS := $(CPP_FILES:%.cpp=%) \
+        $(SRC_DIR)/../../../10-common/include/dbix/dbresult_callback_imp4osptask
+
+## Add driver-specific include directory to the search path
+INC_PATH += $(TOP)/code \
+        $(TOP)/code/utils \
+		../../../10-common/include/cbb \
+        ../../../10-common/include/dbix \
+		../../../10-common/include/db \
+		../../../10-common/include/cbb/osp \
+        ../../../10-common/include
+        
+## Libraries to include in shared object file
+INSTALL_LIB_PATH = ../../../10-common/lib/debug/linux64/db
+include $(COMM_DIR)/common.mk

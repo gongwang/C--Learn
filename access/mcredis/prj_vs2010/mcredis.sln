@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mcredis", "mcredis.vcxproj", "{9ADD89BC-C218-43A6-932C-B4FF1F0D35BF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "..\test\test.vcxproj", "{E2B62A58-EA41-4074-B42C-72897C95727A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9ADD89BC-C218-43A6-932C-B4FF1F0D35BF} = {9ADD89BC-C218-43A6-932C-B4FF1F0D35BF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9ADD89BC-C218-43A6-932C-B4FF1F0D35BF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9ADD89BC-C218-43A6-932C-B4FF1F0D35BF}.Debug|Win32.Build.0 = Debug|Win32
+		{9ADD89BC-C218-43A6-932C-B4FF1F0D35BF}.Release|Win32.ActiveCfg = Release|Win32
+		{9ADD89BC-C218-43A6-932C-B4FF1F0D35BF}.Release|Win32.Build.0 = Release|Win32
+		{E2B62A58-EA41-4074-B42C-72897C95727A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E2B62A58-EA41-4074-B42C-72897C95727A}.Debug|Win32.Build.0 = Debug|Win32
+		{E2B62A58-EA41-4074-B42C-72897C95727A}.Release|Win32.ActiveCfg = Release|Win32
+		{E2B62A58-EA41-4074-B42C-72897C95727A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

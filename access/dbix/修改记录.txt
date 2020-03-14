@@ -1,0 +1,48 @@
+1、dbix_define.h 添加如果类型定义
+typedef map<TColName, Variant> CMapColVal;
+解决 map<TColName, Variant>::const_iterator cit; 语句编译不过的问题
+
+2、修改模板函数 SetColumnVal和 GetColumnVal，把模板参数ENDBDataType改成函数最后一个参数
+3、SetColumnVal, GetColumnVal类函数，修改实现，删除模板参数，由编译器模据参数自动推导；再加上ENDBDataType参数
+
+4、std::string DBData( const CCMSTime &val )修改实现
+std::string DBData( const CCMSTime &val )
+{
+#ifdef WIN32
+    s8 szBuf[21] = { 0 };
+    return string(_i64toa(static_cast<u64>(val.GetTime()), szBuf, 10));
+#else
+    std::stringstream ssNum;
+    ssNum << static_cast<u64>(val.GetTime());
+    return ssNum.str();
+#endif
+}
+
+5、variant.h 修改
+模板拷贝构造函数改用重载
+模板赋值运算符改用重载
+template<typename T> const T *GetPointer() const 改为 template<typename T> const T *GetPointer(T val) const
+
+template<typename T>
+T variant_cast(const Variant &variant)
+{
+    const T *pointer = variant.GetPointer<T>();
+
+    if (!pointer) { throw std::bad_cast(); }
+
+    return *pointer;
+}
+改成
+template<typename T>
+T variant_cast(const Variant &variant)
+{
+    const T *pointer = variant.GetPointer(T());
+
+    if (!pointer) { throw std::bad_cast(); }
+
+    return *pointer;
+}
+
+6、修复一处bug：生成插入sql语句时，values前没有空格
+dbentity.cpp:line=136
+tSql.AppendString(")values("); 改为：tSql.AppendString(") values(");

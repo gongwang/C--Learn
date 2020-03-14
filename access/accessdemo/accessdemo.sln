@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "accessdemo", "accessdemo.vcxproj", "{D9B5E85E-F570-4A8F-8C37-DD0419D1E4FF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "communication", "..\..\..\20-cbb\communication\prj_win32\communication.vcxproj", "{E43192EF-6EC3-49AB-80F5-1DBBDED76A79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9B5E85E-F570-4A8F-8C37-DD0419D1E4FF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D9B5E85E-F570-4A8F-8C37-DD0419D1E4FF}.Debug|Win32.Build.0 = Debug|Win32
+		{D9B5E85E-F570-4A8F-8C37-DD0419D1E4FF}.Release|Win32.ActiveCfg = Release|Win32
+		{D9B5E85E-F570-4A8F-8C37-DD0419D1E4FF}.Release|Win32.Build.0 = Release|Win32
+		{E43192EF-6EC3-49AB-80F5-1DBBDED76A79}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E43192EF-6EC3-49AB-80F5-1DBBDED76A79}.Debug|Win32.Build.0 = Debug|Win32
+		{E43192EF-6EC3-49AB-80F5-1DBBDED76A79}.Release|Win32.ActiveCfg = Release|Win32
+		{E43192EF-6EC3-49AB-80F5-1DBBDED76A79}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

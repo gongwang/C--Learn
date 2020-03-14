@@ -1,0 +1,39 @@
+一、实体类操作方法举例1(查询类)
+
+#define f_tbl1_col1 "xxx"
+
+class CDevice: public CDBEntity
+{
+public:
+	
+public:
+	CDevice(): CDBEntity()
+	{
+		InitEntityInfo(...);	
+	}
+        
+}
+
+
+CDevice cDevice;
+cDevice.SetCBParm(xx);
+cDevice.SetQryFlag();
+cDevice.SetColumnVal(f_tbl1_col1, xxx);  // 当然此种设置方法，也可以在CDevice里面封装成具体的方法；从而转变为cDevice.SetName(xxx)的样式
+cDevice.SetColumnVal(f_tbl1_col2, xxx1);
+
+OperateDBEntity(cDevice);
+
+
+..... CBDBResult will be called in the future...
+pResultData的值可以自定义；它的默认结果为：add, mod, insert时为空, qry时为自身实体类数组。
+
+二、存储过程执行方法举例1(不单独定义类)
+
+#define p_proc1 "xxxx"
+
+CDBCmd cDBCmd;
+cDBCmd.InitCmdInfo(p_proc1, NULL);
+ExecDBCmd(cDBCmd);
+
+.... CBDBResult will be called in the future...
+pResultData的值自定义。

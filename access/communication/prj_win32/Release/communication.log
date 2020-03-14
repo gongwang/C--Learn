@@ -1,0 +1,28 @@
+﻿Build started 2019/12/20 15:20:11.
+     1>Project "D:\SVN_SVR\ismp_vob\20-cbb\communication\prj_win32\communication.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\communication.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\include /I"..\..\..\10-common\include\cbb" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\comconnectpolicy.cpp ..\src\iconnectbase.cpp ..\src\tcpconnectpolicy.cpp ..\src\tcpserverpolicy.cpp ..\src\udpconnectpolicy.cpp
+         comconnectpolicy.cpp
+         iconnectbase.cpp
+         tcpconnectpolicy.cpp
+         tcpserverpolicy.cpp
+         udpconnectpolicy.cpp
+       Lib:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"D:\SVN_SVR\ismp_vob\40-csp\AccessTemplate\accessdemo\Release\communication.lib" serialport.lib socketbase.lib /LIBPATH:"..\..\..\10-common\lib\release\vs2010" /LIBPATH:"..\..\..\10-common\lib\release\win32" /NOLOGO /LTCG Release\comconnectpolicy.obj
+         Release\dascommonfun.obj
+         Release\dasstring.obj
+         Release\iconnectbase.obj
+         Release\tcpconnectpolicy.obj
+         Release\tcpserverpolicy.obj
+         Release\udpconnectpolicy.obj
+         communication.vcxproj -> D:\SVN_SVR\ismp_vob\40-csp\AccessTemplate\accessdemo\Release\communication.lib
+       FinalizeBuildStatus:
+         Deleting file "Release\communication.unsuccessfulbuild".
+         Touching "Release\communication.lastbuildstate".
+     1>Done Building Project "D:\SVN_SVR\ismp_vob\20-cbb\communication\prj_win32\communication.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.03

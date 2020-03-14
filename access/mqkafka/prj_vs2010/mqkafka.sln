@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mqkafka", "mqkafka.vcxproj", "{95290B55-A7C6-476B-A515-F1F2AADE59EE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "..\test\test.vcxproj", "{F2FD60E0-1594-47CB-BCFA-8AD01C517182}"
+	ProjectSection(ProjectDependencies) = postProject
+		{95290B55-A7C6-476B-A515-F1F2AADE59EE} = {95290B55-A7C6-476B-A515-F1F2AADE59EE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95290B55-A7C6-476B-A515-F1F2AADE59EE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{95290B55-A7C6-476B-A515-F1F2AADE59EE}.Debug|Win32.Build.0 = Debug|Win32
+		{95290B55-A7C6-476B-A515-F1F2AADE59EE}.Release|Win32.ActiveCfg = Release|Win32
+		{95290B55-A7C6-476B-A515-F1F2AADE59EE}.Release|Win32.Build.0 = Release|Win32
+		{F2FD60E0-1594-47CB-BCFA-8AD01C517182}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F2FD60E0-1594-47CB-BCFA-8AD01C517182}.Debug|Win32.Build.0 = Debug|Win32
+		{F2FD60E0-1594-47CB-BCFA-8AD01C517182}.Release|Win32.ActiveCfg = Release|Win32
+		{F2FD60E0-1594-47CB-BCFA-8AD01C517182}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
